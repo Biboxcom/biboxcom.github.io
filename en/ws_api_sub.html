@@ -1,0 +1,858 @@
+ <!DOCTYPE HTML> <html lang="en"> <head> <meta charset="UTF-8"> <meta content="text/html; charset=utf-8"http-equiv="Content-Type"> <title>WebSocket API Subscribe · Bibox API</title> <meta content="IE=edge"http-equiv="X-UA-Compatible"/> <meta content=""name="description"> <meta content="GitBook 3.2.3"name="generator"> <link href="../gitbook/style.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-search-pro/search.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-highlight/website.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-fontsettings/website.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-theme-api/theme-api.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-theme-comscore/test.css"rel="stylesheet"> <meta content="true"name="HandheldFriendly"/> <meta content="width=device-width,initial-scale=1,user-scalable=no"name="viewport"> <meta content="yes"name="apple-mobile-web-app-capable"> <meta content="black"name="apple-mobile-web-app-status-bar-style"> <link href="../gitbook/images/apple-touch-icon-precomposed-152.png"rel="apple-touch-icon-precomposed"sizes="152x152"> <link href="../gitbook/images/favicon.ico"rel="shortcut icon"type="image/x-icon"> <link href="ws_api_sub.html"rel="next"/> <link href="ws_api_intro.html"rel="prev"/> </head> <body> <div class="book"> <div class="book-summary"> <div role="search"id="book-search-input"> <input placeholder="Type to search"type="text"/> </div> <nav role="navigation"> <ul class="summary"> <li class="chapter"data-level="1.1"data-path="./"> <a href="./"> Bibox Exchange </a> </li> <li class="chapter"data-level="1.2"data-path="restful_intro.html"> <a href="restful_intro.html#t0"> Restful API description </a> <ul class="articles"> <li class="chapter"data-level="1.2.1"data-path="restful_intro.html"> <a href="restful_intro.html#t1"> Introduction </a> </li> <li class="chapter"data-level="1.2.2"data-path="restful_intro.html"> <a href="restful_intro.html#t2"> API Url </a> </li> <li class="chapter"data-level="1.2.3"data-path="restful_intro.html"> <a href="restful_intro.html#t3"> API Signature </a> <ul class="articles"> <li class="chapter"data-level="1.2.3.1"data-path="restful_intro.html"> <a href="restful_intro.html#申请apikey"> Apply for apikey </a> </li> <li class="chapter"data-level="1.2.3.2"data-path="restful_intro.html"> <a href="restful_intro.html#设置apikey操作权限"> Set apikey operating authorization </a> </li> <li class="chapter"data-level="1.2.3.3"data-path="restful_intro.html"> <a href="restful_intro.html#合法请求结构"> Legal request structure </a> </li> <li class="chapter"data-level="1.2.3.4"data-path="restful_intro.html"> <a href="restful_intro.html#签名步骤"> Sign Steps </a> </li> <li class="chapter"data-level="1.2.3.5"data-path="restful_intro.html"> <a href="restful_intro.html#完整签名例子"> the example of completed signature </a> </li> </ul> </li> <li class="chapter"data-level="1.2.4"data-path="restful_intro.html"> <a href="restful_intro.html#t4"> API Request and Response Format </a> <ul class="articles"> <li class="chapter"data-level="1.2.4.1"data-path="restful_intro.html"> <a href="restful_intro.html#请求参数"> Request Parameter </a> </li> <li class="chapter"data-level="1.2.4.2"data-path="restful_intro.html"> <a href="restful_intro.html#结果返回"> The result of return </a> </li> <li class="chapter"data-level="1.2.4.3"data-path="restful_intro.html"> <a href="restful_intro.html#请求示例"> Example </a> </li> </ul> </li> </ul> </li> <li class="chapter"data-level="1.3"data-path="rest_api_c.html"> <a href="rest_api_c.html#t0"> Restful API contract trading </a> <ul class="articles"> <li class="chapter"data-level="1.3.1"data-path="rest_api_c.html"> <a href="rest_api_c.html#查询合约资产"> contract account information </a> </li> <li class="chapter"data-level="1.3.2"data-path="rest_api_c.html"> <a href="rest_api_c.html#查询单个合约持仓信息"> check single information of contract position </a> </li> <li class="chapter"data-level="1.3.3"data-path="rest_api_c.html"> <a href="rest_api_c.html#查询所有合约持仓信息"> Check all information of contract position </a> </li> <li class="chapter"data-level="1.3.4"data-path="rest_api_c.html"> <a href="rest_api_c.html#查询合约未成交订单"> Check uncompleted contract orders </a> </li> <li class="chapter"data-level="1.3.5"data-path="rest_api_c.html"> <a href="rest_api_c.html#合约下单"> make contract order </a> </li> <li class="chapter"data-level="1.3.6"data-path="rest_api_c.html"> <a href="rest_api_c.html#合约批量下单"> make bulk contract orders </a> </li> <li class="chapter"data-level="1.3.7"data-path="rest_api_c.html"> <a href="rest_api_c.html#合约撤单"> cancel contract order </a> </li> <li class="chapter"data-level="1.3.8"data-path="rest_api_c.html"> <a href="rest_api_c.html#合约撤多单"> cancel multiple orders </a> </li> <li class="chapter"data-level="1.3.9"data-path="rest_api_c.html"> <a href="rest_api_c.html#合约撤1000单"> cancel 1000 orders </a> </li> <li class="chapter"data-level="1.3.10"data-path="rest_api_c.html"> <a href="rest_api_c.html#合约调整杠杆倍数"> adjust contract leverage </a> </li> <li class="chapter"data-level="1.3.11"data-path="rest_api_c.html"> <a href="rest_api_c.html#合约调整保证金"> adjust contract margin </a> </li> <li class="chapter"data-level="1.3.12"data-path="rest_api_c.html"> <a href="rest_api_c.html#主账户资金转入合约账户"> transfer funds from master account to contract account </a> </li> <li class="chapter"data-level="1.3.13"data-path="rest_api_c.html"> <a href="rest_api_c.html#查询市场成交记录"> check transaction records in the market </a> </li> <li class="chapter"data-level="1.3.14"data-path="rest_api_c.html"> <a href="rest_api_c.html#通过订单号查询未成交订单"> check uncompleted orders through order id </a> </li> <li class="chapter"data-level="1.3.15"data-path="rest_api_c.html"> <a href="rest_api_c.html#查询个人成交记录"> check personal transaction record </a> </li> <li class="chapter"data-level="1.3.16"data-path="rest_api_c.html"> <a href="rest_api_c.html#查询订单详情"> query order detail </a> </li> <li class="chapter"data-level="1.3.17"data-path="rest_api_c.html"> <a href="rest_api_c.html#t1"> query contract value (apikey not required) </a> </li> <li class="chapter"data-level="1.3.18"data-path="rest_api_c.html"> <a href="rest_api_c.html#t2"> query contract leverage info (apikey not required) </a> </li> <li class="chapter"data-level="1.3.19"data-path="rest_api_c.html"> <a href="rest_api_c.html#t3"> query contract open limit once (apikey not required) </a> </li> </ul> </li> <li class="chapter"data-level="1.4"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#t0"> Restful API Spot trading </a> <ul class="articles"> <li class="chapter"data-level="1.4.1"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#t1"> Market Quotation(apikey is not necessary) </a> <ul class="articles"> <li class="chapter"data-level="1.4.1.1"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#网络测试"> Network testing </a> </li> <li class="chapter"data-level="1.4.1.2"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询交易对"> View trading pair </a> </li> <li class="chapter"data-level="1.4.1.3"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询k线"> View Kline </a> </li> <li class="chapter"data-level="1.4.1.4"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询全币种市场行情"> View the market quotation of all tokens </a> </li> <li class="chapter"data-level="1.4.1.5"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询单币种市场行情"> View market quotation of a single token </a> </li> <li class="chapter"data-level="1.4.1.6"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询市场深度"> View the depth of the market </a> </li> <li class="chapter"data-level="1.4.1.7"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询成交记录"> View trading record history </a> </li> <li class="chapter"data-level="1.4.1.8"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询市场ticker"> View the market ticker </a> </li> <li class="chapter"data-level="1.4.1.9"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#下单限制信息"> The trade parameter specification </a> </li> </ul> </li> <li class="chapter"data-level="1.4.2"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#t2"> Users Asset Information (needs apikey) </a> <ul class="articles"> <li class="chapter"data-level="1.4.2.1"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#币币账户资产"> Spot account asset </a> </li> <li class="chapter"data-level="1.4.2.2"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#充值"> Deposit </a> </li> <li class="chapter"data-level="1.4.2.3"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#提现"> Withdraw </a> </li> <li class="chapter"data-level="1.4.2.4"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询充值记录"> Deposit history list </a> </li> <li class="chapter"data-level="1.4.2.5"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询提现记录"> Withdraw history list </a> </li> <li class="chapter"data-level="1.4.2.6"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#获取币种配置"> Query token config </a> </li> <li class="chapter"data-level="1.4.2.7"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询某一条提现记录"> Withdrawal information </a> </li> </ul> </li> <li class="chapter"data-level="1.4.3"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#t3"> Transaction(Needs apikey) </a> <ul class="articles"> <li class="chapter"data-level="1.4.3.1"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#下单"> place an order </a> </li> <li class="chapter"data-level="1.4.3.2"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#撤单"> cancel an order </a> </li> <li class="chapter"data-level="1.4.3.3"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#当前委托"> The current order list </a> </li> <li class="chapter"data-level="1.4.3.4"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#历史委托"> The order history </a> </li> <li class="chapter"data-level="1.4.3.5"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#成交记录"> The order history detail </a> </li> <li class="chapter"data-level="1.4.3.6"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#委托单详情"> The order </a> </li> <li class="chapter"data-level="1.4.3.7"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#成交明细"> The dealed order history </a> </li> </ul> </li> </ul> </li> <li class="chapter"data-level="1.5"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#t0"> Restful API Transfer Assets </a> <ul class="articles"> <li class="chapter"data-level="1.5.1"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#t1"> Query assets(apikey) </a> <ul class="articles"> <li class="chapter"data-level="1.5.1.1"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#钱包账户"> Main assets </a> </li> <li class="chapter"data-level="1.5.1.2"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#币币账户资产"> Spot Assets </a> </li> <li class="chapter"data-level="1.5.1.3"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#合约账户资产"> Contract Assets </a> </li> <li class="chapter"data-level="1.5.1.4"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#信用账户资产"> Credit Assets </a> </li> </ul> </li> <li class="chapter"data-level="1.5.2"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#t2"> Main Assets And Spot Assets(needs apikey) </a> <ul class="articles"> <li class="chapter"data-level="1.5.2.1"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#钱包账户划转到币币账户"> Main assets transfer to spot assets </a> </li> </ul> </li> <li class="chapter"data-level="1.5.3"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#t3"> Main Assets Transfer to Credit Assets(needs apikey) </a> <ul class="articles"> <li class="chapter"data-level="1.5.3.1"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#钱包账户划转到信用账户"> Main assets to credit assets </a> </li> <li class="chapter"data-level="1.5.3.2"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#信用户划转到钱包账户"> Credit assets transfer to main assets </a> </li> </ul> </li> <li class="chapter"data-level="1.5.4"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#t4"> Main Assets Transfer to Contract Assets(need apikey) </a> <ul class="articles"> <li class="chapter"data-level="1.5.4.1"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#钱包账户划转到合约账户"> Main Assets Transfer to Contract Assets </a> </li> </ul> </li> </ul> </li> <li class="chapter"data-level="1.6"data-path="restful_credit.html"> <a href="restful_credit.html#head"> Restful API Credit Trading </a> <ul class="articles"> <li class="chapter"data-level="1.6.1"data-path="restful_credit.html"> <a href="restful_credit.html#lendOrder-get"> Get Lend Order </a> </li> <li class="chapter"data-level="1.6.2"data-path="restful_credit.html"> <a href="restful_credit.html#borrowOrder-get"> Get Borrow Order </a> </li> <li class="chapter"data-level="1.6.3"data-path="restful_credit.html"> <a href="restful_credit.html#borrowOrder-book"> Borrow </a> </li> <li class="chapter"data-level="1.6.4"data-path="restful_credit.html"> <a href="restful_credit.html#borrowOrder-cancel"> Cancel Borrow </a> </li> <li class="chapter"data-level="1.6.5"data-path="restful_credit.html"> <a href="restful_credit.html#borrowOrder-refund"> Refund </a> </li> <li class="chapter"data-level="1.6.6"data-path="restful_credit.html"> <a href="restful_credit.html#lendOrderbook-get"> Get Lend Book Info </a> </li> <li class="chapter"data-level="1.6.7"data-path="restful_credit.html"> <a href="restful_credit.html#lendOrderbook-publish"> Publish Lend </a> </li> <li class="chapter"data-level="1.6.8"data-path="restful_credit.html"> <a href="restful_credit.html#lendOrderbook-cancel"> Cancel Lend </a> </li> <li class="chapter"data-level="1.6.9"data-path="restful_credit.html"> <a href="restful_credit.html#borrowDepth-get"> Get Lend Depth </a> </li> <li class="chapter"data-level="1.6.10"data-path="restful_credit.html"> <a href="restful_credit.html#trade-trade"> Trade </a> </li> <li class="chapter"data-level="1.6.11"data-path="restful_credit.html"> <a href="restful_credit.html#trade-cancel"> Cancel Trade </a> </li> <li class="chapter"data-level="1.6.12"data-path="restful_credit.html"> <a href="restful_credit.html#transferAssets-lendAssets"> Get Lend Assets </a> </li> <li class="chapter"data-level="1.6.13"data-path="restful_credit.html"> <a href="restful_credit.html#transferAssets-borrowAssets"> Get Borrow Assets </a> </li> </ul> </li> <li class="chapter"data-level="1.7"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t0"> WebSocket API description </a> <ul class="articles"> <li class="chapter"data-level="1.7.1"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t1"> Introduction </a> </li> <li class="chapter"data-level="1.7.2"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#访问地址"> Access to the url </a> </li> <li class="chapter"data-level="1.7.3"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#请求与订阅说明"> The description of request and subscription </a> <ul class="articles"> <li class="chapter"data-level="1.7.3.1"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t2"> Access to the url </a> </li> <li class="chapter"data-level="1.7.3.2"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t3"> Data compression </a> </li> <li class="chapter"data-level="1.7.3.3"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t4"> WebSocket Library </a> </li> <li class="chapter"data-level="1.7.3.4"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t5"> Ping message </a> </li> <li class="chapter"data-level="1.7.3.5"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t6"> Channel Format </a> </li> <li class="chapter"data-level="1.7.3.6"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t7"> Subscribe(addChannel) </a> </li> <li class="chapter"data-level="1.7.3.7"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t8"> Unsubscribe(removeChannel) </a> </li> </ul> </li> </ul> </li> <li class="chapter"data-level="1.8"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t0"> WebSocket API Subscribe </a> <ul class="articles"> <li class="chapter"data-level="1.8.1"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t1"> Subscribe Kline </a> </li> <li class="chapter"data-level="1.8.2"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t2"> Subscribe Market </a> </li> <li class="chapter"data-level="1.8.3"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t3"> Subscribe Depth </a> </li> <li class="chapter"data-level="1.8.4"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t4"> Subscribe Deals </a> </li> <li class="chapter"data-level="1.8.5"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t5"> Subscribe Ticker </a> </li> <li class="chapter"data-level="1.8.6"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t6"> Subscribe Login </a> <ul class="articles"> <li class="chapter"data-level="1.8.6.1"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#签名步骤"> Sign Steps </a> </li> <li class="chapter"data-level="1.8.6.2"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#完整签名例子"> the example of completed signature </a> </li> <li class="chapter"data-level="1.8.6.3"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#正确订阅"> subscribe correctly </a> </li> <li class="chapter"data-level="1.8.6.4"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#订阅成功返回"> the successful response </a> </li> <li class="chapter"data-level="1.8.6.5"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#现货账户资产"> Normal account assets </a> </li> <li class="chapter"data-level="1.8.6.6"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#信用账户资产"> Credit account assets </a> </li> <li class="chapter"data-level="1.8.6.7"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#现货委托单"> Spot Pending orders </a> </li> <li class="chapter"data-level="1.8.6.8"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#现货成交历史"> History of spot orders </a> </li> </ul> </li> <li class="chapter"data-level="1.8.7"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t7"> Subscribe contract Kline </a> </li> <li class="chapter"data-level="1.8.8"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t8"> Subscribe contract Market </a> </li> <li class="chapter"data-level="1.8.9"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t9"> Subscribe contract Depth </a> </li> <li class="chapter"data-level="1.8.10"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t10"> Subscribe contract Deals </a> </li> <li class="chapter"data-level="1.8.11"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t11"> Subscribe contract Ticker </a> </li> <li class="chapter"data-level="1.8.12"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t12"> Subscribe contract Login </a> <ul class="articles"> <li class="chapter"data-level="1.8.12.1"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#合约资产"> contract assets </a> </li> <li class="chapter"data-level="1.8.12.2"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#合约持仓"> contract position contract_order </a> </li> <li class="chapter"data-level="1.8.12.3"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#合约委托单"> contract order pending </a> </li> <li class="chapter"data-level="1.8.12.4"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#成交记录"> transaction records </a> </li> <li class="chapter"data-level="1.8.12.5"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#仓位变化记录"> position change records </a> </li> </ul> </li> <li class="chapter"data-level="1.8.13"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#订阅指数"> Subscribe indexMarket </a> </li> <li class="chapter"data-level="1.8.14"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#订阅合约下单价格限制"> Subscribe the price limit of taking contract orders </a> </li> </ul> </li> <li class="chapter"data-level="1.9"data-path="error_code.html"> <a href="error_code.html#错误码"> Error code </a> </li> <li class="divider"></li> <li class="chapter"data-level="2.1"> <a href="https://github.com/Biboxcom/REST-API-demos"target="_blank"> Restful API example </a> </li> <li class="chapter"data-level="2.2"> <a href="https://github.com/Biboxcom/WS-API-demos"target="_blank"> WebSocket API example </a> </li> <li class="header">Restful API 杠杆交易</li> <li class="divider"></li> <li> <a href="https://www.gitbook.com"class="gitbook-link"target="blank"> Published with GitBook </a> </li> </ul> </nav> </div> <div class="book-body"> <div class="body-inner"> <div class="book-header"role="navigation"> <h1> <i class="fa fa-circle-o-notch fa-spin"></i> <a href=".">WebSocket API Subscribe</a> </h1> </div> <div class="page-wrapper"role="main"tabindex="-1"> <div class="page-inner"> <div id="book-search-results"> <div class="search-noresults"> <section class="markdown-section normal"> <h2 id="t0"><a href="#t0"class="anchor-navigation-ex-anchor"name="t0"><i class="fa fa-link"aria-hidden="true"></i></a>WebSocket API Subscribe </h2> <h2 id="t1"><a href="#t1"class="anchor-navigation-ex-anchor"name="t1"><i class="fa fa-link"aria-hidden="true"></i></a>Subscribe Kline </h2> <ul> <li>channel: bibox<em>sub_spot</em>$pair<em>kline</em>$period</li> </ul> <p>After buliding the connection with WebSocket API, sending the data with the following format to server to subscribe data</p> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_$pair_kline_$period&quot;</span>
+}
+</code></pre> <table> <thead> <tr> <th>Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>pair</td> <td>true</td> <td>string</td> <td>Trading pair</td> <td></td> <td>BIX_BTC, BIX_ETH, BTC_USDT, ETH_USDT......</td> </tr> <tr> <td>period</td> <td>true</td> <td>string</td> <td>K line period</td> <td></td> <td>1min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, day, week</td> </tr> </tbody> </table> <p><strong>the example of subscribing correctly</strong></p> <ul> <li>subscribe correctly</li> </ul> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_BIX_BTC_kline_1min&quot;</span>
+}
+</code></pre> <ul> <li>The example of subscribing success return data</li> </ul> <pre><code class="lang-js">[{
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_BIX_BTC_kline_1min&quot;</span>,
+  <span class="hljs-string">&quot;data_type&quot;</span>: <span class="hljs-number">0</span>, <span class="hljs-comment">//Subscribe one time of returning total value sucessfully, then return increment value</span>
+  <span class="hljs-string">&quot;data&quot;</span>: 
+  [
+      {
+          <span class="hljs-string">&quot;time&quot;</span>:<span class="hljs-number">1536310020000</span>,
+          <span class="hljs-string">&quot;open&quot;</span>:<span class="hljs-string">&quot;0.00006614&quot;</span>,
+          <span class="hljs-string">&quot;high&quot;</span>:<span class="hljs-string">&quot;0.00006659&quot;</span>,
+          <span class="hljs-string">&quot;low&quot;</span>:<span class="hljs-string">&quot;0.00006604&quot;</span>,
+          <span class="hljs-string">&quot;close&quot;</span>:<span class="hljs-string">&quot;0.00006652&quot;</span>,
+          <span class="hljs-string">&quot;vol&quot;</span>:<span class="hljs-string">&quot;74056.89597166&quot;</span>
+      },
+      {
+          <span class="hljs-string">&quot;time&quot;</span>:<span class="hljs-number">1536310080000</span>,
+          <span class="hljs-string">&quot;open&quot;</span>:<span class="hljs-string">&quot;0.00006652&quot;</span>,
+          <span class="hljs-string">&quot;high&quot;</span>:<span class="hljs-string">&quot;0.00006652&quot;</span>,
+          <span class="hljs-string">&quot;low&quot;</span>:<span class="hljs-string">&quot;0.00006652&quot;</span>,
+          <span class="hljs-string">&quot;close&quot;</span>:<span class="hljs-string">&quot;0.00006652&quot;</span>,
+          <span class="hljs-string">&quot;vol&quot;</span>:<span class="hljs-string">&quot;100&quot;</span>
+      }
+  ]
+}]
+</code></pre> <ul> <li><p><code>&quot;data_type&quot;</code> The type of data marked to be returned , 0-return total value, 1-return incremental value</p> </li> <li><p>data description</p> </li> </ul> <pre><code class="lang-js">  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;time&quot;</span>: the starting time <span class="hljs-keyword">of</span> K line period,
+    <span class="hljs-string">&quot;open&quot;</span>: the openging price,
+    <span class="hljs-string">&quot;high&quot;</span>: The highest price,
+    <span class="hljs-string">&quot;low&quot;</span>: the lowest price,
+    <span class="hljs-string">&quot;close&quot;</span>: the closing price
+    <span class="hljs-string">&quot;vol&quot;</span>:  trading volume
+  }
+</code></pre> <p>Client will receive the incremental data as long as <strong>Kline</strong> updates, for example</p> <pre><code class="lang-json">[{
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_BIX_BTC_kline_1min&quot;</span>,
+  <span class="hljs-string">&quot;data_type&quot;</span>: <span class="hljs-number">1</span>, 
+  <span class="hljs-string">&quot;data&quot;</span>: 
+  [
+      {
+          <span class="hljs-string">&quot;time&quot;</span>:<span class="hljs-number">1536310020000</span>,
+          <span class="hljs-string">&quot;open&quot;</span>:<span class="hljs-string">&quot;0.00006614&quot;</span>,
+          <span class="hljs-string">&quot;high&quot;</span>:<span class="hljs-string">&quot;0.00006659&quot;</span>,
+          <span class="hljs-string">&quot;low&quot;</span>:<span class="hljs-string">&quot;0.00006604&quot;</span>,
+          <span class="hljs-string">&quot;close&quot;</span>:<span class="hljs-string">&quot;0.00006652&quot;</span>,
+          <span class="hljs-string">&quot;vol&quot;</span>:<span class="hljs-string">&quot;74056.89597166&quot;</span>
+      },
+      {
+          <span class="hljs-string">&quot;time&quot;</span>:<span class="hljs-number">1536310080000</span>,
+          <span class="hljs-string">&quot;open&quot;</span>:<span class="hljs-string">&quot;0.00006652&quot;</span>,
+          <span class="hljs-string">&quot;high&quot;</span>:<span class="hljs-string">&quot;0.00006652&quot;</span>,
+          <span class="hljs-string">&quot;low&quot;</span>:<span class="hljs-string">&quot;0.00006652&quot;</span>,
+          <span class="hljs-string">&quot;close&quot;</span>:<span class="hljs-string">&quot;0.00006652&quot;</span>,
+          <span class="hljs-string">&quot;vol&quot;</span>:<span class="hljs-string">&quot;100&quot;</span>
+      }
+  ]
+}]
+</code></pre> <p>Note: 2 closest k lines will be returned every time, when incremental value k line be returned</p> <p><strong>example of subscribing wrongly</strong></p> <p>subscribe wrongly (wrong pair, capitalized sensitively)</p> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_bix_btc_kline_1min&quot;</span>
+}
+</code></pre> <p>The example of subscribing wrongly return data</p> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_bix_btc_kline_1min&quot;</span>,
+  <span class="hljs-string">&quot;error&quot;</span>: 
+  {
+       <span class="hljs-string">&quot;code&quot;</span>: <span class="hljs-string">&quot;3009&quot;</span>,
+       <span class="hljs-string">&quot;msg&quot;</span>:<span class="hljs-string">&quot;&#x63A8;&#x9001;&#x8BA2;&#x9605;channel&#x4E0D;&#x5408;&#x6CD5;&quot;</span>
+  }
+}
+</code></pre> <h2 id="t2"><a href="#t2"class="anchor-navigation-ex-anchor"name="t2"><i class="fa fa-link"aria-hidden="true"></i></a>Subscribe Market </h2> <ul> <li>channel: bibox_sub_spot_ALL_ALL_market</li> </ul> <p>After buliding the connection with WebSocket API, sending the data with the following format to server to subscribe data</p> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_market&quot;</span>
+}
+</code></pre> <p>subscribe correctly</p> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_market&quot;</span>
+}
+</code></pre> <p>The example of subscribing success return data </p> <pre><code class="lang-js">[{
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_market&quot;</span>,
+  <span class="hljs-string">&quot;data_type&quot;</span>: <span class="hljs-number">0</span>, 
+  <span class="hljs-string">&quot;data&quot;</span>:
+    [
+        {
+            <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;BIX&quot;</span>,
+            <span class="hljs-string">&quot;currency_symbol&quot;</span>:<span class="hljs-string">&quot;BTC&quot;</span>,
+            <span class="hljs-string">&quot;last&quot;</span>:<span class="hljs-string">&quot;0.00006604&quot;</span>,
+            <span class="hljs-string">&quot;high&quot;</span>:<span class="hljs-string">&quot;0.00006712&quot;</span>,
+            <span class="hljs-string">&quot;low&quot;</span>:<span class="hljs-string">&quot;0.00006421&quot;</span>,
+            <span class="hljs-string">&quot;change&quot;</span>:<span class="hljs-string">&quot;+0.00000121&quot;</span>,
+            <span class="hljs-string">&quot;percent&quot;</span>:<span class="hljs-string">&quot;+1.87%&quot;</span>,
+            <span class="hljs-string">&quot;vol24H&quot;</span>:<span class="hljs-string">&quot;54475636&quot;</span>,
+            <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;3571.11&quot;</span>,
+            <span class="hljs-string">&quot;last_cny&quot;</span>:<span class="hljs-string">&quot;2.91&quot;</span>,
+            <span class="hljs-string">&quot;high_cny&quot;</span>:<span class="hljs-string">&quot;2.95&quot;</span>,
+            <span class="hljs-string">&quot;low_cny&quot;</span>:<span class="hljs-string">&quot;2.83&quot;</span>,
+            <span class="hljs-string">&quot;last_usd&quot;</span>:<span class="hljs-string">&quot;0.42&quot;</span>,
+            <span class="hljs-string">&quot;high_usd&quot;</span>:<span class="hljs-string">&quot;0.43&quot;</span>,
+            <span class="hljs-string">&quot;low_usd&quot;</span>:<span class="hljs-string">&quot;0.41&quot;</span>
+        },
+        {
+            <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">2</span>,
+            <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;BIX&quot;</span>,
+            <span class="hljs-string">&quot;currency_symbol&quot;</span>:<span class="hljs-string">&quot;ETH&quot;</span>,
+            <span class="hljs-string">&quot;last&quot;</span>:<span class="hljs-string">&quot;0.00190235&quot;</span>,
+            <span class="hljs-string">&quot;high&quot;</span>:<span class="hljs-string">&quot;0.00192190&quot;</span>,
+            <span class="hljs-string">&quot;low&quot;</span>:<span class="hljs-string">&quot;0.00181724&quot;</span>,
+            <span class="hljs-string">&quot;change&quot;</span>:<span class="hljs-string">&quot;+0.00008058&quot;</span>,
+            <span class="hljs-string">&quot;percent&quot;</span>:<span class="hljs-string">&quot;+4.42%&quot;</span>,
+            <span class="hljs-string">&quot;vol24H&quot;</span>:<span class="hljs-string">&quot;32059017&quot;</span>,
+            <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;59861.18&quot;</span>,
+            <span class="hljs-string">&quot;last_cny&quot;</span>:<span class="hljs-string">&quot;2.90&quot;</span>,
+            <span class="hljs-string">&quot;high_cny&quot;</span>:<span class="hljs-string">&quot;2.93&quot;</span>,
+            <span class="hljs-string">&quot;low_cny&quot;</span>:<span class="hljs-string">&quot;2.77&quot;</span>,
+            <span class="hljs-string">&quot;last_usd&quot;</span>:<span class="hljs-string">&quot;0.42&quot;</span>,
+            <span class="hljs-string">&quot;high_usd&quot;</span>:<span class="hljs-string">&quot;0.42&quot;</span>,
+            <span class="hljs-string">&quot;low_usd&quot;</span>:<span class="hljs-string">&quot;0.40&quot;</span>
+        },
+        ...  <span class="hljs-comment">//others</span>
+    ]
+}]
+</code></pre> <p>data description</p> <pre><code class="lang-js"> {
+     <span class="hljs-string">&quot;id&quot;</span>: pair id
+     <span class="hljs-string">&quot;coin_symbol&quot;</span>: Trading Token
+     <span class="hljs-string">&quot;currency_symbol&quot;</span>: Pricing Token
+     <span class="hljs-string">&quot;last&quot;</span>: <span class="hljs-number">24</span>h the lastest price
+     <span class="hljs-string">&quot;high&quot;</span>: <span class="hljs-number">24</span>h the highest price
+     <span class="hljs-string">&quot;low&quot;</span>: <span class="hljs-number">24</span>h the lowest price
+     <span class="hljs-string">&quot;change&quot;</span>: <span class="hljs-number">24</span>h price change
+     <span class="hljs-string">&quot;percent&quot;</span>: <span class="hljs-number">24</span>h price change percentage
+     <span class="hljs-string">&quot;vol24H&quot;</span>: <span class="hljs-number">24</span>h trading volume
+     <span class="hljs-string">&quot;amount&quot;</span>: <span class="hljs-number">24</span>h trading amount
+     <span class="hljs-string">&quot;last_cny&quot;</span>: The lastest price equivelant to CNY
+     <span class="hljs-string">&quot;high_cny&quot;</span>: The highest price equivelant to CNY
+     <span class="hljs-string">&quot;low_cny&quot;</span>: The lowest price equivelant to CNY
+     <span class="hljs-string">&quot;last_usd&quot;</span>: The lastest price equivelant to USD
+     <span class="hljs-string">&quot;high_usd&quot;</span>: The highest price equivelant to USD
+     <span class="hljs-string">&quot;low_usd&quot;</span>: The lowest price equivelant to USD
+ }
+</code></pre> <p>Client will receive the incremental data as long as <strong>Market</strong> updates, for example</p> <pre><code class="lang-js">[{
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_market&quot;</span>,
+  <span class="hljs-string">&quot;data_type&quot;</span>: <span class="hljs-number">1</span>, 
+  <span class="hljs-string">&quot;data&quot;</span>:
+    [
+        {
+            <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;BIX&quot;</span>,
+            <span class="hljs-string">&quot;currency_symbol&quot;</span>:<span class="hljs-string">&quot;BTC&quot;</span>,
+            <span class="hljs-string">&quot;last&quot;</span>:<span class="hljs-string">&quot;0.00006604&quot;</span>,
+            <span class="hljs-string">&quot;high&quot;</span>:<span class="hljs-string">&quot;0.00006712&quot;</span>,
+            <span class="hljs-string">&quot;low&quot;</span>:<span class="hljs-string">&quot;0.00006421&quot;</span>,
+            <span class="hljs-string">&quot;change&quot;</span>:<span class="hljs-string">&quot;+0.00000121&quot;</span>,
+            <span class="hljs-string">&quot;percent&quot;</span>:<span class="hljs-string">&quot;+1.87%&quot;</span>,
+            <span class="hljs-string">&quot;vol24H&quot;</span>:<span class="hljs-string">&quot;54475636&quot;</span>,
+            <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;3571.11&quot;</span>,
+            <span class="hljs-string">&quot;last_cny&quot;</span>:<span class="hljs-string">&quot;2.91&quot;</span>,
+            <span class="hljs-string">&quot;high_cny&quot;</span>:<span class="hljs-string">&quot;2.95&quot;</span>,
+            <span class="hljs-string">&quot;low_cny&quot;</span>:<span class="hljs-string">&quot;2.83&quot;</span>,
+            <span class="hljs-string">&quot;last_usd&quot;</span>:<span class="hljs-string">&quot;0.42&quot;</span>,
+            <span class="hljs-string">&quot;high_usd&quot;</span>:<span class="hljs-string">&quot;0.43&quot;</span>,
+            <span class="hljs-string">&quot;low_usd&quot;</span>:<span class="hljs-string">&quot;0.41&quot;</span>
+        }
+    ]
+}]
+</code></pre> <h2 id="t3"><a href="#t3"class="anchor-navigation-ex-anchor"name="t3"><i class="fa fa-link"aria-hidden="true"></i></a>Subscribe Depth </h2> <ul> <li>channel: bibox<em>sub_spot</em>$pair_depth</li> </ul> <p>After buliding the connection with WebSocket API, sending the data with the following format to server to subscribe data</p> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_$pair_depth&quot;</span>
+}
+</code></pre> <table> <thead> <tr> <th>Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>pair</td> <td>true</td> <td>string</td> <td>Trading pair</td> <td></td> <td>BIX_BTC, BIX_ETH, BTC_USDT, ETH_USDT......</td> </tr> </tbody> </table> <p><strong>the example of subscribing correctly</strong></p> <p>subscribe correctly</p> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_BIX_BTC_depth&quot;</span>
+}
+</code></pre> <p>The example of subscribing success return data </p> <pre><code class="lang-js">[{
+    <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_BIX_BTC_depth&quot;</span>,
+    <span class="hljs-string">&quot;data_type&quot;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;data&quot;</span>: {
+        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;BIX_BTC&quot;</span>,
+        <span class="hljs-string">&quot;update_time&quot;</span>:<span class="hljs-number">1536648343927</span>,
+        <span class="hljs-string">&quot;asks&quot;</span>:[
+            {
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;0.0000683&quot;</span>,
+                <span class="hljs-string">&quot;volume&quot;</span>:<span class="hljs-string">&quot;1048.8046&quot;</span>
+            },
+            {
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;0.00006831&quot;</span>,
+                <span class="hljs-string">&quot;volume&quot;</span>:<span class="hljs-string">&quot;1008.2509&quot;</span>
+            },
+            ... <span class="hljs-comment">// other data</span>
+        ],
+        <span class="hljs-string">&quot;bids&quot;</span>:[
+            {
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;0.00006801&quot;</span>,
+                <span class="hljs-string">&quot;volume&quot;</span>:<span class="hljs-string">&quot;2.3472&quot;</span>
+            },
+            {
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;0.00006793&quot;</span>,
+                <span class="hljs-string">&quot;volume&quot;</span>:<span class="hljs-string">&quot;0.3458&quot;</span>
+            },
+            ... <span class="hljs-comment">// other data</span>
+        ]
+    }
+}]
+</code></pre> <p>datadescription</p> <pre><code class="lang-js"><span class="hljs-string">&quot;bids&quot;</span>: The depth list <span class="hljs-keyword">of</span> buyers
+<span class="hljs-string">&quot;asks&quot;</span>: The depth list <span class="hljs-keyword">of</span> sellers 
+{
+    <span class="hljs-string">&quot;price&quot;</span>: order price,
+    <span class="hljs-string">&quot;volume&quot;</span>: order amount
+}
+</code></pre> <p>Client will receive the all measured data as long as <strong>Depth</strong> updates, for example</p> <pre><code class="lang-js">[{
+    <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_BIX_BTC_depth&quot;</span>,
+    <span class="hljs-string">&quot;data_type&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;data&quot;</span>: {
+        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;BIX_BTC&quot;</span>,
+        <span class="hljs-string">&quot;update_time&quot;</span>:<span class="hljs-number">1536648343927</span>,
+        <span class="hljs-string">&quot;asks&quot;</span>:[
+            {
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;0.0000683&quot;</span>,
+                <span class="hljs-string">&quot;volume&quot;</span>:<span class="hljs-string">&quot;1048.8046&quot;</span>
+            },
+            {
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;0.00006831&quot;</span>,
+                <span class="hljs-string">&quot;volume&quot;</span>:<span class="hljs-string">&quot;1008.2509&quot;</span>
+            },
+            ... <span class="hljs-comment">// other data</span>
+        ],
+        <span class="hljs-string">&quot;bids&quot;</span>:[
+            {
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;0.00006801&quot;</span>,
+                <span class="hljs-string">&quot;volume&quot;</span>:<span class="hljs-string">&quot;2.3472&quot;</span>
+            },
+            {
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;0.00006793&quot;</span>,
+                <span class="hljs-string">&quot;volume&quot;</span>:<span class="hljs-string">&quot;0.3458&quot;</span>
+            },
+            ... <span class="hljs-comment">// other data</span>
+        ]
+    }
+}]
+</code></pre> <h2 id="t4"><a href="#t4"class="anchor-navigation-ex-anchor"name="t4"><i class="fa fa-link"aria-hidden="true"></i></a>Subscribe Deals </h2> <ul> <li>channel: bibox<em>sub_spot</em>$pair_deals</li> </ul> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_$pair_deals&quot;</span>
+}
+</code></pre> <table> <thead> <tr> <th>Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>pair</td> <td>true</td> <td>string</td> <td>Trading pair</td> <td></td> <td>BIX_BTC, BIX_ETH, BTC_USDT, ETH_USDT......</td> </tr> </tbody> </table> <p><strong>the example of subscribing correctly</strong></p> <p>subscribe correctly</p> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_BIX_BTC_deals&quot;</span>
+}
+</code></pre> <p>The example of subscribing success return data </p> <pre><code class="lang-js">[{
+    <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_BIX_BTC_deals&quot;</span>,
+    <span class="hljs-string">&quot;data_type&quot;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;data&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">71890943</span>,
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;BIX_BTC&quot;</span>,
+            <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;0.00006788&quot;</span>,
+            <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;9705.9732&quot;</span>,
+            <span class="hljs-string">&quot;time&quot;</span>:<span class="hljs-number">1536648308000</span>,
+            <span class="hljs-string">&quot;side&quot;</span>:<span class="hljs-number">2</span>
+        },
+        {
+            <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">71890942</span>,
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;BIX_BTC&quot;</span>,
+            <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;0.00006788&quot;</span>,
+            <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;11914.8712&quot;</span>,
+            <span class="hljs-string">&quot;time&quot;</span>:<span class="hljs-number">1536648308000</span>,
+            <span class="hljs-string">&quot;side&quot;</span>:<span class="hljs-number">2</span>
+        },
+        ... <span class="hljs-comment">// other data</span>
+    ]
+}]
+</code></pre> <p>data description</p> <pre><code class="lang-js">{
+    <span class="hljs-string">&quot;id&quot;</span>: Trading history id,
+    <span class="hljs-string">&quot;pair&quot;</span>: Trading pair,
+    <span class="hljs-string">&quot;price&quot;</span>: The average price <span class="hljs-keyword">of</span> trading,
+    <span class="hljs-string">&quot;amount&quot;</span>: trading amount,
+    <span class="hljs-string">&quot;time&quot;</span>: trading timestamp,
+    <span class="hljs-string">&quot;side&quot;</span>: Taker trading side, <span class="hljs-number">1</span>-Buy, <span class="hljs-number">2</span>-Sell
+}
+</code></pre> <p>Client will receive the incremental data as long as <strong>Deals</strong> updates, for example</p> <pre><code class="lang-js">[{
+    <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_BIX_BTC_depth&quot;</span>,
+    <span class="hljs-string">&quot;data_type&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;data&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;0.00006788&quot;</span>,
+            <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;9705.9732&quot;</span>,
+            <span class="hljs-string">&quot;time&quot;</span>:<span class="hljs-number">1536648308000</span>,
+            <span class="hljs-string">&quot;side&quot;</span>:<span class="hljs-number">2</span>
+        },
+        {
+            <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;0.00006788&quot;</span>,
+            <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;11914.8712&quot;</span>,
+            <span class="hljs-string">&quot;time&quot;</span>:<span class="hljs-number">1536648308000</span>,
+            <span class="hljs-string">&quot;side&quot;</span>:<span class="hljs-number">2</span>
+        },
+        ... <span class="hljs-comment">// other data</span>
+    ]
+}]
+</code></pre> <h2 id="t5"><a href="#t5"class="anchor-navigation-ex-anchor"name="t5"><i class="fa fa-link"aria-hidden="true"></i></a>Subscribe Ticker </h2> <ul> <li>channel: bibox<em>sub_spot</em>$pair_ticker</li> </ul> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_$pair_ticker&quot;</span>
+}
+</code></pre> <table> <thead> <tr> <th>Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>pair</td> <td>true</td> <td>string</td> <td>Trading pair</td> <td></td> <td>BIX_BTC, BIX_ETH, BTC_USDT, ETH_USDT......</td> </tr> </tbody> </table> <p><strong>the example of subscribing correctly</strong></p> <p>subscribe correctly</p> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_BIX_BTC_ticker&quot;</span>
+}
+</code></pre> <p>The example of subscribing success return data </p> <pre><code class="lang-js">[{
+    <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_BIX_BTC_ticker&quot;</span>,
+    <span class="hljs-string">&quot;data_type&quot;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;data&quot;</span>:{
+        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;BIX_BTC&quot;</span>,
+        <span class="hljs-string">&quot;last&quot;</span>:<span class="hljs-string">&quot;0.00006837&quot;</span>,
+        <span class="hljs-string">&quot;last_usd&quot;</span>:<span class="hljs-string">&quot;0.43&quot;</span>,
+        <span class="hljs-string">&quot;last_cny&quot;</span>:<span class="hljs-string">&quot;2.96&quot;</span>,
+        <span class="hljs-string">&quot;high&quot;</span>:<span class="hljs-string">&quot;0.00007401&quot;</span>,
+        <span class="hljs-string">&quot;low&quot;</span>:<span class="hljs-string">&quot;0.00006628&quot;</span>,
+        <span class="hljs-string">&quot;buy&quot;</span>:<span class="hljs-string">&quot;0.00006814&quot;</span>,
+        <span class="hljs-string">&quot;buy_amount&quot;</span>:<span class="hljs-string">&quot;2654.5376&quot;</span>,
+        <span class="hljs-string">&quot;sell&quot;</span>:<span class="hljs-string">&quot;0.00006876&quot;</span>,
+        <span class="hljs-string">&quot;sell_amount&quot;</span>:<span class="hljs-string">&quot;170.3094&quot;</span>,
+        <span class="hljs-string">&quot;vol&quot;</span>:<span class="hljs-string">&quot;48027601&quot;</span>,
+        <span class="hljs-string">&quot;percent&quot;</span>:<span class="hljs-string">&quot;-6.73%&quot;</span>,
+        <span class="hljs-string">&quot;timestamp&quot;</span>:<span class="hljs-number">1536650154258</span>,
+        <span class="hljs-string">&quot;base_last_cny&quot;</span>:<span class="hljs-string">&quot;2.96838961&quot;</span>
+    }
+}]
+</code></pre> <p>data description</p> <pre><code class="lang-js"><span class="hljs-string">&quot;data&quot;</span>:{
+   <span class="hljs-string">&quot;pair&quot;</span>: Trading pair
+   <span class="hljs-string">&quot;last&quot;</span>: the lastest price
+   <span class="hljs-string">&quot;last_cny&quot;</span>: The lastest price equivelant to CNY
+   <span class="hljs-string">&quot;last_usd&quot;</span>: The lastest price equivelant to USD
+   <span class="hljs-string">&quot;high&quot;</span>: <span class="hljs-number">24</span>h The highest price
+   <span class="hljs-string">&quot;low&quot;</span>: <span class="hljs-number">24</span>h the lowest price
+   <span class="hljs-string">&quot;buy&quot;</span>: The highest bid price
+   <span class="hljs-string">&quot;buy_amount&quot;</span>: The highest bid amount
+   <span class="hljs-string">&quot;sell&quot;</span>: The lowest ask price
+   <span class="hljs-string">&quot;sell_amount&quot;</span>: The lowest ask amount
+   <span class="hljs-string">&quot;vol&quot;</span>: <span class="hljs-number">24</span>h trading volume
+   <span class="hljs-string">&quot;percent&quot;</span>: <span class="hljs-number">24</span>h price change percentage
+   <span class="hljs-string">&quot;timestamp&quot;</span>: Timestamp
+   <span class="hljs-string">&quot;base_last_cny&quot;</span>: The lastest trading price, equivalent to CNY (remains <span class="hljs-number">8</span> decimals)
+}
+</code></pre> <p>Client will receive the all measured data as long as <strong>Ticker</strong> updates, for example</p> <pre><code class="lang-js">[{
+    <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_BIX_BTC_ticker&quot;</span>,
+    <span class="hljs-string">&quot;data_type&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;data&quot;</span>:{
+        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;BIX_BTC&quot;</span>,
+        <span class="hljs-string">&quot;last&quot;</span>:<span class="hljs-string">&quot;0.00006837&quot;</span>,
+        <span class="hljs-string">&quot;last_usd&quot;</span>:<span class="hljs-string">&quot;0.43&quot;</span>,
+        <span class="hljs-string">&quot;last_cny&quot;</span>:<span class="hljs-string">&quot;2.96&quot;</span>,
+        <span class="hljs-string">&quot;high&quot;</span>:<span class="hljs-string">&quot;0.00007401&quot;</span>,
+        <span class="hljs-string">&quot;low&quot;</span>:<span class="hljs-string">&quot;0.00006628&quot;</span>,
+        <span class="hljs-string">&quot;buy&quot;</span>:<span class="hljs-string">&quot;0.00006814&quot;</span>,
+        <span class="hljs-string">&quot;buy_amount&quot;</span>:<span class="hljs-string">&quot;2654.5376&quot;</span>,
+        <span class="hljs-string">&quot;sell&quot;</span>:<span class="hljs-string">&quot;0.00006876&quot;</span>,
+        <span class="hljs-string">&quot;sell_amount&quot;</span>:<span class="hljs-string">&quot;170.3094&quot;</span>,
+        <span class="hljs-string">&quot;vol&quot;</span>:<span class="hljs-string">&quot;48027601&quot;</span>,
+        <span class="hljs-string">&quot;percent&quot;</span>:<span class="hljs-string">&quot;-6.73%&quot;</span>,
+        <span class="hljs-string">&quot;timestamp&quot;</span>:<span class="hljs-number">1536650154258</span>,
+        <span class="hljs-string">&quot;base_last_cny&quot;</span>:<span class="hljs-string">&quot;2.96838961&quot;</span>
+    }
+}]
+</code></pre> <h2 id="t6"><a href="#t6"class="anchor-navigation-ex-anchor"name="t6"><i class="fa fa-link"aria-hidden="true"></i></a>Subscribe Login </h2> <ul> <li>channel: bibox_sub_spot_ALL_ALL_login</li> </ul> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+  <span class="hljs-string">&quot;apikey&quot;</span>: <span class="hljs-string">&quot;thisisyourapikey&quot;</span>,
+  <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;thisissigneddata&quot;</span>
+}
+</code></pre> <table> <thead> <tr> <th>Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>apikey</td> <td>true</td> <td>string</td> <td>Your apikey</td> <td></td> <td></td> </tr> <tr> <td>sign</td> <td>true</td> <td>string</td> <td>Use your apisecret to sign the whole request data</td> <td></td> </tr> </tbody> </table> <p>Note: Subscription Login channel will push user-related messages, including: assets, pending orders and history of orders</p> <h3 id="&#x7B7E;&#x540D;&#x6B65;&#x9AA4;"><a href="#&#x7B7E;&#x540D;&#x6B65;&#x9AA4;"class="anchor-navigation-ex-anchor"name="&#x7B7E;&#x540D;&#x6B65;&#x9AA4;"><i class="fa fa-link"aria-hidden="true"></i></a>Sign Steps </h3> <ul> <li>1.Before sign</li> </ul> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+  <span class="hljs-string">&quot;apikey&quot;</span>: <span class="hljs-string">&quot;thisisyourapikey&quot;</span>
+}
+</code></pre> <ul> <li>2.<strong>Sort in ascending</strong> with the key of Object</li> </ul> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;apikey&quot;</span>: <span class="hljs-string">&quot;thisisyourapikey&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>
+}
+</code></pre> <ul> <li>3.Format the data and sign</li> </ul> <pre><code class="lang-js"><span class="hljs-keyword">let</span> data = {
+             <span class="hljs-string">&quot;apikey&quot;</span>: <span class="hljs-string">&quot;thisisyourapikey&quot;</span>,
+             <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+             <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>
+           };
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;thisisyourapisecret&quot;</span>;
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(<span class="hljs-built_in">JSON</span>.stringify(data), secret).toString(); <span class="hljs-comment">// &#x7B7E;&#x540D;&#x7ED3;&#x679C; thisissigneddata</span>
+</code></pre> <ul> <li>4.Append the signed data to the request params</li> </ul> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+  <span class="hljs-string">&quot;apikey&quot;</span>: <span class="hljs-string">&quot;thisisyourapikey&quot;</span>,
+  <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;thisissigneddata&quot;</span>
+}
+</code></pre> <h3 id="&#x5B8C;&#x6574;&#x7B7E;&#x540D;&#x4F8B;&#x5B50;"><a href="#&#x5B8C;&#x6574;&#x7B7E;&#x540D;&#x4F8B;&#x5B50;"class="anchor-navigation-ex-anchor"name="&#x5B8C;&#x6574;&#x7B7E;&#x540D;&#x4F8B;&#x5B50;"><i class="fa fa-link"aria-hidden="true"></i></a>the example of completed signature </h3> <p>nodejs implements</p> <pre><code class="lang-js">
+<span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getSign</span>(<span class="hljs-params">data</span>) </span>{
+    <span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;your apisecret&quot;</span>;
+    <span class="hljs-keyword">let</span> sdic = <span class="hljs-built_in">Object</span>.keys(data).sort();<span class="hljs-comment">//sort in ascending</span>
+    <span class="hljs-keyword">let</span> dataTmp = {};
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> ki <span class="hljs-keyword">in</span> sdic){
+        dataTmp[sdic[ki]] = data[sdic[ki]];
+    }
+    <span class="hljs-keyword">return</span> CryptoJS.HmacMD5(<span class="hljs-built_in">JSON</span>.stringify(dataTmp), secret).toString();
+}
+
+<span class="hljs-keyword">let</span> data = {
+   <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+   <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&apos;bibox_sub_spot_ALL_ALL_login&apos;</span>,
+   <span class="hljs-string">&quot;apikey&quot;</span>: <span class="hljs-string">&quot;your apikey&quot;</span>
+};
+<span class="hljs-keyword">let</span> sign = getSign(data);<span class="hljs-comment">//return the signed data</span>
+data.sign = sign;
+</code></pre> <h3 id="the-example-of-subscribing-correctly"><a href="#the-example-of-subscribing-correctly"class="anchor-navigation-ex-anchor"name="the-example-of-subscribing-correctly"><i class="fa fa-link"aria-hidden="true"></i></a>the example of subscribing correctly</h3> <h4 id="&#x6B63;&#x786E;&#x8BA2;&#x9605;"><a href="#&#x6B63;&#x786E;&#x8BA2;&#x9605;"class="anchor-navigation-ex-anchor"name="&#x6B63;&#x786E;&#x8BA2;&#x9605;"><i class="fa fa-link"aria-hidden="true"></i></a>subscribe correctly </h4> <pre><code class="lang-js">{
+  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;addChannel&quot;</span>,
+  <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+  <span class="hljs-string">&quot;apikey&quot;</span>: <span class="hljs-string">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>,
+  <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
+}
+</code></pre> <h4 id="&#x8BA2;&#x9605;&#x6210;&#x529F;&#x8FD4;&#x56DE;"><a href="#&#x8BA2;&#x9605;&#x6210;&#x529F;&#x8FD4;&#x56DE;"class="anchor-navigation-ex-anchor"name="&#x8BA2;&#x9605;&#x6210;&#x529F;&#x8FD4;&#x56DE;"><i class="fa fa-link"aria-hidden="true"></i></a>the successful response </h4> <pre><code class="lang-js">[{
+    <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+    <span class="hljs-string">&quot;data_type&quot;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;data&quot;</span>:{ result: <span class="hljs-string">&apos;&#x8BA2;&#x9605;&#x6210;&#x529F;&apos;</span> }
+}]
+</code></pre> <p>Client will receive the incremental data as long as <strong>the user-related data(assets, pending orders and history of orders)</strong> updates, for example</p> <h4 id="&#x73B0;&#x8D27;&#x8D26;&#x6237;&#x8D44;&#x4EA7;"><a href="#&#x73B0;&#x8D27;&#x8D26;&#x6237;&#x8D44;&#x4EA7;"class="anchor-navigation-ex-anchor"name="&#x73B0;&#x8D27;&#x8D26;&#x6237;&#x8D44;&#x4EA7;"><i class="fa fa-link"aria-hidden="true"></i></a>Normal account assets </h4> <ul> <li>credit --&gt; normal</li> </ul> <pre><code class="lang-js">[{
+     <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+     <span class="hljs-string">&quot;binary&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,                              <span class="hljs-comment">//push compressed data or not, 0-no, 1-yes</span>
+     <span class="hljs-string">&quot;data_type&quot;</span>:<span class="hljs-number">1</span>,
+     <span class="hljs-string">&quot;data&quot;</span>:{
+         <span class="hljs-string">&quot;assets&quot;</span>:{                             <span class="hljs-comment">//Type of Assets</span>
+             <span class="hljs-string">&quot;normal&quot;</span>:{                         <span class="hljs-comment">//Normal assets</span>
+                 <span class="hljs-string">&quot;BIX&quot;</span>:{
+                     <span class="hljs-string">&quot;balance&quot;</span>:<span class="hljs-string">&quot;497.59601765&quot;</span>,  <span class="hljs-comment">//Available</span>
+                     <span class="hljs-string">&quot;freeze&quot;</span>:<span class="hljs-string">&quot;0.00000000&quot;</span>      <span class="hljs-comment">//Freeze   </span>
+                 },
+                 <span class="hljs-string">&quot;USDT&quot;</span>:{
+                     <span class="hljs-string">&quot;balance&quot;</span>:<span class="hljs-string">&quot;20.52027574&quot;</span>,
+                     <span class="hljs-string">&quot;freeze&quot;</span>:<span class="hljs-string">&quot;22.12000000&quot;</span>
+                 }
+             }
+         }
+     }
+ }]
+</code></pre> <h4 id="&#x4FE1;&#x7528;&#x8D26;&#x6237;&#x8D44;&#x4EA7;"><a href="#&#x4FE1;&#x7528;&#x8D26;&#x6237;&#x8D44;&#x4EA7;"class="anchor-navigation-ex-anchor"name="&#x4FE1;&#x7528;&#x8D26;&#x6237;&#x8D44;&#x4EA7;"><i class="fa fa-link"aria-hidden="true"></i></a>Credit account assets </h4> <ul> <li>assets --&gt; credit</li> </ul> <pre><code class="lang-js">[{
+     <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+     <span class="hljs-string">&quot;binary&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,
+     <span class="hljs-string">&quot;data_type&quot;</span>:<span class="hljs-number">1</span>,
+     <span class="hljs-string">&quot;data&quot;</span>:{
+         <span class="hljs-string">&quot;assets&quot;</span>:{                                 <span class="hljs-comment">//Type of Assets</span>
+             <span class="hljs-string">&quot;credit&quot;</span>:{                             <span class="hljs-comment">//Credit assets</span>
+                 <span class="hljs-string">&quot;BIX_USDT&quot;</span>:{                       <span class="hljs-comment">//Pair</span>
+                     <span class="hljs-string">&quot;BIX&quot;</span>:{
+                         <span class="hljs-string">&quot;balance&quot;</span>:<span class="hljs-string">&quot;681.74441804&quot;</span>,  <span class="hljs-comment">//Available</span>
+                         <span class="hljs-string">&quot;freeze&quot;</span>:<span class="hljs-string">&quot;0.00000000&quot;</span>      <span class="hljs-comment">//Freeze</span>
+                     },
+                     <span class="hljs-string">&quot;USDT&quot;</span>:{
+                         <span class="hljs-string">&quot;balance&quot;</span>:<span class="hljs-string">&quot;0.21698199&quot;</span>,
+                         <span class="hljs-string">&quot;freeze&quot;</span>:<span class="hljs-string">&quot;0.00000000&quot;</span>
+                     }
+                 },
+                 <span class="hljs-string">&quot;BTC_USDT&quot;</span>:{
+                     <span class="hljs-string">&quot;BTC&quot;</span>:{
+                         <span class="hljs-string">&quot;balance&quot;</span>:<span class="hljs-string">&quot;100&quot;</span>,
+                         <span class="hljs-string">&quot;freeze&quot;</span>:<span class="hljs-string">&quot;0.00000000&quot;</span>
+                     },
+                     <span class="hljs-string">&quot;USDT&quot;</span>:{
+                         <span class="hljs-string">&quot;balance&quot;</span>:<span class="hljs-string">&quot;10&quot;</span>,
+                         <span class="hljs-string">&quot;freeze&quot;</span>:<span class="hljs-string">&quot;0.00000000&quot;</span>
+                     }
+                 }
+             }
+         }
+     }
+ }]
+</code></pre> <p>Note: Credit account assets are distinguished by Pair. The same currencies under different pairs (such as the USDT in BIX_USDT and BTC_USDT) are not related to each other.</p> <h4 id="&#x73B0;&#x8D27;&#x59D4;&#x6258;&#x5355;"><a href="#&#x73B0;&#x8D27;&#x59D4;&#x6258;&#x5355;"class="anchor-navigation-ex-anchor"name="&#x73B0;&#x8D27;&#x59D4;&#x6258;&#x5355;"><i class="fa fa-link"aria-hidden="true"></i></a>Spot Pending orders </h4> <ul> <li>orderpending</li> </ul> <pre><code class="lang-js">[{
+     <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+     <span class="hljs-string">&quot;binary&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,
+     <span class="hljs-string">&quot;data_type&quot;</span>:<span class="hljs-number">1</span>,
+     <span class="hljs-string">&quot;data&quot;</span>:{
+         <span class="hljs-string">&quot;orderpending&quot;</span>:{                           <span class="hljs-comment">//Type of Pending orders</span>
+             <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">159</span>,
+             <span class="hljs-string">&quot;createdAt&quot;</span>: <span class="hljs-number">1512756997000</span>,
+             <span class="hljs-string">&quot;account_type&quot;</span>:<span class="hljs-number">0</span>,  
+             <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;LTC&quot;</span>,                    <span class="hljs-comment">//Trading Token</span>
+             <span class="hljs-string">&quot;currency_symbol&quot;</span>:<span class="hljs-string">&quot;BTC&quot;</span>,                <span class="hljs-comment">//Pricing Token</span>
+             <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">2</span>,                         <span class="hljs-comment">//Trading side 1-Buy, 2-Sell</span>
+             <span class="hljs-string">&quot;order_type&quot;</span>:<span class="hljs-number">2</span>,                         <span class="hljs-comment">//2-limit order</span>
+             <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;0.00900000&quot;</span>,                   <span class="hljs-comment">//order price</span>
+             <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;1.00000000&quot;</span>,                  <span class="hljs-comment">//order amount</span>
+             <span class="hljs-string">&quot;money&quot;</span>:<span class="hljs-string">&quot;0.00900000&quot;</span>,                   <span class="hljs-comment">//currency amount (price * amount)</span>
+             <span class="hljs-string">&quot;deal_amount&quot;</span>:<span class="hljs-string">&quot;0.00000000&quot;</span>,             <span class="hljs-comment">//deal amount</span>
+             <span class="hljs-string">&quot;deal_percent&quot;</span>:<span class="hljs-string">&quot;0.00%&quot;</span>,                 <span class="hljs-comment">//deal percentage</span>
+             <span class="hljs-string">&quot;unexecuted&quot;</span>:<span class="hljs-string">&quot;0.00000000&quot;</span>,              <span class="hljs-comment">//unexecuted amount</span>
+             <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-number">1</span>                              <span class="hljs-comment">//Status, 1-to be dealt, 2-dealt partly, 3-dealt totally, 4- cancelled partly, 5-cancelled totally, 6-to be cancelled</span>
+         }
+     }
+ }]
+</code></pre> <h4 id="&#x73B0;&#x8D27;&#x6210;&#x4EA4;&#x5386;&#x53F2;"><a href="#&#x73B0;&#x8D27;&#x6210;&#x4EA4;&#x5386;&#x53F2;"class="anchor-navigation-ex-anchor"name="&#x73B0;&#x8D27;&#x6210;&#x4EA4;&#x5386;&#x53F2;"><i class="fa fa-link"aria-hidden="true"></i></a>History of spot orders </h4> <ul> <li>&#x5173;&#x952E;&#x5B57; history</li> </ul> <pre><code class="lang-js">[{
+     <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+     <span class="hljs-string">&quot;binary&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,
+     <span class="hljs-string">&quot;data_type&quot;</span>:<span class="hljs-number">1</span>,
+     <span class="hljs-string">&quot;data&quot;</span>:{
+         <span class="hljs-string">&quot;history&quot;</span>:{                                    <span class="hljs-comment">//Type of History orders</span>
+             <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-string">&quot;123432223346763&quot;</span>,
+             <span class="hljs-string">&quot;createdAt&quot;</span>: <span class="hljs-number">1512756997000</span>,
+             <span class="hljs-string">&quot;account_type&quot;</span>:<span class="hljs-number">0</span>,
+             <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;LTC&quot;</span>,
+             <span class="hljs-string">&quot;currency_symbol&quot;</span>:<span class="hljs-string">&quot;BTC&quot;</span>, 
+             <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">2</span>, 
+             <span class="hljs-string">&quot;order_type&quot;</span>:<span class="hljs-number">2</span>,
+             <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;0.00886500&quot;</span>, 
+             <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;1.00000000&quot;</span>,
+             <span class="hljs-string">&quot;money&quot;</span>:<span class="hljs-string">&quot;0.00886500&quot;</span>,
+             <span class="hljs-string">&quot;relay_id&quot;</span>:<span class="hljs-string">&quot;11221615825364891&quot;</span>,            <span class="hljs-comment">// Order id</span>
+             <span class="hljs-string">&quot;fee&quot;</span>:<span class="hljs-number">0</span>
+         }
+     }
+}]
+</code></pre> <h2 id="t7"><a href="#t7"class="anchor-navigation-ex-anchor"name="t7"><i class="fa fa-link"aria-hidden="true"></i></a>Subscribe contract Kline </h2> <ul> <li>channel: bibox<em>sub_spot</em>$pair<em>kline</em>$period (&#x4F8B;&#x5982; bibox_sub_spot_4BTC_USDT_kline_1min)</li> <li>referance <a href="ws_api_sub.html#t1">Subscribe Kline</a></li> </ul> <blockquote> <p>pair parameter of contract: BTCUSDT perpetual contract = 4BTC_USDT, ETHUSDT perpetual contract = 4ETH_USDT, by parity of reasoning</p> </blockquote> <p>data description</p> <pre><code class="lang-js">  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;time&quot;</span>: the starting time <span class="hljs-keyword">of</span> a cycle <span class="hljs-keyword">of</span> the k-line,
+    <span class="hljs-string">&quot;count&quot;</span>: transanction completed,
+    <span class="hljs-string">&quot;open&quot;</span>: opening price,
+    <span class="hljs-string">&quot;high&quot;</span>: the highest price,
+    <span class="hljs-string">&quot;low&quot;</span>: the lowest price,
+    <span class="hljs-string">&quot;close&quot;</span>: closing price
+    <span class="hljs-string">&quot;vol&quot;</span>: trading volume (Cont)
+  }
+</code></pre> <h2 id="t8"><a href="#t8"class="anchor-navigation-ex-anchor"name="t8"><i class="fa fa-link"aria-hidden="true"></i></a>Subscribe contract Market </h2> <ul> <li>channel: bibox_sub_spot_ALL_ALL_market </li> <li>referance <a href="ws_api_sub.html#t2">Subscribe Market</a></li> </ul> <p>data description</p> <pre><code class="lang-js"> {
+     <span class="hljs-string">&quot;id&quot;</span>: trading pair id
+     <span class="hljs-string">&quot;coin_symbol&quot;</span>: trading token, <span class="hljs-keyword">for</span> example: <span class="hljs-number">4</span>BTC, <span class="hljs-number">4</span>ETH
+     <span class="hljs-string">&quot;currency_symbol&quot;</span>: pricing token
+     <span class="hljs-string">&quot;last&quot;</span>: the latest price <span class="hljs-keyword">in</span> <span class="hljs-number">24</span>h
+     <span class="hljs-string">&quot;high&quot;</span>: the highest price <span class="hljs-keyword">in</span> <span class="hljs-number">24</span>h
+     <span class="hljs-string">&quot;low&quot;</span>: the lowest price <span class="hljs-keyword">in</span> <span class="hljs-number">24</span>h
+     <span class="hljs-string">&quot;change&quot;</span>: change <span class="hljs-keyword">in</span> <span class="hljs-number">24</span>h
+     <span class="hljs-string">&quot;percent&quot;</span>: change percent <span class="hljs-keyword">in</span> <span class="hljs-number">24</span>h
+     <span class="hljs-string">&quot;vol24H&quot;</span>: trading volume <span class="hljs-keyword">in</span> <span class="hljs-number">24</span>h (Cont)
+     <span class="hljs-string">&quot;amount&quot;</span>: trading amount <span class="hljs-keyword">in</span> <span class="hljs-number">24</span>h (USDT)
+     <span class="hljs-string">&quot;last_cny&quot;</span>: the latest price <span class="hljs-keyword">in</span> CNY
+     <span class="hljs-string">&quot;high_cny&quot;</span>: the highest price <span class="hljs-keyword">in</span> CNY
+     <span class="hljs-string">&quot;low_cny&quot;</span>: the lowest price <span class="hljs-keyword">in</span> CNY
+     <span class="hljs-string">&quot;last_usd&quot;</span>: the latest price <span class="hljs-keyword">in</span> USD
+     <span class="hljs-string">&quot;high_usd&quot;</span>: the highest price <span class="hljs-keyword">in</span> USD
+     <span class="hljs-string">&quot;low_usd&quot;</span>: the lowest price <span class="hljs-keyword">in</span> USD
+ }
+</code></pre> <h2 id="t9"><a href="#t9"class="anchor-navigation-ex-anchor"name="t9"><i class="fa fa-link"aria-hidden="true"></i></a>Subscribe contract Depth </h2> <ul> <li>channel: bibox<em>sub_spot</em>$pair_depth (example:bibox_sub_spot_4BTC_USDT_depth)</li> <li>referance <a href="ws_api_sub.html#t3">Subscribe Depth</a></li> </ul> <blockquote> <p> pair parameter of contract: BTCUSDT perpetual contract = 4BTC_USDT, ETHUSDT perpetual contract = 4ETH_USDT, by parity of reasoning</p> </blockquote> <p>data description</p> <pre><code class="lang-js">&quot;bids&quot;: buyer&apos;s depth list
+&quot;asks&quot;: seller&apos;s depth list
+{
+    &quot;price&quot;: limit order price
+    &quot;volume&quot;: limit order size (Cont)
+}
+</code></pre> <h2 id="t10"><a href="#t10"class="anchor-navigation-ex-anchor"name="t10"><i class="fa fa-link"aria-hidden="true"></i></a>Subscribe contract Deals </h2> <ul> <li>channel: bibox<em>sub_spot</em>$pair_deals (example:bibox_sub_spot_4BTC_USDT_deals)</li> <li>referance <a href="ws_api_sub.html#t4">Subscribe Deals</a></li> </ul> <blockquote> <p> pair parameter of contract: BTCUSDT perpetual contract = 4BTC_USDT, ETHUSDT perpetual contract = 4ETH_USDT, by parity of reasoning</p> </blockquote> <p>data description</p> <pre><code class="lang-js">{
+    <span class="hljs-string">&quot;id&quot;</span>: transanction history id
+    <span class="hljs-string">&quot;pair&quot;</span>: trading pair, <span class="hljs-number">4</span>BTC_USDT&#x3001;<span class="hljs-number">4</span>ETH_USDT...
+    <span class="hljs-string">&quot;price&quot;</span>: average transaction price
+    <span class="hljs-string">&quot;amount&quot;</span>: deal amount,
+    <span class="hljs-string">&quot;time&quot;</span>: transaction time
+    <span class="hljs-string">&quot;side&quot;</span>: transaction side, <span class="hljs-number">1</span>-open long, <span class="hljs-number">2</span>-open short
+}
+</code></pre> <h2 id="t11"><a href="#t11"class="anchor-navigation-ex-anchor"name="t11"><i class="fa fa-link"aria-hidden="true"></i></a>Subscribe contract Ticker </h2> <ul> <li>bibox<em>sub_spot</em>$pair_ticker (example:bibox_sub_spot_4BTC_USDT_ticker)</li> <li>referance <a href="ws_api_sub.html#t5">Subscribe Ticker</a></li> </ul> <blockquote> <p> pair parameter of contract: BTCUSDT perpetual contract = 4BTC_USDT, ETHUSDT perpetual contract = 4ETH_USDT, by parity of reasoning</p> </blockquote> <p>data description</p> <pre><code class="lang-js"><span class="hljs-string">&quot;data&quot;</span>:{
+   <span class="hljs-string">&quot;pair&quot;</span>: trading pair
+   <span class="hljs-string">&quot;last&quot;</span>: the latest transaction price
+   <span class="hljs-string">&quot;last_cny&quot;</span>: the latest transaction price <span class="hljs-keyword">in</span> CNY
+   <span class="hljs-string">&quot;last_usd&quot;</span>: the latest transaction price <span class="hljs-keyword">in</span> USD
+   <span class="hljs-string">&quot;high&quot;</span>: the highest price <span class="hljs-keyword">in</span> <span class="hljs-number">24</span>h
+   <span class="hljs-string">&quot;low&quot;</span>: the lowest price <span class="hljs-keyword">in</span> <span class="hljs-number">24</span>h
+   <span class="hljs-string">&quot;buy&quot;</span>: the latest buy<span class="hljs-number">-1</span> price
+   <span class="hljs-string">&quot;buy_amount&quot;</span>: buy<span class="hljs-number">-1</span> amount (Cont)
+   <span class="hljs-string">&quot;sell&quot;</span>: the latest sell<span class="hljs-number">-1</span> price
+   <span class="hljs-string">&quot;sell_amount&quot;</span>: sell<span class="hljs-number">-1</span> amount (Cont)
+   <span class="hljs-string">&quot;vol&quot;</span>: transaction amount <span class="hljs-keyword">in</span> <span class="hljs-number">24</span>h (Cont)
+   <span class="hljs-string">&quot;percent&quot;</span>: change percent <span class="hljs-keyword">in</span> <span class="hljs-number">24</span>h
+   <span class="hljs-string">&quot;timestamp&quot;</span>: timestamp
+   <span class="hljs-string">&quot;base_last_cny&quot;</span>: the latest transaction price <span class="hljs-keyword">in</span> CNY (remaining <span class="hljs-number">8</span> decimal places)
+}
+</code></pre> <h2 id="t12"><a href="#t12"class="anchor-navigation-ex-anchor"name="t12"><i class="fa fa-link"aria-hidden="true"></i></a>Subscribe contract Login </h2> <ul> <li>bibox_sub_spot_ALL_ALL_login</li> <li>referance <a href="ws_api_sub.html#t6">Subscribe Login</a></li> </ul> <h3 id="the-example-of-dealing-returning-data"><a href="#the-example-of-dealing-returning-data"class="anchor-navigation-ex-anchor"name="the-example-of-dealing-returning-data"><i class="fa fa-link"aria-hidden="true"></i></a>The example of dealing returning data</h3> <h4 id="&#x5408;&#x7EA6;&#x8D44;&#x4EA7;"><a href="#&#x5408;&#x7EA6;&#x8D44;&#x4EA7;"class="anchor-navigation-ex-anchor"name="&#x5408;&#x7EA6;&#x8D44;&#x4EA7;"><i class="fa fa-link"aria-hidden="true"></i></a>contract assets </h4> <ul> <li>contract_assets</li> </ul> <pre><code class="lang-js">[
+    {
+        <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+        <span class="hljs-string">&quot;binary&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,
+        <span class="hljs-string">&quot;data_type&quot;</span>:<span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;data&quot;</span>:{
+            <span class="hljs-string">&quot;contract_assets&quot;</span>:{
+                <span class="hljs-string">&quot;user_id&quot;</span>:<span class="hljs-number">10101010</span>,
+                <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
+                <span class="hljs-string">&quot;balance&quot;</span>:<span class="hljs-string">&quot;99.1823&quot;</span>, <span class="hljs-comment">// available balance</span>
+                <span class="hljs-string">&quot;freeze&quot;</span>:<span class="hljs-string">&quot;0.7899&quot;</span>, <span class="hljs-comment">// frozen amount</span>
+                <span class="hljs-string">&quot;profit&quot;</span>:<span class="hljs-string">&quot;-3.6816&quot;</span>,
+                <span class="hljs-string">&quot;margin&quot;</span>:<span class="hljs-string">&quot;0.7899&quot;</span>, <span class="hljs-comment">// frozen margin </span>
+                <span class="hljs-string">&quot;imargin&quot;</span>:<span class="hljs-string">&quot;0.0000&quot;</span> <span class="hljs-comment">// frozen limit order amount</span>
+            }
+        }
+    }
+]
+</code></pre> <h4 id="&#x5408;&#x7EA6;&#x6301;&#x4ED3;"><a href="#&#x5408;&#x7EA6;&#x6301;&#x4ED3;"class="anchor-navigation-ex-anchor"name="&#x5408;&#x7EA6;&#x6301;&#x4ED3;"><i class="fa fa-link"aria-hidden="true"></i></a>contract position contract_order </h4> <ul> <li>contract_order</li> </ul> <pre><code class="lang-js">[
+    {
+        <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+        <span class="hljs-string">&quot;binary&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,
+        <span class="hljs-string">&quot;data_type&quot;</span>:<span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;data&quot;</span>:{
+            <span class="hljs-string">&quot;contract_order&quot;</span>:{
+                <span class="hljs-string">&quot;user_id&quot;</span>:<span class="hljs-number">10101010</span>,
+                <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
+                <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>, <span class="hljs-comment">// contract symbol</span>
+                <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">2</span>, <span class="hljs-comment">// position side, 1long, 2short</span>
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;3949.7850&quot;</span>, <span class="hljs-comment">// average open position price</span>
+                <span class="hljs-string">&quot;price_up&quot;</span>:<span class="hljs-string">&quot;4009.0200&quot;</span>, <span class="hljs-comment">// average limit order price in long position</span>
+                <span class="hljs-string">&quot;price_down&quot;</span>:<span class="hljs-string">&quot;3946.0300&quot;</span>, <span class="hljs-comment">// average limit order price in short position</span>
+                <span class="hljs-string">&quot;fee_rate&quot;</span>:<span class="hljs-string">&quot;0.0000&quot;</span>,
+                <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">2</span>, <span class="hljs-comment">// position size (Cont)</span>
+                <span class="hljs-string">&quot;margin&quot;</span>:<span class="hljs-string">&quot;1.5799&quot;</span>, <span class="hljs-comment">// margin</span>
+                <span class="hljs-string">&quot;imargin&quot;</span>:<span class="hljs-string">&quot;0.0000&quot;</span>, <span class="hljs-comment">// limit order amount</span>
+                <span class="hljs-string">&quot;icontract_up&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// uncompleted Cont of limit order in long position</span>
+                <span class="hljs-string">&quot;icontract_down&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">// uncompleted Cont of limit order in short position </span>
+                <span class="hljs-string">&quot;leverage&quot;</span>:<span class="hljs-string">&quot;50&quot;</span>, <span class="hljs-comment">// leverage, o represents Cross margin</span>
+                <span class="hljs-string">&quot;price_force&quot;</span>:<span class="hljs-string">&quot;4009.0318&quot;</span>, <span class="hljs-comment">// forced liquidation price</span>
+                <span class="hljs-string">&quot;price_alert&quot;</span>:<span class="hljs-string">&quot;3989.2829&quot;</span>, <span class="hljs-comment">// forced liquidation alart price </span>
+                <span class="hljs-string">&quot;profit&quot;</span>:<span class="hljs-string">&quot;-3.5492&quot;</span> 
+            }
+        }
+    }
+]
+</code></pre> <h4 id="&#x5408;&#x7EA6;&#x59D4;&#x6258;&#x5355;"><a href="#&#x5408;&#x7EA6;&#x59D4;&#x6258;&#x5355;"class="anchor-navigation-ex-anchor"name="&#x5408;&#x7EA6;&#x59D4;&#x6258;&#x5355;"><i class="fa fa-link"aria-hidden="true"></i></a>contract order pending </h4> <ul> <li>contract_pending</li> </ul> <pre><code class="lang-js">[
+    {
+        <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+        <span class="hljs-string">&quot;binary&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,
+        <span class="hljs-string">&quot;data_type&quot;</span>:<span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;data&quot;</span>:{
+            <span class="hljs-string">&quot;contract_pending&quot;</span>:{
+                <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-string">&quot;628754&quot;</span>, <span class="hljs-comment">// order number</span>
+                <span class="hljs-string">&quot;user_id&quot;</span>:<span class="hljs-number">10101010</span>,
+                <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
+                <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>, <span class="hljs-comment">// contract symbol</span>
+                <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// 1long, 2short</span>
+                <span class="hljs-string">&quot;order_type&quot;</span>:<span class="hljs-number">1</span>,
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;4009.0200&quot;</span>, <span class="hljs-comment">// order price</span>
+                <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// order size</span>
+                <span class="hljs-string">&quot;fee_rate_maker&quot;</span>:<span class="hljs-string">&quot;0.0000&quot;</span>,
+                <span class="hljs-string">&quot;fee_rate_taker&quot;</span>:<span class="hljs-string">&quot;0.0000&quot;</span>,
+                <span class="hljs-string">&quot;order_from&quot;</span>:<span class="hljs-number">1</span>,
+                <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-number">3</span>, <span class="hljs-comment">// 0&#xFF0C;1:Uncompleted  2. Partly completed 3. Above: Completed</span>
+                <span class="hljs-string">&quot;price_deal&quot;</span>:<span class="hljs-string">&quot;3952.5600&quot;</span>, <span class="hljs-comment">// average transaction price</span>
+                <span class="hljs-string">&quot;contract_deal&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// completed Cont</span>
+                <span class="hljs-string">&quot;deal_count&quot;</span>:<span class="hljs-number">1</span>,
+                <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-number">1550671734000</span>, <span class="hljs-comment">// order time</span>
+                <span class="hljs-string">&quot;updatedAt&quot;</span>:<span class="hljs-number">1550671734000</span>
+            }
+        }
+    }
+]
+</code></pre> <h4 id="&#x6210;&#x4EA4;&#x8BB0;&#x5F55;"><a href="#&#x6210;&#x4EA4;&#x8BB0;&#x5F55;"class="anchor-navigation-ex-anchor"name="&#x6210;&#x4EA4;&#x8BB0;&#x5F55;"><i class="fa fa-link"aria-hidden="true"></i></a>transaction records </h4> <ul> <li>contract_detail</li> </ul> <pre><code class="lang-js">[
+    {
+        <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+        <span class="hljs-string">&quot;binary&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,
+        <span class="hljs-string">&quot;data_type&quot;</span>:<span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;data&quot;</span>:{
+            <span class="hljs-string">&quot;contract_detail&quot;</span>:{
+                <span class="hljs-string">&quot;order_id&quot;</span>:<span class="hljs-string">&quot;628754&quot;</span>, <span class="hljs-comment">// order id</span>
+                <span class="hljs-string">&quot;user_id&quot;</span>:<span class="hljs-number">10101010</span>,
+                <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
+                <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>, <span class="hljs-comment">// contract symbol</span>
+                <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// 1long, 2short</span>
+                <span class="hljs-string">&quot;order_type&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// 1market price, 2limit price</span>
+                <span class="hljs-string">&quot;order_from&quot;</span>:<span class="hljs-number">1</span>,
+                <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// deal number </span>
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;4009.0200&quot;</span>, <span class="hljs-comment">// open position price </span>
+                <span class="hljs-string">&quot;price_deal&quot;</span>:<span class="hljs-string">&quot;3952.5600&quot;</span>, <span class="hljs-comment">// transaction price</span>
+                <span class="hljs-string">&quot;fee&quot;</span>:<span class="hljs-string">&quot;0.0000&quot;</span>, <span class="hljs-comment">// transaction fee</span>
+                <span class="hljs-string">&quot;is_maker&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">// maker or not</span>
+                <span class="hljs-string">&quot;is_cancel&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">// canceled order or not</span>
+                <span class="hljs-string">&quot;is_persist&quot;</span>:<span class="hljs-number">0</span>,
+                <span class="hljs-string">&quot;force_sub&quot;</span>:<span class="hljs-number">0</span>,
+                <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-number">1550671735000</span>, <span class="hljs-comment">// generation time</span>
+                <span class="hljs-string">&quot;updatedAt&quot;</span>:<span class="hljs-number">1550671735000</span>
+            }
+        }
+    }
+]
+</code></pre> <h4 id="&#x4ED3;&#x4F4D;&#x53D8;&#x5316;&#x8BB0;&#x5F55;"><a href="#&#x4ED3;&#x4F4D;&#x53D8;&#x5316;&#x8BB0;&#x5F55;"class="anchor-navigation-ex-anchor"name="&#x4ED3;&#x4F4D;&#x53D8;&#x5316;&#x8BB0;&#x5F55;"><i class="fa fa-link"aria-hidden="true"></i></a>position change records </h4> <ul> <li>contract_deal_log</li> </ul> <pre><code class="lang-js">{
+    <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_login&quot;</span>,
+    <span class="hljs-string">&quot;binary&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,
+    <span class="hljs-string">&quot;data_type&quot;</span>:<span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;data&quot;</span>:{
+        <span class="hljs-string">&quot;contract_deal_log&quot;</span>:{
+            <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-string">&quot;1125899906842966183&quot;</span>, 
+            <span class="hljs-string">&quot;user_id&quot;</span>:<span class="hljs-number">10040000</span>,
+            <span class="hljs-string">&quot;type&quot;</span>:<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-comment">// 1 open orders&#xFF0C;2 close orders&#xFF0C;3 liquidation&#xFF0C;4 ADL</span>
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4ETH_USDT&quot;</span>,
+            <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
+            <span class="hljs-string">&quot;price_open&quot;</span>:<span class="hljs-string">&quot;182.2091272149&quot;</span>, <span class="hljs-comment">// position open price</span>
+            <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;181.1900&quot;</span>, <span class="hljs-comment">// order open price</span>
+            <span class="hljs-string">&quot;price_deal&quot;</span>:<span class="hljs-string">&quot;181.1900&quot;</span>, <span class="hljs-comment">// order deal price</span>
+            <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-comment">// deal amount, maybe &lt; 0</span>
+            <span class="hljs-string">&quot;profit&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">// profit</span>
+            <span class="hljs-string">&quot;fee&quot;</span>:<span class="hljs-string">&quot;0.0011&quot;</span>, <span class="hljs-comment">// fee</span>
+            <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// 1long, 2short</span>
+            <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-number">1572855008209</span>,
+            <span class="hljs-string">&quot;updatedAt&quot;</span>:<span class="hljs-number">1572855008209</span>
+        }
+    }
+}
+</code></pre> <h2 id="&#x8BA2;&#x9605;&#x6307;&#x6570;"><a href="#&#x8BA2;&#x9605;&#x6307;&#x6570;"class="anchor-navigation-ex-anchor"name="&#x8BA2;&#x9605;&#x6307;&#x6570;"><i class="fa fa-link"aria-hidden="true"></i></a>Subscribe indexMarket </h2> <ul> <li>channel: bibox_sub_spot_ALL_ALL_indexMarket</li> </ul> <p>After buliding the connection with WebSocket API, sending the data with the following format to server to subscribe data </p> <pre><code class="lang-js">{
+    <span class="hljs-string">&quot;event&quot;</span>:<span class="hljs-string">&quot;addChannel&quot;</span>,
+    <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_indexMarket&quot;</span>,
+    <span class="hljs-string">&quot;binary&quot;</span>:<span class="hljs-number">1</span>
+}
+</code></pre> <ul> <li>Dealt correctly</li> </ul> <pre><code class="lang-js">{
+    <span class="hljs-string">&quot;event&quot;</span>:<span class="hljs-string">&quot;addChannel&quot;</span>,
+    <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_indexMarket&quot;</span>,
+    <span class="hljs-string">&quot;binary&quot;</span>:<span class="hljs-number">1</span>
+}
+</code></pre> <ul> <li>The example of dealing returning data successfully </li> </ul> <pre><code class="lang-js">[
+    {
+        <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">147</span>,
+        <span class="hljs-string">&quot;is_hide&quot;</span>:<span class="hljs-number">0</span>,
+        <span class="hljs-string">&quot;pair_type&quot;</span>:<span class="hljs-number">0</span>,
+        <span class="hljs-string">&quot;area_id&quot;</span>:<span class="hljs-number">15</span>,
+        <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;ETH&quot;</span>,
+        <span class="hljs-string">&quot;currency_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
+        <span class="hljs-string">&quot;last&quot;</span>:<span class="hljs-string">&quot;147.1849&quot;</span>,
+        <span class="hljs-string">&quot;high&quot;</span>:<span class="hljs-string">&quot;148.3986&quot;</span>,
+        <span class="hljs-string">&quot;low&quot;</span>:<span class="hljs-string">&quot;140.4113&quot;</span>,
+        <span class="hljs-string">&quot;change&quot;</span>:<span class="hljs-string">&quot;-0.5364&quot;</span>,
+        <span class="hljs-string">&quot;percent&quot;</span>:<span class="hljs-string">&quot;-0.36%&quot;</span>,
+        <span class="hljs-string">&quot;vol24H&quot;</span>:<span class="hljs-string">&quot;43108&quot;</span>,
+        <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;6240970.83&quot;</span>,
+        <span class="hljs-string">&quot;last_cny&quot;</span>:<span class="hljs-string">&quot;989.4382&quot;</span>,
+        <span class="hljs-string">&quot;base_last_cny&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;high_cny&quot;</span>:<span class="hljs-string">&quot;997.5971&quot;</span>,
+        <span class="hljs-string">&quot;low_cny&quot;</span>:<span class="hljs-string">&quot;943.9036&quot;</span>,
+        <span class="hljs-string">&quot;last_usd&quot;</span>:<span class="hljs-string">&quot;147.1848&quot;</span>,
+        <span class="hljs-string">&quot;high_usd&quot;</span>:<span class="hljs-string">&quot;148.3985&quot;</span>,
+        <span class="hljs-string">&quot;low_usd&quot;</span>:<span class="hljs-string">&quot;140.4113&quot;</span>
+    },
+    {
+        <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">146</span>,
+        <span class="hljs-string">&quot;is_hide&quot;</span>:<span class="hljs-number">0</span>,
+        <span class="hljs-string">&quot;pair_type&quot;</span>:<span class="hljs-number">0</span>,
+        <span class="hljs-string">&quot;area_id&quot;</span>:<span class="hljs-number">15</span>,
+        <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;BTC&quot;</span>,
+        <span class="hljs-string">&quot;currency_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
+        <span class="hljs-string">&quot;last&quot;</span>:<span class="hljs-string">&quot;3955.1652&quot;</span>,
+        <span class="hljs-string">&quot;high&quot;</span>:<span class="hljs-string">&quot;3993.1069&quot;</span>,
+        <span class="hljs-string">&quot;low&quot;</span>:<span class="hljs-string">&quot;3880.6072&quot;</span>,
+        <span class="hljs-string">&quot;change&quot;</span>:<span class="hljs-string">&quot;+6.1701&quot;</span>,
+        <span class="hljs-string">&quot;percent&quot;</span>:<span class="hljs-string">&quot;+0.16%&quot;</span>,
+        <span class="hljs-string">&quot;vol24H&quot;</span>:<span class="hljs-string">&quot;43109&quot;</span>,
+        <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;169654088.16&quot;</span>,
+        <span class="hljs-string">&quot;last_cny&quot;</span>:<span class="hljs-string">&quot;26588.2733&quot;</span>,
+        <span class="hljs-string">&quot;base_last_cny&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;high_cny&quot;</span>:<span class="hljs-string">&quot;26843.3333&quot;</span>,
+        <span class="hljs-string">&quot;low_cny&quot;</span>:<span class="hljs-string">&quot;26087.0635&quot;</span>,
+        <span class="hljs-string">&quot;last_usd&quot;</span>:<span class="hljs-string">&quot;3955.1651&quot;</span>,
+        <span class="hljs-string">&quot;high_usd&quot;</span>:<span class="hljs-string">&quot;3993.1068&quot;</span>,
+        <span class="hljs-string">&quot;low_usd&quot;</span>:<span class="hljs-string">&quot;3880.6072&quot;</span>
+    }
+]
+</code></pre> <ul> <li>data description description</li> </ul> <pre><code class="lang-js"> {
+     <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">147</span>,
+     <span class="hljs-string">&quot;is_hide&quot;</span>:<span class="hljs-number">0</span>,
+     <span class="hljs-string">&quot;pair_type&quot;</span>:<span class="hljs-number">0</span>,
+     <span class="hljs-string">&quot;area_id&quot;</span>:<span class="hljs-number">15</span>,
+     <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;ETH&quot;</span>, <span class="hljs-comment">// token symbol</span>
+     <span class="hljs-string">&quot;currency_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>, <span class="hljs-comment">// currency of price&#xFF0C;USDTFUND stands for premium index</span>
+     <span class="hljs-string">&quot;last&quot;</span>:<span class="hljs-string">&quot;147.1867&quot;</span>, <span class="hljs-comment">// the latest price</span>
+     <span class="hljs-string">&quot;high&quot;</span>:<span class="hljs-string">&quot;148.3986&quot;</span>,
+     <span class="hljs-string">&quot;low&quot;</span>:<span class="hljs-string">&quot;140.4113&quot;</span>,
+     <span class="hljs-string">&quot;change&quot;</span>:<span class="hljs-string">&quot;-0.5346&quot;</span>,
+     <span class="hljs-string">&quot;percent&quot;</span>:<span class="hljs-string">&quot;-0.36%&quot;</span>,
+     <span class="hljs-string">&quot;vol24H&quot;</span>:<span class="hljs-string">&quot;43109&quot;</span>,
+     <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;6241118.04&quot;</span>,
+     <span class="hljs-string">&quot;last_cny&quot;</span>:<span class="hljs-string">&quot;989.4508&quot;</span>,
+     <span class="hljs-string">&quot;base_last_cny&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+     <span class="hljs-string">&quot;high_cny&quot;</span>:<span class="hljs-string">&quot;997.5971&quot;</span>,
+     <span class="hljs-string">&quot;low_cny&quot;</span>:<span class="hljs-string">&quot;943.9036&quot;</span>,
+     <span class="hljs-string">&quot;last_usd&quot;</span>:<span class="hljs-string">&quot;147.1867&quot;</span>,
+     <span class="hljs-string">&quot;high_usd&quot;</span>:<span class="hljs-string">&quot;148.3985&quot;</span>,
+     <span class="hljs-string">&quot;low_usd&quot;</span>:<span class="hljs-string">&quot;140.4113&quot;</span>
+ }
+</code></pre> <p>Client will receive data as long as the index updated, for example</p> <pre><code class="lang-js">{
+    <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">147</span>,
+    <span class="hljs-string">&quot;is_hide&quot;</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;pair_type&quot;</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;area_id&quot;</span>:<span class="hljs-number">15</span>,
+    <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;ETH&quot;</span>,
+    <span class="hljs-string">&quot;currency_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
+    <span class="hljs-string">&quot;last&quot;</span>:<span class="hljs-string">&quot;147.1867&quot;</span>,
+    <span class="hljs-string">&quot;high&quot;</span>:<span class="hljs-string">&quot;148.3986&quot;</span>,
+    <span class="hljs-string">&quot;low&quot;</span>:<span class="hljs-string">&quot;140.4113&quot;</span>,
+    <span class="hljs-string">&quot;change&quot;</span>:<span class="hljs-string">&quot;-0.5346&quot;</span>,
+    <span class="hljs-string">&quot;percent&quot;</span>:<span class="hljs-string">&quot;-0.36%&quot;</span>,
+    <span class="hljs-string">&quot;vol24H&quot;</span>:<span class="hljs-string">&quot;43109&quot;</span>,
+    <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;6241118.04&quot;</span>,
+    <span class="hljs-string">&quot;last_cny&quot;</span>:<span class="hljs-string">&quot;989.4508&quot;</span>,
+    <span class="hljs-string">&quot;base_last_cny&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-string">&quot;high_cny&quot;</span>:<span class="hljs-string">&quot;997.5971&quot;</span>,
+    <span class="hljs-string">&quot;low_cny&quot;</span>:<span class="hljs-string">&quot;943.9036&quot;</span>,
+    <span class="hljs-string">&quot;last_usd&quot;</span>:<span class="hljs-string">&quot;147.1867&quot;</span>,
+    <span class="hljs-string">&quot;high_usd&quot;</span>:<span class="hljs-string">&quot;148.3985&quot;</span>,
+    <span class="hljs-string">&quot;low_usd&quot;</span>:<span class="hljs-string">&quot;140.4113&quot;</span>
+}
+</code></pre> <h2 id="&#x8BA2;&#x9605;&#x5408;&#x7EA6;&#x4E0B;&#x5355;&#x4EF7;&#x683C;&#x9650;&#x5236;"><a href="#&#x8BA2;&#x9605;&#x5408;&#x7EA6;&#x4E0B;&#x5355;&#x4EF7;&#x683C;&#x9650;&#x5236;"class="anchor-navigation-ex-anchor"name="&#x8BA2;&#x9605;&#x5408;&#x7EA6;&#x4E0B;&#x5355;&#x4EF7;&#x683C;&#x9650;&#x5236;"><i class="fa fa-link"aria-hidden="true"></i></a>Subscribe the price limit of taking contract orders </h2> <ul> <li>channel: bibox_sub_spot_ALL_ALL_contractPriceLimit</li> </ul> <p>After buliding the connection with WebSocket API, sending the data with the following format to server to subscribe data</p> <pre><code class="lang-js">{
+    <span class="hljs-string">&quot;event&quot;</span>:<span class="hljs-string">&quot;addChannel&quot;</span>,
+    <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_contractPriceLimit&quot;</span>,
+    <span class="hljs-string">&quot;binary&quot;</span>:<span class="hljs-number">1</span>
+}
+</code></pre> <ul> <li>Dealt correctly</li> </ul> <pre><code class="lang-js">{
+    <span class="hljs-string">&quot;event&quot;</span>:<span class="hljs-string">&quot;addChannel&quot;</span>,
+    <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;bibox_sub_spot_ALL_ALL_contractPriceLimit&quot;</span>,
+    <span class="hljs-string">&quot;binary&quot;</span>:<span class="hljs-number">1</span>
+}
+</code></pre> <ul> <li>The example of dealing returning data successfully </li> </ul> <pre><code class="lang-js">{
+    <span class="hljs-string">&quot;4BTC_USDT&quot;</span>:{
+        <span class="hljs-string">&quot;min_up&quot;</span>:<span class="hljs-string">&quot;2964.4562&quot;</span>,
+        <span class="hljs-string">&quot;max_up&quot;</span>:<span class="hljs-string">&quot;4090.9496&quot;</span>,
+        <span class="hljs-string">&quot;min_down&quot;</span>:<span class="hljs-string">&quot;3814.2670&quot;</span>,
+        <span class="hljs-string">&quot;max_down&quot;</span>:<span class="hljs-string">&quot;4940.7603&quot;</span>,
+        <span class="hljs-string">&quot;market_up&quot;</span>:<span class="hljs-string">&quot;4090.9496&quot;</span>,
+        <span class="hljs-string">&quot;market_down&quot;</span>:<span class="hljs-string">&quot;3814.2670&quot;</span>
+    },
+    <span class="hljs-string">&quot;4ETH_USDT&quot;</span>:{
+        <span class="hljs-string">&quot;min_up&quot;</span>:<span class="hljs-string">&quot;110.3038&quot;</span>,
+        <span class="hljs-string">&quot;max_up&quot;</span>:<span class="hljs-string">&quot;155.1606&quot;</span>,
+        <span class="hljs-string">&quot;min_down&quot;</span>:<span class="hljs-string">&quot;138.9828&quot;</span>,
+        <span class="hljs-string">&quot;max_down&quot;</span>:<span class="hljs-string">&quot;183.8396&quot;</span>,
+        <span class="hljs-string">&quot;market_up&quot;</span>:<span class="hljs-string">&quot;155.1606&quot;</span>,
+        <span class="hljs-string">&quot;market_down&quot;</span>:<span class="hljs-string">&quot;138.9828&quot;</span>
+    }
+}
+</code></pre> <ul> <li>data description</li> </ul> <pre><code class="lang-js">{
+       <span class="hljs-string">&quot;4BTC_USDT&quot;</span>:{ <span class="hljs-comment">// contract symbol </span>
+           <span class="hljs-string">&quot;min_up&quot;</span>:<span class="hljs-string">&quot;2964.4562&quot;</span>, <span class="hljs-comment">// minimum price of opening long</span>
+           <span class="hljs-string">&quot;max_up&quot;</span>:<span class="hljs-string">&quot;4090.9496&quot;</span>, <span class="hljs-comment">// maximum price of opening long</span>
+           <span class="hljs-string">&quot;min_down&quot;</span>:<span class="hljs-string">&quot;3814.2670&quot;</span>, <span class="hljs-comment">// minimum price of opening short</span>
+           <span class="hljs-string">&quot;max_down&quot;</span>:<span class="hljs-string">&quot;4940.7603&quot;</span>, <span class="hljs-comment">// maximum price of opening short</span>
+           <span class="hljs-string">&quot;market_up&quot;</span>:<span class="hljs-string">&quot;4090.9496&quot;</span>, <span class="hljs-comment">// maximum price of opening long at the market price</span>
+           <span class="hljs-string">&quot;market_down&quot;</span>:<span class="hljs-string">&quot;3814.2670&quot;</span> <span class="hljs-comment">// minimum price of opening short at the market price</span>
+       }
+   }
+</code></pre> <p>Client will receive data as long as the limit of order price updated, for example</p> <pre><code class="lang-js">{
+    <span class="hljs-string">&quot;4BTC_USDT&quot;</span>:{
+        <span class="hljs-string">&quot;min_up&quot;</span>:<span class="hljs-string">&quot;2964.4562&quot;</span>,
+        <span class="hljs-string">&quot;max_up&quot;</span>:<span class="hljs-string">&quot;4090.9496&quot;</span>,
+        <span class="hljs-string">&quot;min_down&quot;</span>:<span class="hljs-string">&quot;3814.2670&quot;</span>,
+        <span class="hljs-string">&quot;max_down&quot;</span>:<span class="hljs-string">&quot;4940.7603&quot;</span>,
+        <span class="hljs-string">&quot;market_up&quot;</span>:<span class="hljs-string">&quot;4090.9496&quot;</span>,
+        <span class="hljs-string">&quot;market_down&quot;</span>:<span class="hljs-string">&quot;3814.2670&quot;</span>
+    },
+    <span class="hljs-string">&quot;4ETH_USDT&quot;</span>:{
+        <span class="hljs-string">&quot;min_up&quot;</span>:<span class="hljs-string">&quot;110.3038&quot;</span>,
+        <span class="hljs-string">&quot;max_up&quot;</span>:<span class="hljs-string">&quot;155.1606&quot;</span>,
+        <span class="hljs-string">&quot;min_down&quot;</span>:<span class="hljs-string">&quot;138.9828&quot;</span>,
+        <span class="hljs-string">&quot;max_down&quot;</span>:<span class="hljs-string">&quot;183.8396&quot;</span>,
+        <span class="hljs-string">&quot;market_up&quot;</span>:<span class="hljs-string">&quot;155.1606&quot;</span>,
+        <span class="hljs-string">&quot;market_down&quot;</span>:<span class="hljs-string">&quot;138.9828&quot;</span>
+    }
+}
+</code></pre> <footer class="page-footer"><span class="copyright">Copyright &#xA9; bibox.com 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Update Date: 2019-11-13 </span></footer> </section> </div> <div class="search-results"> <div class="has-results"> <h1 class="search-results-title"><span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1> <ul class="search-results-list"></ul> </div> <div class="no-results"> <h1 class="search-results-title">No results matching "<span class="search-query"></span>"</h1> </div> </div> </div> </div> </div> </div> </div> <script>var gitbook=gitbook||[];gitbook.push(function(){gitbook.page.hasChanged({page:{title:"WebSocket API Subscribe",level:"1.8",depth:1,next:{title:"Subscribe Kline",level:"1.8.1",depth:2,anchor:"#t1",path:"ws_api_sub.md",ref:"ws_api_sub.md#t1",articles:[]},previous:{title:"Unsubscribe(removeChannel)",level:"1.7.3.7",depth:3,anchor:"#t8",path:"ws_api_intro.md",ref:"ws_api_intro.md#t8",articles:[]},dir:"ltr"},config:{plugins:["-lunr","-search","search-pro","theme-api","theme-comscore","expandable-chapters-small","ancre-navigation","-sharing","hide-element","i18n","tbfed-pagefooter","custom-favicon-new","html-minifier"],styles:{website:"styles/website.css",pdf:"styles/pdf.css",epub:"styles/epub.css",mobi:"styles/mobi.css",ebook:"styles/ebook.css",print:"styles/print.css"},pluginsConfig:{"tbfed-pagefooter":{copyright:"Copyright &copy bibox.com 2019",modify_label:"Update Date: ",modify_format:"YYYY-MM-DD"},livereload:{},"search-pro":{},"html-minifier":{customAttrSurround:[],removeScriptTypeAttributes:!1,removeEmptyAttributes:!1,removeRedundantAttributes:!1,removeEmptyElements:!1,sortClassName:!0,caseSensitive:!0,html5:!0,collapseWhitespace:!0,processConditionalComments:!1,quoteCharacter:null,keepClosingSlash:!0,preventAttributesEscaping:!1,minifyURLs:!1,removeAttributeQuotes:!1,decodeEntities:!1,trimCustomFragments:!1,customAttrAssign:[],includeAutoGeneratedTags:!0,collapseInlineTagWhitespace:!0,collapseBooleanAttributes:!0,minifyJS:!0,removeTagWhitespace:!0,preserveLineBreaks:!1,sortAttributes:!0,removeStyleLinkTypeAttributes:!1,removeComments:!0,minifyCSS:!0,processScripts:[],conservativeCollapse:!0,removeOptionalTags:!1,useShortDoctype:!1},"custom-favicon-new":{myConfigKey:"default"},"hide-element":{elements:[".gitbook-link"]},fontsettings:{theme:"white",family:"sans",size:1},highlight:{},favicon:"assets/favicon.ico","theme-comscore":{},"theme-api":{languages:[{lang:"js",name:"JavaScript",default:!0},{lang:"python",name:"Python"}],split:!0,theme:"dark"},appleTouchIconPrecomposed152:"assets/favicon.ico","ancre-navigation":{associatedWithSummary:!0,float:{level1Icon:"",level2Icon:"",level3Icon:"",showLevelIcon:!1},mode:"float",multipleH1:!0,pageTop:{level1Icon:"",level2Icon:"",level3Icon:"",showLevelIcon:!1},printLog:!1,showLevel:!0},"expandable-chapters-small":{},"theme-default":{styles:{website:"styles/website.css",pdf:"styles/pdf.css",epub:"styles/epub.css",mobi:"styles/mobi.css",ebook:"styles/ebook.css",print:"styles/print.css"},showLevel:!1},i18n:{ChineseUrl:"../zh-hans",EnglishUrl:"../en",all:["english","chinese"]}},theme:"default",pdf:{pageNumbers:!0,fontSize:12,fontFamily:"Arial",paperSize:"a4",chapterMark:"pagebreak",pageBreaksBefore:"/",margin:{right:62,left:62,top:56,bottom:56}},structure:{langs:"LANGS.md",readme:"README.md",glossary:"GLOSSARY.md",summary:"SUMMARY.md"},variables:{},title:"Bibox API",language:"en",gitbook:"*",description:"Bibox交易所提供REST API 和 WebSocket API，便于投资者查看行情、快速交易。"},file:{path:"ws_api_sub.md",mtime:"2019-11-13T11:31:47.951Z",type:"markdown"},gitbook:{version:"3.2.3",time:"2019-11-13T11:48:52.296Z"},basePath:".",book:{language:"en"}})})</script> </div> <script src="../gitbook/gitbook.js"></script> <script src="../gitbook/theme.js"></script> <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script> <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script> <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script> <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script> <script src="../gitbook/gitbook-plugin-i18n/buttons.js"></script> <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script> <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script> <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script> <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script> </body> </html> 

@@ -1,0 +1,1264 @@
+ <!DOCTYPE HTML> <html lang="en"> <head> <meta charset="UTF-8"> <meta content="text/html; charset=utf-8"http-equiv="Content-Type"> <title>Restful API contract trading · Bibox API</title> <meta content="IE=edge"http-equiv="X-UA-Compatible"/> <meta content=""name="description"> <meta content="GitBook 3.2.3"name="generator"> <link href="../gitbook/style.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-search-pro/search.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-highlight/website.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-fontsettings/website.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-theme-api/theme-api.css"rel="stylesheet"> <link href="../gitbook/gitbook-plugin-theme-comscore/test.css"rel="stylesheet"> <meta content="true"name="HandheldFriendly"/> <meta content="width=device-width,initial-scale=1,user-scalable=no"name="viewport"> <meta content="yes"name="apple-mobile-web-app-capable"> <meta content="black"name="apple-mobile-web-app-status-bar-style"> <link href="../gitbook/images/apple-touch-icon-precomposed-152.png"rel="apple-touch-icon-precomposed"sizes="152x152"> <link href="../gitbook/images/favicon.ico"rel="shortcut icon"type="image/x-icon"> <link href="rest_api_c.html"rel="next"/> <link href="restful_intro.html"rel="prev"/> </head> <body> <div class="book"> <div class="book-summary"> <div role="search"id="book-search-input"> <input placeholder="Type to search"type="text"/> </div> <nav role="navigation"> <ul class="summary"> <li class="chapter"data-level="1.1"data-path="./"> <a href="./"> Bibox Exchange </a> </li> <li class="chapter"data-level="1.2"data-path="restful_intro.html"> <a href="restful_intro.html#t0"> Restful API description </a> <ul class="articles"> <li class="chapter"data-level="1.2.1"data-path="restful_intro.html"> <a href="restful_intro.html#t1"> Introduction </a> </li> <li class="chapter"data-level="1.2.2"data-path="restful_intro.html"> <a href="restful_intro.html#t2"> API Url </a> </li> <li class="chapter"data-level="1.2.3"data-path="restful_intro.html"> <a href="restful_intro.html#t3"> API Signature </a> <ul class="articles"> <li class="chapter"data-level="1.2.3.1"data-path="restful_intro.html"> <a href="restful_intro.html#申请apikey"> Apply for apikey </a> </li> <li class="chapter"data-level="1.2.3.2"data-path="restful_intro.html"> <a href="restful_intro.html#设置apikey操作权限"> Set apikey operating authorization </a> </li> <li class="chapter"data-level="1.2.3.3"data-path="restful_intro.html"> <a href="restful_intro.html#合法请求结构"> Legal request structure </a> </li> <li class="chapter"data-level="1.2.3.4"data-path="restful_intro.html"> <a href="restful_intro.html#签名步骤"> Sign Steps </a> </li> <li class="chapter"data-level="1.2.3.5"data-path="restful_intro.html"> <a href="restful_intro.html#完整签名例子"> the example of completed signature </a> </li> </ul> </li> <li class="chapter"data-level="1.2.4"data-path="restful_intro.html"> <a href="restful_intro.html#t4"> API Request and Response Format </a> <ul class="articles"> <li class="chapter"data-level="1.2.4.1"data-path="restful_intro.html"> <a href="restful_intro.html#请求参数"> Request Parameter </a> </li> <li class="chapter"data-level="1.2.4.2"data-path="restful_intro.html"> <a href="restful_intro.html#结果返回"> The result of return </a> </li> <li class="chapter"data-level="1.2.4.3"data-path="restful_intro.html"> <a href="restful_intro.html#请求示例"> Example </a> </li> </ul> </li> </ul> </li> <li class="chapter"data-level="1.3"data-path="rest_api_c.html"> <a href="rest_api_c.html#t0"> Restful API contract trading </a> <ul class="articles"> <li class="chapter"data-level="1.3.1"data-path="rest_api_c.html"> <a href="rest_api_c.html#查询合约资产"> contract account information </a> </li> <li class="chapter"data-level="1.3.2"data-path="rest_api_c.html"> <a href="rest_api_c.html#查询单个合约持仓信息"> check single information of contract position </a> </li> <li class="chapter"data-level="1.3.3"data-path="rest_api_c.html"> <a href="rest_api_c.html#查询所有合约持仓信息"> Check all information of contract position </a> </li> <li class="chapter"data-level="1.3.4"data-path="rest_api_c.html"> <a href="rest_api_c.html#查询合约未成交订单"> Check uncompleted contract orders </a> </li> <li class="chapter"data-level="1.3.5"data-path="rest_api_c.html"> <a href="rest_api_c.html#合约下单"> make contract order </a> </li> <li class="chapter"data-level="1.3.6"data-path="rest_api_c.html"> <a href="rest_api_c.html#合约批量下单"> make bulk contract orders </a> </li> <li class="chapter"data-level="1.3.7"data-path="rest_api_c.html"> <a href="rest_api_c.html#合约撤单"> cancel contract order </a> </li> <li class="chapter"data-level="1.3.8"data-path="rest_api_c.html"> <a href="rest_api_c.html#合约撤多单"> cancel multiple orders </a> </li> <li class="chapter"data-level="1.3.9"data-path="rest_api_c.html"> <a href="rest_api_c.html#合约撤1000单"> cancel 1000 orders </a> </li> <li class="chapter"data-level="1.3.10"data-path="rest_api_c.html"> <a href="rest_api_c.html#合约调整杠杆倍数"> adjust contract leverage </a> </li> <li class="chapter"data-level="1.3.11"data-path="rest_api_c.html"> <a href="rest_api_c.html#合约调整保证金"> adjust contract margin </a> </li> <li class="chapter"data-level="1.3.12"data-path="rest_api_c.html"> <a href="rest_api_c.html#主账户资金转入合约账户"> transfer funds from master account to contract account </a> </li> <li class="chapter"data-level="1.3.13"data-path="rest_api_c.html"> <a href="rest_api_c.html#查询市场成交记录"> check transaction records in the market </a> </li> <li class="chapter"data-level="1.3.14"data-path="rest_api_c.html"> <a href="rest_api_c.html#通过订单号查询未成交订单"> check uncompleted orders through order id </a> </li> <li class="chapter"data-level="1.3.15"data-path="rest_api_c.html"> <a href="rest_api_c.html#查询个人成交记录"> check personal transaction record </a> </li> <li class="chapter"data-level="1.3.16"data-path="rest_api_c.html"> <a href="rest_api_c.html#查询订单详情"> query order detail </a> </li> <li class="chapter"data-level="1.3.17"data-path="rest_api_c.html"> <a href="rest_api_c.html#t1"> query contract value (apikey not required) </a> </li> <li class="chapter"data-level="1.3.18"data-path="rest_api_c.html"> <a href="rest_api_c.html#t2"> query contract leverage info (apikey not required) </a> </li> <li class="chapter"data-level="1.3.19"data-path="rest_api_c.html"> <a href="rest_api_c.html#t3"> query contract open limit once (apikey not required) </a> </li> </ul> </li> <li class="chapter"data-level="1.4"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#t0"> Restful API Spot trading </a> <ul class="articles"> <li class="chapter"data-level="1.4.1"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#t1"> Market Quotation(apikey is not necessary) </a> <ul class="articles"> <li class="chapter"data-level="1.4.1.1"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#网络测试"> Network testing </a> </li> <li class="chapter"data-level="1.4.1.2"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询交易对"> View trading pair </a> </li> <li class="chapter"data-level="1.4.1.3"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询k线"> View Kline </a> </li> <li class="chapter"data-level="1.4.1.4"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询全币种市场行情"> View the market quotation of all tokens </a> </li> <li class="chapter"data-level="1.4.1.5"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询单币种市场行情"> View market quotation of a single token </a> </li> <li class="chapter"data-level="1.4.1.6"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询市场深度"> View the depth of the market </a> </li> <li class="chapter"data-level="1.4.1.7"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询成交记录"> View trading record history </a> </li> <li class="chapter"data-level="1.4.1.8"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询市场ticker"> View the market ticker </a> </li> <li class="chapter"data-level="1.4.1.9"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#下单限制信息"> The trade parameter specification </a> </li> </ul> </li> <li class="chapter"data-level="1.4.2"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#t2"> Users Asset Information (needs apikey) </a> <ul class="articles"> <li class="chapter"data-level="1.4.2.1"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#币币账户资产"> Spot account asset </a> </li> <li class="chapter"data-level="1.4.2.2"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#充值"> Deposit </a> </li> <li class="chapter"data-level="1.4.2.3"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#提现"> Withdraw </a> </li> <li class="chapter"data-level="1.4.2.4"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询充值记录"> Deposit history list </a> </li> <li class="chapter"data-level="1.4.2.5"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询提现记录"> Withdraw history list </a> </li> <li class="chapter"data-level="1.4.2.6"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#获取币种配置"> Query token config </a> </li> <li class="chapter"data-level="1.4.2.7"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#查询某一条提现记录"> Withdrawal information </a> </li> </ul> </li> <li class="chapter"data-level="1.4.3"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#t3"> Transaction(Needs apikey) </a> <ul class="articles"> <li class="chapter"data-level="1.4.3.1"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#下单"> place an order </a> </li> <li class="chapter"data-level="1.4.3.2"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#撤单"> cancel an order </a> </li> <li class="chapter"data-level="1.4.3.3"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#当前委托"> The current order list </a> </li> <li class="chapter"data-level="1.4.3.4"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#历史委托"> The order history </a> </li> <li class="chapter"data-level="1.4.3.5"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#成交记录"> The order history detail </a> </li> <li class="chapter"data-level="1.4.3.6"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#委托单详情"> The order </a> </li> <li class="chapter"data-level="1.4.3.7"data-path="rest_api_spot.html"> <a href="rest_api_spot.html#成交明细"> The dealed order history </a> </li> </ul> </li> </ul> </li> <li class="chapter"data-level="1.5"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#t0"> Restful API Transfer Assets </a> <ul class="articles"> <li class="chapter"data-level="1.5.1"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#t1"> Query assets(apikey) </a> <ul class="articles"> <li class="chapter"data-level="1.5.1.1"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#钱包账户"> Main assets </a> </li> <li class="chapter"data-level="1.5.1.2"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#币币账户资产"> Spot Assets </a> </li> <li class="chapter"data-level="1.5.1.3"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#合约账户资产"> Contract Assets </a> </li> <li class="chapter"data-level="1.5.1.4"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#信用账户资产"> Credit Assets </a> </li> </ul> </li> <li class="chapter"data-level="1.5.2"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#t2"> Main Assets And Spot Assets(needs apikey) </a> <ul class="articles"> <li class="chapter"data-level="1.5.2.1"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#钱包账户划转到币币账户"> Main assets transfer to spot assets </a> </li> </ul> </li> <li class="chapter"data-level="1.5.3"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#t3"> Main Assets Transfer to Credit Assets(needs apikey) </a> <ul class="articles"> <li class="chapter"data-level="1.5.3.1"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#钱包账户划转到信用账户"> Main assets to credit assets </a> </li> <li class="chapter"data-level="1.5.3.2"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#信用户划转到钱包账户"> Credit assets transfer to main assets </a> </li> </ul> </li> <li class="chapter"data-level="1.5.4"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#t4"> Main Assets Transfer to Contract Assets(need apikey) </a> <ul class="articles"> <li class="chapter"data-level="1.5.4.1"data-path="rest_api_transfer.html"> <a href="rest_api_transfer.html#钱包账户划转到合约账户"> Main Assets Transfer to Contract Assets </a> </li> </ul> </li> </ul> </li> <li class="chapter"data-level="1.6"data-path="restful_credit.html"> <a href="restful_credit.html#head"> Restful API Credit Trading </a> <ul class="articles"> <li class="chapter"data-level="1.6.1"data-path="restful_credit.html"> <a href="restful_credit.html#lendOrder-get"> Get Lend Order </a> </li> <li class="chapter"data-level="1.6.2"data-path="restful_credit.html"> <a href="restful_credit.html#borrowOrder-get"> Get Borrow Order </a> </li> <li class="chapter"data-level="1.6.3"data-path="restful_credit.html"> <a href="restful_credit.html#borrowOrder-book"> Borrow </a> </li> <li class="chapter"data-level="1.6.4"data-path="restful_credit.html"> <a href="restful_credit.html#borrowOrder-cancel"> Cancel Borrow </a> </li> <li class="chapter"data-level="1.6.5"data-path="restful_credit.html"> <a href="restful_credit.html#borrowOrder-refund"> Refund </a> </li> <li class="chapter"data-level="1.6.6"data-path="restful_credit.html"> <a href="restful_credit.html#lendOrderbook-get"> Get Lend Book Info </a> </li> <li class="chapter"data-level="1.6.7"data-path="restful_credit.html"> <a href="restful_credit.html#lendOrderbook-publish"> Publish Lend </a> </li> <li class="chapter"data-level="1.6.8"data-path="restful_credit.html"> <a href="restful_credit.html#lendOrderbook-cancel"> Cancel Lend </a> </li> <li class="chapter"data-level="1.6.9"data-path="restful_credit.html"> <a href="restful_credit.html#borrowDepth-get"> Get Lend Depth </a> </li> <li class="chapter"data-level="1.6.10"data-path="restful_credit.html"> <a href="restful_credit.html#trade-trade"> Trade </a> </li> <li class="chapter"data-level="1.6.11"data-path="restful_credit.html"> <a href="restful_credit.html#trade-cancel"> Cancel Trade </a> </li> <li class="chapter"data-level="1.6.12"data-path="restful_credit.html"> <a href="restful_credit.html#transferAssets-lendAssets"> Get Lend Assets </a> </li> <li class="chapter"data-level="1.6.13"data-path="restful_credit.html"> <a href="restful_credit.html#transferAssets-borrowAssets"> Get Borrow Assets </a> </li> </ul> </li> <li class="chapter"data-level="1.7"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t0"> WebSocket API description </a> <ul class="articles"> <li class="chapter"data-level="1.7.1"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t1"> Introduction </a> </li> <li class="chapter"data-level="1.7.2"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#访问地址"> Access to the url </a> </li> <li class="chapter"data-level="1.7.3"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#请求与订阅说明"> The description of request and subscription </a> <ul class="articles"> <li class="chapter"data-level="1.7.3.1"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t2"> Access to the url </a> </li> <li class="chapter"data-level="1.7.3.2"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t3"> Data compression </a> </li> <li class="chapter"data-level="1.7.3.3"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t4"> WebSocket Library </a> </li> <li class="chapter"data-level="1.7.3.4"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t5"> Ping message </a> </li> <li class="chapter"data-level="1.7.3.5"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t6"> Channel Format </a> </li> <li class="chapter"data-level="1.7.3.6"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t7"> Subscribe(addChannel) </a> </li> <li class="chapter"data-level="1.7.3.7"data-path="ws_api_intro.html"> <a href="ws_api_intro.html#t8"> Unsubscribe(removeChannel) </a> </li> </ul> </li> </ul> </li> <li class="chapter"data-level="1.8"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t0"> WebSocket API Subscribe </a> <ul class="articles"> <li class="chapter"data-level="1.8.1"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t1"> Subscribe Kline </a> </li> <li class="chapter"data-level="1.8.2"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t2"> Subscribe Market </a> </li> <li class="chapter"data-level="1.8.3"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t3"> Subscribe Depth </a> </li> <li class="chapter"data-level="1.8.4"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t4"> Subscribe Deals </a> </li> <li class="chapter"data-level="1.8.5"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t5"> Subscribe Ticker </a> </li> <li class="chapter"data-level="1.8.6"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t6"> Subscribe Login </a> <ul class="articles"> <li class="chapter"data-level="1.8.6.1"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#签名步骤"> Sign Steps </a> </li> <li class="chapter"data-level="1.8.6.2"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#完整签名例子"> the example of completed signature </a> </li> <li class="chapter"data-level="1.8.6.3"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#正确订阅"> subscribe correctly </a> </li> <li class="chapter"data-level="1.8.6.4"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#订阅成功返回"> the successful response </a> </li> <li class="chapter"data-level="1.8.6.5"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#现货账户资产"> Normal account assets </a> </li> <li class="chapter"data-level="1.8.6.6"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#信用账户资产"> Credit account assets </a> </li> <li class="chapter"data-level="1.8.6.7"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#现货委托单"> Spot Pending orders </a> </li> <li class="chapter"data-level="1.8.6.8"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#现货成交历史"> History of spot orders </a> </li> </ul> </li> <li class="chapter"data-level="1.8.7"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t7"> Subscribe contract Kline </a> </li> <li class="chapter"data-level="1.8.8"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t8"> Subscribe contract Market </a> </li> <li class="chapter"data-level="1.8.9"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t9"> Subscribe contract Depth </a> </li> <li class="chapter"data-level="1.8.10"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t10"> Subscribe contract Deals </a> </li> <li class="chapter"data-level="1.8.11"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t11"> Subscribe contract Ticker </a> </li> <li class="chapter"data-level="1.8.12"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#t12"> Subscribe contract Login </a> <ul class="articles"> <li class="chapter"data-level="1.8.12.1"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#合约资产"> contract assets </a> </li> <li class="chapter"data-level="1.8.12.2"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#合约持仓"> contract position contract_order </a> </li> <li class="chapter"data-level="1.8.12.3"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#合约委托单"> contract order pending </a> </li> <li class="chapter"data-level="1.8.12.4"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#成交记录"> transaction records </a> </li> <li class="chapter"data-level="1.8.12.5"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#仓位变化记录"> position change records </a> </li> </ul> </li> <li class="chapter"data-level="1.8.13"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#订阅指数"> Subscribe indexMarket </a> </li> <li class="chapter"data-level="1.8.14"data-path="ws_api_sub.html"> <a href="ws_api_sub.html#订阅合约下单价格限制"> Subscribe the price limit of taking contract orders </a> </li> </ul> </li> <li class="chapter"data-level="1.9"data-path="error_code.html"> <a href="error_code.html#错误码"> Error code </a> </li> <li class="divider"></li> <li class="chapter"data-level="2.1"> <a href="https://github.com/Biboxcom/REST-API-demos"target="_blank"> Restful API example </a> </li> <li class="chapter"data-level="2.2"> <a href="https://github.com/Biboxcom/WS-API-demos"target="_blank"> WebSocket API example </a> </li> <li class="header">Restful API 杠杆交易</li> <li class="divider"></li> <li> <a href="https://www.gitbook.com"target="blank"class="gitbook-link"> Published with GitBook </a> </li> </ul> </nav> </div> <div class="book-body"> <div class="body-inner"> <div class="book-header"role="navigation"> <h1> <i class="fa fa-circle-o-notch fa-spin"></i> <a href=".">Restful API contract trading</a> </h1> </div> <div class="page-wrapper"role="main"tabindex="-1"> <div class="page-inner"> <div id="book-search-results"> <div class="search-noresults"> <section class="markdown-section normal"> <h2 id="t0"><a href="#t0"class="anchor-navigation-ex-anchor"name="t0"><i class="fa fa-link"aria-hidden="true"></i></a>Restful API description for contract </h2> <h3 id="&#x67E5;&#x8BE2;&#x5408;&#x7EA6;&#x8D44;&#x4EA7;"><a href="#&#x67E5;&#x8BE2;&#x5408;&#x7EA6;&#x8D44;&#x4EA7;"class="anchor-navigation-ex-anchor"name="&#x67E5;&#x8BE2;&#x5408;&#x7EA6;&#x8D44;&#x4EA7;"><i class="fa fa-link"aria-hidden="true"></i></a>contract account information </h3> <ul> <li><p>POST <a href="https://api.bibox.com/v1/cquery"target="_blank">https://api.bibox.com/v1/cquery</a></p> </li> <li><p>cmd&#xFF1A;query/assets</p> </li> <li><p>example</p> </li> </ul> <p>Request parameter</p> <pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+[
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/assets&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{}
+    }
+]
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://api.bibox365.com/v1/cquery&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;query/assets\&quot;,\&quot;body\&quot;:{}}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;85190bfcb83357b9fa5aa2e79f0d7826&quot;</span>
+    }
+}
+</code></pre> <p>example code</p> <pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;https://api.bibox.com/v1/cquery&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f098d93423&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>: <span class="hljs-string">&quot;query/assets&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>: {}
+    }
+];
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre> <p>Response</p> <pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;result&quot;</span>:{
+                <span class="hljs-string">&quot;balance&quot;</span>:<span class="hljs-string">&quot;97.2378&quot;</span>, <span class="hljs-comment">// available balance</span>
+                <span class="hljs-string">&quot;freeze&quot;</span>:<span class="hljs-string">&quot;1.7326&quot;</span>, <span class="hljs-comment">// frozen amount</span>
+                <span class="hljs-string">&quot;profit&quot;</span>:<span class="hljs-string">&quot;-2.4327&quot;</span>, 
+                <span class="hljs-string">&quot;margin&quot;</span>:<span class="hljs-string">&quot;1.7326&quot;</span>,
+                <span class="hljs-string">&quot;imargin&quot;</span>:<span class="hljs-string">&quot;0.0000&quot;</span>,
+                <span class="hljs-string">&quot;total_balance&quot;</span>:<span class="hljs-string">&quot;98.8397&quot;</span>,
+                <span class="hljs-string">&quot;BTCValue&quot;</span>:<span class="hljs-string">&quot;0.02528321&quot;</span>,
+                <span class="hljs-string">&quot;CNYValue&quot;</span>:<span class="hljs-string">&quot;664.61&quot;</span>,
+                <span class="hljs-string">&quot;USDValue&quot;</span>:<span class="hljs-string">&quot;98.84&quot;</span>,
+                <span class="hljs-string">&quot;floatProfitBTC&quot;</span>:<span class="hljs-string">&quot;-0.00003344&quot;</span>,
+                <span class="hljs-string">&quot;floatProfit&quot;</span>:<span class="hljs-string">&quot;-0.1308&quot;</span>,
+                <span class="hljs-string">&quot;profitBTC&quot;</span>:<span class="hljs-string">&quot;-0.00062226&quot;</span>,
+                <span class="hljs-string">&quot;freezeBTC&quot;</span>:<span class="hljs-string">&quot;0.00044322&quot;</span>
+            },
+            <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/assets&quot;</span>
+        }
+    ]
+}
+</code></pre> <h3 id="&#x67E5;&#x8BE2;&#x5355;&#x4E2A;&#x5408;&#x7EA6;&#x6301;&#x4ED3;&#x4FE1;&#x606F;"><a href="#&#x67E5;&#x8BE2;&#x5355;&#x4E2A;&#x5408;&#x7EA6;&#x6301;&#x4ED3;&#x4FE1;&#x606F;"class="anchor-navigation-ex-anchor"name="&#x67E5;&#x8BE2;&#x5355;&#x4E2A;&#x5408;&#x7EA6;&#x6301;&#x4ED3;&#x4FE1;&#x606F;"><i class="fa fa-link"aria-hidden="true"></i></a>check single information of contract position </h3> <ul> <li><p>POST <a href="https://api.bibox.com/v1/cquery"target="_blank">https://api.bibox.com/v1/cquery</a></p> </li> <li><p>cmd: query/order</p> </li> <li><p>Request parameter</p> </li> </ul> <table> <thead> <tr> <th>Parameter Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>pair</td> <td>true</td> <td>string</td> <td>contract symbol</td> <td></td> <td>4BTC_USDT,4ETH_USDT, ...</td> </tr> </tbody> </table> <ul> <li>example</li> </ul> <p>Request parameter</p> <pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+{
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/order&quot;</span>,
+    <span class="hljs-string">&quot;body&quot;</span>:{
+        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span> <span class="hljs-comment">// contract symbol&#xFF1A;BTCUSDT Perpetual Contract symbol is 4BTC_USDT&#xFF0C;ETHUSDT Perpetual Contract symbol is 4ETH_USDT &#x3002;&#x3002;&#x3002;</span>
+    }
+}
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://api.bibox.com/v1/cquery&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;query/order\&quot;,\&quot;body\&quot;:{\&quot;pair\&quot;:\&quot;4BTC_USDT\&quot;}}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;e533359a43984510ef4dbcb0941bac6b&quot;</span>
+    }
+}
+</code></pre> <p>example code</p> <pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;https://api.bibox.com/v1/cquery&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f098d93423&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>: <span class="hljs-string">&quot;query/order&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>: {
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>
+        }
+    }
+];
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre> <p>Response</p> <pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;result&quot;</span>:{
+                <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
+                <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>, <span class="hljs-comment">// contract symbol</span>
+                <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">2</span>, <span class="hljs-comment">// position size</span>
+                <span class="hljs-string">&quot;margin&quot;</span>:<span class="hljs-string">&quot;1.5612&quot;</span>, <span class="hljs-comment">// margin</span>
+                <span class="hljs-string">&quot;profit&quot;</span>:<span class="hljs-string">&quot;-2.4995&quot;</span>,
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;3903.0450&quot;</span>, <span class="hljs-comment">// average price of opening position</span>
+                <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">2</span>, <span class="hljs-comment">// side: 1long, 2short</span>
+                <span class="hljs-string">&quot;price_force&quot;</span>:<span class="hljs-string">&quot;3961.5907&quot;</span>, <span class="hljs-comment">// forced liquidation price</span>
+                <span class="hljs-string">&quot;floatProfit&quot;</span>:<span class="hljs-string">&quot;-0.1376&quot;</span>,
+                <span class="hljs-string">&quot;leverage&quot;</span>:<span class="hljs-number">50</span>, <span class="hljs-comment">// 0:cross-margin, others: fixed leverage</span>
+                <span class="hljs-string">&quot;icontract_up&quot;</span>:<span class="hljs-number">2</span>, <span class="hljs-comment">// uncompleted orders in long position</span>
+                <span class="hljs-string">&quot;icontract_down&quot;</span>:<span class="hljs-number">0</span> <span class="hljs-comment">// uncompleted orders in short position</span>
+            },
+            <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/order&quot;</span>
+        }
+    ]
+}
+</code></pre> <h3 id="&#x67E5;&#x8BE2;&#x6240;&#x6709;&#x5408;&#x7EA6;&#x6301;&#x4ED3;&#x4FE1;&#x606F;"><a href="#&#x67E5;&#x8BE2;&#x6240;&#x6709;&#x5408;&#x7EA6;&#x6301;&#x4ED3;&#x4FE1;&#x606F;"class="anchor-navigation-ex-anchor"name="&#x67E5;&#x8BE2;&#x6240;&#x6709;&#x5408;&#x7EA6;&#x6301;&#x4ED3;&#x4FE1;&#x606F;"><i class="fa fa-link"aria-hidden="true"></i></a>Check all information of contract position </h3> <ul> <li>POST <a href="https://api.bibox.com/v1/cquery"target="_blank">https://api.bibox.com/v1/cquery</a></li> <li>cmd: query/orderAll</li> <li>Request parameter</li> </ul> <table> <thead> <tr> <th>Parameter Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>pair</td> <td>true</td> <td>string</td> <td>Contract symbol</td> <td></td> <td>4BTC_USDT,4ETH_USDT, ...</td> </tr> </tbody> </table> <ul> <li>example</li> </ul> <p>Request parameter</p> <pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+{
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/orderAll&quot;</span>,
+    <span class="hljs-string">&quot;body&quot;</span>:{
+
+    }
+}
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://api.bibox.com/v1/cquery&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;query/orderAll\&quot;,\&quot;body\&quot;:{}}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;1a9be520fb658c677b86f99769634e5b&quot;</span>
+    }
+}
+</code></pre> <p>example code</p> <pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;https://api.bibox.com/v1/cquery&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f098d93423&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>: <span class="hljs-string">&quot;query/orderAll&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>: {
+
+        }
+    }
+];
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre> <p>Response</p> <pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;result&quot;</span>:[
+                {
+                    <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
+                    <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>, <span class="hljs-comment">// Contract symbol</span>
+                    <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">2</span>, <span class="hljs-comment">// position size</span>
+                    <span class="hljs-string">&quot;margin&quot;</span>:<span class="hljs-string">&quot;1.5612&quot;</span>, <span class="hljs-comment">// margin</span>
+                    <span class="hljs-string">&quot;profit&quot;</span>:<span class="hljs-string">&quot;-2.4995&quot;</span>,
+                    <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;3903.0450&quot;</span>, <span class="hljs-comment">// average price of opening position</span>
+                    <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">2</span>, <span class="hljs-comment">// position side: 1long, 2short</span>
+                    <span class="hljs-string">&quot;price_force&quot;</span>:<span class="hljs-string">&quot;3961.5907&quot;</span>, <span class="hljs-comment">// forced liquidation price</span>
+                    <span class="hljs-string">&quot;floatProfit&quot;</span>:<span class="hljs-string">&quot;-0.1376&quot;</span>,
+                    <span class="hljs-string">&quot;leverage&quot;</span>:<span class="hljs-number">50</span>, <span class="hljs-comment">// 0:cross-margin, others: fixed leverage</span>
+                    <span class="hljs-string">&quot;icontract_up&quot;</span>:<span class="hljs-number">2</span>, <span class="hljs-comment">// uncompleted Cont of limit order in long position</span>
+                    <span class="hljs-string">&quot;icontract_down&quot;</span>:<span class="hljs-number">0</span> <span class="hljs-comment">// uncompleted Cont of limit order in short position</span>
+                },
+                {
+                    <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
+                    <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4ETH_USDT&quot;</span>,
+                    <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">6</span>,
+                    <span class="hljs-string">&quot;margin&quot;</span>:<span class="hljs-string">&quot;0.1714&quot;</span>,
+                    <span class="hljs-string">&quot;profit&quot;</span>:<span class="hljs-string">&quot;0.0668&quot;</span>,
+                    <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;142.8816&quot;</span>,
+                    <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">2</span>,
+                    <span class="hljs-string">&quot;price_force&quot;</span>:<span class="hljs-string">&quot;145.0248&quot;</span>,
+                    <span class="hljs-string">&quot;floatProfit&quot;</span>:<span class="hljs-string">&quot;0.0063&quot;</span>,
+                    <span class="hljs-string">&quot;leverage&quot;</span>:<span class="hljs-number">50</span>,
+                    <span class="hljs-string">&quot;icontract_up&quot;</span>:<span class="hljs-number">6</span>,
+                    <span class="hljs-string">&quot;icontract_down&quot;</span>:<span class="hljs-number">0</span>
+                }
+            ],
+            <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/orderAll&quot;</span>
+        }
+    ]
+}
+</code></pre> <h3 id="&#x67E5;&#x8BE2;&#x5408;&#x7EA6;&#x672A;&#x6210;&#x4EA4;&#x8BA2;&#x5355;"><a href="#&#x67E5;&#x8BE2;&#x5408;&#x7EA6;&#x672A;&#x6210;&#x4EA4;&#x8BA2;&#x5355;"class="anchor-navigation-ex-anchor"name="&#x67E5;&#x8BE2;&#x5408;&#x7EA6;&#x672A;&#x6210;&#x4EA4;&#x8BA2;&#x5355;"><i class="fa fa-link"aria-hidden="true"></i></a>Check uncompleted contract orders </h3> <ul> <li>POST <a href="https://api.bibox.com/v1/cquery"target="_blank">https://api.bibox.com/v1/cquery</a></li> <li>cmd: query/orderPending</li> <li>Request parameter</li> </ul> <table> <thead> <tr> <th>Parameter Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>page</td> <td>true</td> <td>integer</td> <td>page</td> <td></td> <td>1,2, ...</td> </tr> <tr> <td>size</td> <td>true</td> <td>integer</td> <td>number</td> <td></td> <td>10,20, ...</td> </tr> <tr> <td>pair</td> <td>false</td> <td>string</td> <td>Contract symbol</td> <td></td> <td>4BTC_USDT,4ETH_USDT, ...</td> </tr> </tbody> </table> <ul> <li>example</li> </ul> <p>Request parameter</p> <pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+{
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/orderPending&quot;</span>,
+    <span class="hljs-string">&quot;body&quot;</span>:{
+        <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;size&quot;</span>:<span class="hljs-number">20</span>,
+        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;&quot;</span>
+    }
+}
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://api.bibox.com/v1/cquery&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;query/orderPending\&quot;,\&quot;body\&quot;:{\&quot;page\&quot;:1,\&quot;size\&quot;:20,\&quot;pair\&quot;:\&quot;\&quot;}}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;caef8a751a35660e073ea07014b3b8d8&quot;</span>
+    }
+}
+</code></pre> <p>example code</p> <pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;https://api.bibox.com/v1/cquery&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f098d93423&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/orderPending&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;size&quot;</span>:<span class="hljs-number">20</span>,
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;&quot;</span>
+        }
+    }
+];
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre> <p>Response</p> <pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;result&quot;</span>:{
+                <span class="hljs-string">&quot;count&quot;</span>:<span class="hljs-number">3</span>,
+                <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,
+                <span class="hljs-string">&quot;items&quot;</span>:[
+                    {
+                        <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">491168</span>, <span class="hljs-comment">// order number</span>
+                        <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
+                        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4ETH_USDT&quot;</span>, <span class="hljs-comment">// contract symbol</span>
+                        <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// position side: 1long, 2short</span>
+                        <span class="hljs-string">&quot;order_type&quot;</span>:<span class="hljs-number">2</span>,
+                        <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">3</span>, <span class="hljs-comment">// number of orders</span>
+                        <span class="hljs-string">&quot;order_from&quot;</span>:<span class="hljs-number">1</span>,
+                        <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// 0,1:uncompleted; 2:partly completed; 3:completed; 4: partly cancel; 5 cancel completed; 6,7 system cancel;</span>
+                        <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;136.0000&quot;</span>, <span class="hljs-comment">// order price</span>
+                        <span class="hljs-string">&quot;price_deal&quot;</span>:<span class="hljs-string">&quot;0.0000&quot;</span>, <span class="hljs-comment">// average transaction price</span>
+                        <span class="hljs-string">&quot;deal_count&quot;</span>:<span class="hljs-number">0</span>, 
+                        <span class="hljs-string">&quot;contract_deal&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">// number of completed orders</span>
+                        <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2019-02-20T02:01:46.000Z&quot;</span>,
+                        <span class="hljs-string">&quot;updatedAt&quot;</span>:<span class="hljs-string">&quot;2019-02-20T02:01:46.000Z&quot;</span>
+                    },
+                    {
+                        <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">489453</span>,
+                        <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
+                        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>,
+                        <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>,
+                        <span class="hljs-string">&quot;order_type&quot;</span>:<span class="hljs-number">2</span>,
+                        <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">2</span>,
+                        <span class="hljs-string">&quot;order_from&quot;</span>:<span class="hljs-number">1</span>,
+                        <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-number">1</span>,
+                        <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;3850.0000&quot;</span>,
+                        <span class="hljs-string">&quot;price_deal&quot;</span>:<span class="hljs-string">&quot;0.0000&quot;</span>,
+                        <span class="hljs-string">&quot;deal_count&quot;</span>:<span class="hljs-number">0</span>,
+                        <span class="hljs-string">&quot;contract_deal&quot;</span>:<span class="hljs-number">0</span>,
+                        <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2019-02-20T01:51:41.000Z&quot;</span>,
+                        <span class="hljs-string">&quot;updatedAt&quot;</span>:<span class="hljs-string">&quot;2019-02-20T01:51:42.000Z&quot;</span>
+                    }
+                ]
+            },
+            <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/orderPending&quot;</span>
+        }
+    ]
+}
+</code></pre> <h3 id="&#x5408;&#x7EA6;&#x4E0B;&#x5355;"><a href="#&#x5408;&#x7EA6;&#x4E0B;&#x5355;"class="anchor-navigation-ex-anchor"name="&#x5408;&#x7EA6;&#x4E0B;&#x5355;"><i class="fa fa-link"aria-hidden="true"></i></a>make contract order </h3> <ul> <li>POST <a href="https://api.bibox.com/v1/ctrade"target="_blank">https://api.bibox.com/v1/ctrade</a></li> <li>cmd&#xFF1A; order/open</li> <li>Request parameter</li> </ul> <table> <thead> <tr> <th>Parameter Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>order_type</td> <td>true</td> <td>integer</td> <td>order type</td> <td></td> <td>1:market price 2:limited price</td> </tr> <tr> <td>leverage</td> <td>true</td> <td>integer</td> <td>leverage</td> <td></td> <td>cross margin:0, fixed margin:1,2,...</td> </tr> <tr> <td>cross_leverage</td> <td>false</td> <td>integer</td> <td>cross leverage</td> <td>25</td> <td>when leverage=0 and cross_leverage=1,2,...50</td> </tr> <tr> <td>order_side</td> <td>true</td> <td>integer</td> <td>position side</td> <td></td> <td>1:long, 2:short</td> </tr> <tr> <td>price</td> <td>true</td> <td>string</td> <td>order price</td> <td></td> <td>The numbers greater than 0</td> </tr> <tr> <td>contract</td> <td>true</td> <td>string</td> <td>Cont</td> <td></td> <td>1,2, ...</td> </tr> <tr> <td>pair</td> <td>true</td> <td>string</td> <td>contract symbol</td> <td></td> <td>4BTC_USDT,4ETH_USDT, ...</td> </tr> <tr> <td>order_from</td> <td>true</td> <td>integer</td> <td>6</td> <td></td> <td>6</td> </tr> <tr> <td>client_oid</td> <td>false</td> <td>Long</td> <td>client order id</td> <td></td> <td>&gt; 0</td> </tr> </tbody> </table> <ul> <li>example</li> </ul> <p>Request parameter</p> <pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+{
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/open&quot;</span>,
+    <span class="hljs-string">&quot;body&quot;</span>:{
+        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>,
+        <span class="hljs-string">&quot;order_type&quot;</span>:<span class="hljs-number">2</span>,
+        <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;3929.97&quot;</span>,
+        <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-string">&quot;1&quot;</span>,
+        <span class="hljs-string">&quot;order_from&quot;</span>:<span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;leverage&quot;</span>:<span class="hljs-number">50</span>,
+        <span class="hljs-string">&quot;cross_leverage&quot;</span>:<span class="hljs-number">25</span>,
+        <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;client_oid&quot;</span>: <span class="hljs-string">&apos;123456789&apos;</span>,
+    }
+}
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://api.bibox.com/v1/ctrade&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;order/open\&quot;,\&quot;body\&quot;:{\&quot;pair\&quot;:\&quot;4BTC_USDT\&quot;,\&quot;order_type\&quot;:2,\&quot;price\&quot;:\&quot;3929.97\&quot;,\&quot;contract\&quot;:\&quot;1\&quot;,\&quot;order_from\&quot;:1,\&quot;leverage\&quot;:50,\&quot;cross_leverage\&quot;:25,\&quot;order_side\&quot;:1,\&quot;client_oid\&quot;:\&quot;123456789\&quot;}}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;d298bb71db50f31c9fc923595e942fcd&quot;</span>
+    }
+}
+</code></pre> <p>example code</p> <pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;https://api.bibox.com/v1/cquery&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f098d93423&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/open&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>,
+            <span class="hljs-string">&quot;order_type&quot;</span>:<span class="hljs-number">2</span>,
+            <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;3929.97&quot;</span>,
+            <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-string">&quot;1&quot;</span>,
+            <span class="hljs-string">&quot;order_from&quot;</span>:<span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;leverage&quot;</span>:<span class="hljs-number">50</span>,
+            <span class="hljs-string">&quot;cross_leverage&quot;</span>:<span class="hljs-number">25</span>,
+            <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;client_oid&quot;</span>: <span class="hljs-string">&apos;123456789&apos;</span>,
+        }
+    }
+];
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre> <p>Response</p> <pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            result: <span class="hljs-string">&apos;17592186044786&apos;</span>, <span class="hljs-comment">// order id</span>
+            client_oid: <span class="hljs-string">&apos;123456789&apos;</span>, <span class="hljs-comment">// client order id</span>
+            cmd: <span class="hljs-string">&apos;order/open&apos;</span>,
+        }
+    ]
+}
+</code></pre> <h3 id="&#x5408;&#x7EA6;&#x6279;&#x91CF;&#x4E0B;&#x5355;"><a href="#&#x5408;&#x7EA6;&#x6279;&#x91CF;&#x4E0B;&#x5355;"class="anchor-navigation-ex-anchor"name="&#x5408;&#x7EA6;&#x6279;&#x91CF;&#x4E0B;&#x5355;"><i class="fa fa-link"aria-hidden="true"></i></a>make bulk contract orders </h3> <ul> <li>POST <a href="https://api.bibox.com/v1/ctrade"target="_blank">https://api.bibox.com/v1/ctrade</a></li> <li>cmd: order/openBatch</li> <li>Request parameter</li> </ul> <table> <thead> <tr> <th>Parameter Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>leverage</td> <td>true</td> <td>integer</td> <td>leverage</td> <td></td> <td>cross margin:0, fixed margin:1,2,...</td> </tr> <tr> <td>cross_leverage</td> <td>false</td> <td>integer</td> <td>cross leverage</td> <td>25</td> <td>when leverage=0 and cross_leverage=1,2,...50</td> </tr> <tr> <td>order_side</td> <td>true</td> <td>integer</td> <td>position side</td> <td></td> <td>1:long, 2:short</td> </tr> <tr> <td>price</td> <td>true</td> <td>string</td> <td>order price</td> <td></td> <td>The numbers greater than 0</td> </tr> <tr> <td>contract</td> <td>true</td> <td>string</td> <td>Cont</td> <td></td> <td>1,2, ...</td> </tr> <tr> <td>pair</td> <td>true</td> <td>string</td> <td>Contract symbol</td> <td></td> <td>4BTC_USDT,4ETH_USDT, ...</td> </tr> <tr> <td>client_oid</td> <td>false</td> <td>Long</td> <td>client order id</td> <td></td> <td>&gt; 0</td> </tr> </tbody> </table> <ul> <li>example</li> </ul> <p>Request parameter</p> <pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+{
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/openBatch&quot;</span>,
+    <span class="hljs-string">&quot;body&quot;</span>:{
+        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4ETH_USDT&quot;</span>,
+        <span class="hljs-string">&quot;leverage&quot;</span>:<span class="hljs-number">50</span>,
+        <span class="hljs-string">&quot;cross_leverage&quot;</span>: <span class="hljs-number">25</span>,
+        <span class="hljs-string">&quot;arr&quot;</span>:[
+            {
+                <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>,
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-number">140</span>,
+                <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">1</span>,
+                <span class="hljs-string">&quot;client_oid&quot;</span>: <span class="hljs-string">&apos;123456787&apos;</span> 
+            },
+            {
+                <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>,
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-number">140.5</span>,
+                <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">1</span>,
+                <span class="hljs-string">&quot;client_oid&quot;</span>: <span class="hljs-string">&apos;123456788&apos;</span> 
+            }
+        ]
+    }
+}
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://api.bibox.com/v1/ctrade&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;order/openBatch\&quot;,\&quot;body\&quot;:{\&quot;pair\&quot;:\&quot;4ETH_USDT\&quot;,\&quot;leverage\&quot;:50,\&quot;cross_leverage\&quot;:25,\&quot;arr\&quot;:[{\&quot;order_side\&quot;:1,\&quot;price\&quot;:140,\&quot;contract\&quot;:1,\&quot;client_oid\&quot;:\&quot;123456787\&quot;},{\&quot;order_side\&quot;:1,\&quot;price\&quot;:140.5,\&quot;contract\&quot;:1,\&quot;client_oid\&quot;:\&quot;123456788\&quot;}]}}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;cb3eee178b4f6442026d324760f9b9cd&quot;</span>
+    }
+}
+</code></pre> <p>example code</p> <pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;https://api.bibox.com/v1/ctrade&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f098d93423&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/openBatch&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4ETH_USDT&quot;</span>,
+            <span class="hljs-string">&quot;leverage&quot;</span>:<span class="hljs-number">50</span>,
+            <span class="hljs-string">&quot;cross_leverage&quot;</span>: <span class="hljs-number">25</span>,
+            <span class="hljs-string">&quot;arr&quot;</span>:[
+                {
+                    <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-number">140</span>,
+                    <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;client_oid&quot;</span>: <span class="hljs-string">&apos;123456787&apos;</span>
+                },
+                {
+                    <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-number">140.5</span>,
+                    <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;client_oid&quot;</span>: <span class="hljs-string">&apos;123456788&apos;</span>
+                }
+            ]
+        }
+    }
+];
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre> <p>Response</p> <pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;result&quot;</span>:[
+                {
+                    code: <span class="hljs-number">0</span>, <span class="hljs-comment">// 0 means success&#xFF1B;non-zero means failure, code is error code</span>
+                    id: <span class="hljs-string">&apos;17592186044787&apos;</span>, <span class="hljs-comment">// order id</span>
+                    msg: <span class="hljs-string">&apos;&apos;</span>,
+                    client_oid: <span class="hljs-string">&apos;123456787&apos;</span> 
+                 },
+                 { 
+                    code: <span class="hljs-number">0</span>,
+                    id: <span class="hljs-string">&apos;17592186044790&apos;</span>,
+                    msg: <span class="hljs-string">&apos;&apos;</span>,
+                    client_oid: <span class="hljs-string">&apos;123456788&apos;</span>
+                 }
+            ],
+            <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/openBatch&quot;</span>
+        }
+    ]
+}
+</code></pre> <h3 id="&#x5408;&#x7EA6;&#x64A4;&#x5355;"><a href="#&#x5408;&#x7EA6;&#x64A4;&#x5355;"class="anchor-navigation-ex-anchor"name="&#x5408;&#x7EA6;&#x64A4;&#x5355;"><i class="fa fa-link"aria-hidden="true"></i></a>cancel contract order </h3> <ul> <li>POST <a href="https://api.bibox.com/v1/ctrade"target="_blank">https://api.bibox.com/v1/ctrade</a></li> <li>cmd: order/close</li> <li>Request parameter</li> </ul> <table> <thead> <tr> <th>Parameter Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>order_id</td> <td>true</td> <td>string</td> <td>order id</td> <td></td> </tr> </tbody> </table> <ul> <li>example</li> </ul> <p>Request parameter</p> <pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+{
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/close&quot;</span>,
+    <span class="hljs-string">&quot;body&quot;</span>:{
+        <span class="hljs-string">&quot;order_id&quot;</span>:<span class="hljs-string">&quot;574954&quot;</span>
+    }
+}
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://api.bibox.com/v1/ctrade&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;order/close\&quot;,\&quot;body\&quot;:{\&quot;order_id\&quot;:\&quot;574954\&quot;}}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;9a9286632189e3c2d6581cb81e38349b&quot;</span>
+    }
+}
+</code></pre> <p>example code</p> <pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;https://api.bibox.com/v1/ctrade&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f098d93423&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/close&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;order_id&quot;</span>:<span class="hljs-string">&quot;574954&quot;</span>
+        }
+    }
+];
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre> <p>Response</p> <pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;success&quot;</span>,
+            <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/close&quot;</span>
+        }
+    ]
+}
+</code></pre> <h3 id="&#x5408;&#x7EA6;&#x64A4;&#x591A;&#x5355;"><a href="#&#x5408;&#x7EA6;&#x64A4;&#x591A;&#x5355;"class="anchor-navigation-ex-anchor"name="&#x5408;&#x7EA6;&#x64A4;&#x591A;&#x5355;"><i class="fa fa-link"aria-hidden="true"></i></a>cancel multiple orders </h3> <ul> <li>POST <a href="https://api.bibox.com/v1/ctrade"target="_blank">https://api.bibox.com/v1/ctrade</a></li> <li>cmd: order/closeBatch</li> <li>Request parameter</li> </ul> <table> <thead> <tr> <th>Parameter Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>order_ids</td> <td>true</td> <td>string</td> <td>order id array</td> <td></td> </tr> </tbody> </table> <ul> <li>example</li> </ul> <p>Request parameter</p> <pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+{
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/closeBatch&quot;</span>,
+    <span class="hljs-string">&quot;body&quot;</span>:{
+        <span class="hljs-string">&quot;order_ids&quot;</span>:[
+            <span class="hljs-string">&quot;574953&quot;</span>,
+            <span class="hljs-string">&quot;574954&quot;</span>
+        ]
+    },
+    <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">13</span>
+}
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://api.bibox.com/v1/ctrade&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;order/closeBatch\&quot;,\&quot;body\&quot;:{\&quot;order_ids\&quot;:[\&quot;574953\&quot;,\&quot;574954\&quot;]},\&quot;index\&quot;:13}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;64449ef8dc5016a6230ce4a8f0f18eb1&quot;</span>
+    }
+}
+</code></pre> <p>example code</p> <pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;https://api.bibox.com/v1/ctrade&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f098d93423&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/closeBatch&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;order_ids&quot;</span>:[
+                <span class="hljs-string">&quot;574953&quot;</span>,
+                <span class="hljs-string">&quot;574954&quot;</span>
+            ]
+        },
+        <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">13</span>
+    }
+];
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre> <p>Response</p> <pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;success&quot;</span>,
+            <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/closeBatch&quot;</span>,
+            <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">13</span>
+        }
+    ]
+}
+</code></pre> <h3 id="&#x5408;&#x7EA6;&#x64A4;1000&#x5355;"><a href="#&#x5408;&#x7EA6;&#x64A4;1000&#x5355;"class="anchor-navigation-ex-anchor"name="&#x5408;&#x7EA6;&#x64A4;1000&#x5355;"><i class="fa fa-link"aria-hidden="true"></i></a>cancel 1000 orders </h3> <ul> <li>POST <a href="https://api.bibox.com/v1/ctrade"target="_blank">https://api.bibox.com/v1/ctrade</a></li> <li>cmd: order/closeAll</li> <li>Request parameter</li> </ul> <table> <thead> <tr> <th>Parameter Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>pair</td> <td>false</td> <td>string</td> <td>Contract symbol</td> <td></td> <td>4BTC_USDT,4ETH_USDT, ...</td> </tr> </tbody> </table> <ul> <li>example</li> </ul> <p>Request parameter</p> <pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+{
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/closeAll&quot;</span>,
+    <span class="hljs-string">&quot;body&quot;</span>:{
+        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>
+    },
+    <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">13</span>
+}
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://api.bibox.com/v1/ctrade&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;order/closeAll\&quot;,\&quot;body\&quot;:{\&quot;pair\&quot;:\&quot;4BTC_USDT\&quot;},\&quot;index\&quot;:13}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;d0ab49a6de0aa0254baa8445582b42c2&quot;</span>
+    }
+}
+</code></pre> <p>example code</p> <pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;https://api.bibox.com/v1/ctrade&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f098d93423&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/closeAll&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>
+        },
+        <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">13</span>
+    }
+];
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre> <p>Response</p> <pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;success&quot;</span>,
+            <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/closeAll&quot;</span>,
+            <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">13</span>
+        }
+    ]
+}
+</code></pre> <h3 id="&#x5408;&#x7EA6;&#x8C03;&#x6574;&#x6760;&#x6746;&#x500D;&#x6570;"><a href="#&#x5408;&#x7EA6;&#x8C03;&#x6574;&#x6760;&#x6746;&#x500D;&#x6570;"class="anchor-navigation-ex-anchor"name="&#x5408;&#x7EA6;&#x8C03;&#x6574;&#x6760;&#x6746;&#x500D;&#x6570;"><i class="fa fa-link"aria-hidden="true"></i></a>adjust contract leverage </h3> <ul> <li>POST <a href="https://api.bibox.com/v1/ctrade"target="_blank">https://api.bibox.com/v1/ctrade</a></li> <li>cmd: order/changeLeverage</li> <li>Request parameter</li> </ul> <table> <thead> <tr> <th>Parameter Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>pair</td> <td>true</td> <td>string</td> <td>Contract symbol</td> <td></td> <td>4BTC_USDT,4ETH_USDT, ...</td> </tr> <tr> <td>leverage</td> <td>true</td> <td>integer</td> <td>leverage</td> <td></td> <td>cross margin:0, fixed margin:1,2,...</td> </tr> <tr> <td>cross</td> <td>true</td> <td>integer</td> <td>cross flag</td> <td></td> <td>cross: 1, fixed: 0</td> </tr> </tbody> </table> <ul> <li>example</li> </ul> <p>Request parameter</p> <pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+{
+     <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/changeLeverage&quot;</span>,
+     <span class="hljs-string">&quot;body&quot;</span>:{
+         <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>,
+         <span class="hljs-string">&quot;leverage&quot;</span>:<span class="hljs-number">40</span>,
+         <span class="hljs-string">&quot;cross&quot;</span>: <span class="hljs-number">0</span>
+     },
+     <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">13</span>
+ }
+ {
+     <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://api.bibox.com/v1/ctrade&quot;</span>,
+     <span class="hljs-string">&quot;form&quot;</span>:{
+         <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;order/changeLeverage\&quot;,\&quot;body\&quot;:{\&quot;pair\&quot;:\&quot;4BTC_USDT\&quot;,\&quot;leverage\&quot;:40,\&quot;cross\&quot;:0},\&quot;index\&quot;:13}]&quot;</span>,
+         <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>,
+         <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;1abd620b3cc04be7e181309d5c83670e&quot;</span>
+     }
+ }
+</code></pre> <p>example code</p> <pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;https://api.bibox.com/v1/ctrade&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f098d93423&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/changeLeverage&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>,
+            <span class="hljs-string">&quot;leverage&quot;</span>:<span class="hljs-number">40</span>,
+            <span class="hljs-string">&quot;cross&quot;</span>: <span class="hljs-number">0</span>
+        },
+        <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">13</span>
+    }
+];
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre> <p>Response</p> <pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;success&quot;</span>,
+            <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/changeLeverage&quot;</span>,
+            <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">13</span>
+        }
+    ]
+}
+</code></pre> <h3 id="&#x5408;&#x7EA6;&#x8C03;&#x6574;&#x4FDD;&#x8BC1;&#x91D1;"><a href="#&#x5408;&#x7EA6;&#x8C03;&#x6574;&#x4FDD;&#x8BC1;&#x91D1;"class="anchor-navigation-ex-anchor"name="&#x5408;&#x7EA6;&#x8C03;&#x6574;&#x4FDD;&#x8BC1;&#x91D1;"><i class="fa fa-link"aria-hidden="true"></i></a>adjust contract margin </h3> <ul> <li>POST <a href="https://api.bibox.com/v1/ctrade"target="_blank">https://api.bibox.com/v1/ctrade</a></li> <li>cmd: order/changeMargin</li> <li>Request parameter</li> </ul> <table> <thead> <tr> <th>Parameter Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>pair</td> <td>true</td> <td>string</td> <td>Contract symbol</td> <td></td> <td>4BTC_USDT,4ETH_USDT, ...</td> </tr> <tr> <td>margin</td> <td>true</td> <td>integer</td> <td>increase or reduce margin</td> <td></td> <td>increase: margin&gt;=0.5; reduce: margin &lt;=-0.5</td> </tr> </tbody> </table> <ul> <li>example</li> </ul> <p>Request parameter</p> <pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+{
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/changeMargin&quot;</span>,
+    <span class="hljs-string">&quot;body&quot;</span>:{
+        <span class="hljs-string">&quot;pair&quot;</span>: <span class="hljs-string">&quot;4ETH_USDT&quot;</span>,
+        <span class="hljs-string">&quot;margin&quot;</span>: <span class="hljs-number">4</span>
+    },
+    <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">13</span>
+}
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://api.bibox.com/v1/ctrade&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;order/changeMargin\&quot;,\&quot;body\&quot;:{\&quot;pair\&quot;:\&quot;4ETH_USDT\&quot;,\&quot;margin\&quot;:4},\&quot;index\&quot;:13}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;f6ef54d12ccadaef85782a7a238413f6&quot;</span>
+    }
+}
+</code></pre> <p>example code</p> <pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;https://api.bibox.com/v1/ctrade&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f098d93423&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/changeMargin&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;pair&quot;</span>: <span class="hljs-string">&quot;4ETH_USDT&quot;</span>,
+            <span class="hljs-string">&quot;margin&quot;</span>: <span class="hljs-number">4</span>
+        },
+        <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">13</span>
+    }
+];
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre> <p>Response</p> <pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;success&quot;</span>,
+            <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;order/changeMargin&quot;</span>,
+            <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">13</span>
+        }
+    ]
+}
+</code></pre> <h3 id="&#x4E3B;&#x8D26;&#x6237;&#x8D44;&#x91D1;&#x8F6C;&#x5165;&#x5408;&#x7EA6;&#x8D26;&#x6237;"><a href="#&#x4E3B;&#x8D26;&#x6237;&#x8D44;&#x91D1;&#x8F6C;&#x5165;&#x5408;&#x7EA6;&#x8D26;&#x6237;"class="anchor-navigation-ex-anchor"name="&#x4E3B;&#x8D26;&#x6237;&#x8D44;&#x91D1;&#x8F6C;&#x5165;&#x5408;&#x7EA6;&#x8D26;&#x6237;"><i class="fa fa-link"aria-hidden="true"></i></a>transfer funds from master account to contract account </h3> <ul> <li>POST <a href="https://api.bibox.com/v1/ctrade"target="_blank">https://api.bibox.com/v1/ctrade</a></li> <li>cmd: transfer/in</li> <li>Request parameter</li> </ul> <table> <thead> <tr> <th>Parameter Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>amount</td> <td>true</td> <td>integer</td> <td>amount</td> <td></td> </tr> </tbody> </table> <ul> <li>example</li> </ul> <p>Request parameter</p> <pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+{
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;transfer/in&quot;</span>,
+    <span class="hljs-string">&quot;body&quot;</span>:{
+        <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;100&quot;</span>
+    }
+}
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://api.bibox.com/v1/ctrade&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;transfer/in\&quot;,\&quot;body\&quot;:{\&quot;amount\&quot;:\&quot;100\&quot;}}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;16c40525ae36ae0f55fe5237c91336cd&quot;</span>
+    }
+}
+</code></pre> <p>example code</p> <pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;https://api.bibox.com/v1/ctrade&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f098d93423&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;transfer/in&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;100&quot;</span>
+        }
+    }
+];
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre> <p>Response</p> <pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;success&quot;</span>,
+            <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;transfer/in&quot;</span>
+        }
+    ]
+}
+</code></pre> <h3 id="&#x67E5;&#x8BE2;&#x5E02;&#x573A;&#x6210;&#x4EA4;&#x8BB0;&#x5F55;"><a href="#&#x67E5;&#x8BE2;&#x5E02;&#x573A;&#x6210;&#x4EA4;&#x8BB0;&#x5F55;"class="anchor-navigation-ex-anchor"name="&#x67E5;&#x8BE2;&#x5E02;&#x573A;&#x6210;&#x4EA4;&#x8BB0;&#x5F55;"><i class="fa fa-link"aria-hidden="true"></i></a>check transaction records in the market </h3> <ul> <li><p>GET <a href="https://api.bibox.com/v1/cquery?cmd=deals&amp;&amp;pair=4ETH_USDT&amp;&amp;size=10"target="_blank">https://api.bibox.com/v1/cquery?cmd=deals&amp;&amp;pair=4ETH_USDT&amp;&amp;size=10</a></p> </li> <li><p>Request parameter</p> </li> </ul> <table> <thead> <tr> <th>Parameter Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>pair</td> <td>true</td> <td>String</td> <td>Contract symbol</td> <td></td> <td>4BTC_USDT,4ETH_USDT,...</td> </tr> <tr> <td>size</td> <td>true</td> <td>integer</td> <td>number</td> <td></td> <td>1,2,...</td> </tr> </tbody> </table> <ul> <li>The description of return result</li> </ul> <pre><code class="lang-js">{
+    <span class="hljs-string">&quot;result&quot;</span>:{
+        <span class="hljs-string">&quot;result&quot;</span>:[
+            {
+                <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>, <span class="hljs-comment">// contract symbol</span>
+                <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// 1long, 2short</span>
+                <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">52</span>, <span class="hljs-comment">// number of orders</span>
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;3601.1600&quot;</span>, <span class="hljs-comment">// transaction price</span>
+                <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-number">1550977541000</span> <span class="hljs-comment">// transaction time</span>
+            },
+            ...
+        ],
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;deals&quot;</span>
+    }
+}
+</code></pre> <h3 id="&#x901A;&#x8FC7;&#x8BA2;&#x5355;&#x53F7;&#x67E5;&#x8BE2;&#x672A;&#x6210;&#x4EA4;&#x8BA2;&#x5355;"><a href="#&#x901A;&#x8FC7;&#x8BA2;&#x5355;&#x53F7;&#x67E5;&#x8BE2;&#x672A;&#x6210;&#x4EA4;&#x8BA2;&#x5355;"class="anchor-navigation-ex-anchor"name="&#x901A;&#x8FC7;&#x8BA2;&#x5355;&#x53F7;&#x67E5;&#x8BE2;&#x672A;&#x6210;&#x4EA4;&#x8BA2;&#x5355;"><i class="fa fa-link"aria-hidden="true"></i></a>check uncompleted orders through order id </h3> <ul> <li>POST <a href="https://api.bibox.com/v1/cquery"target="_blank">https://api.bibox.com/v1/cquery</a></li> <li>cmd: query/orderPendingByIDs</li> <li>Request parameter</li> </ul> <table> <thead> <tr> <th>Parameter Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>ids</td> <td>true</td> <td>string array</td> <td>order id</td> <td></td> <td>limit 50</td> </tr> </tbody> </table> <ul> <li>example</li> </ul> <p>Request parameter</p> <pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+{
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/orderPendingByIDs&quot;</span>,
+    <span class="hljs-string">&quot;body&quot;</span>:{
+        <span class="hljs-string">&quot;ids&quot;</span>:[
+            <span class="hljs-string">&quot;491168&quot;</span>,
+            <span class="hljs-string">&quot;2&quot;</span>
+        ]
+    },
+    <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">13</span>
+}
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://api.bibox.com/v1/cquery&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;query/orderPendingByIDs\&quot;,\&quot;body\&quot;:{\&quot;ids\&quot;:[\&quot;491168\&quot;,\&quot;2\&quot;]},\&quot;index\&quot;:13}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;3172e38a62698ffc4f73223c6a0b22d3&quot;</span>
+    }
+}
+</code></pre> <p>example code</p> <pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;https://api.bibox.com/v1/cquery&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f098d93423&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/orderPendingByIDs&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;ids&quot;</span>:[
+                <span class="hljs-string">&quot;491168&quot;</span>,
+                <span class="hljs-string">&quot;2&quot;</span>
+            ]
+        },
+        <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">13</span>
+    }
+];
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre> <p>Response</p> <pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;result&quot;</span>:[
+                {
+                    <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">491168</span>, <span class="hljs-comment">// order id</span>
+                    <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
+                    <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4ETH_USDT&quot;</span>, <span class="hljs-comment">// Contract symbol</span>
+                    <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// 1long, 2short</span>
+                    <span class="hljs-string">&quot;order_type&quot;</span>:<span class="hljs-number">2</span>,
+                    <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">3</span>, <span class="hljs-comment">// contract</span>
+                    <span class="hljs-string">&quot;order_from&quot;</span>:<span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// 0,1:uncompleted; 2:partly completed; 3:completed; 4: partly cancel; 5 cancel completed; 6,7 system cancel;</span>
+                    <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;136.0000&quot;</span>, <span class="hljs-comment">// order price</span>
+                    <span class="hljs-string">&quot;price_deal&quot;</span>:<span class="hljs-string">&quot;0.0000&quot;</span>, <span class="hljs-comment">// average transaction price</span>
+                    <span class="hljs-string">&quot;deal_count&quot;</span>:<span class="hljs-number">0</span>, 
+                    <span class="hljs-string">&quot;contract_deal&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">// number of completed orders</span>
+                    <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2019-02-20T02:01:46.000Z&quot;</span>,
+                    <span class="hljs-string">&quot;updatedAt&quot;</span>:<span class="hljs-string">&quot;2019-02-20T02:01:46.000Z&quot;</span>
+                },
+                {
+                    <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">2</span>,
+                    <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
+                    <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>,
+                    <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;order_type&quot;</span>:<span class="hljs-number">2</span>,
+                    <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;order_from&quot;</span>:<span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-number">3</span>,
+                    <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;3622.0000&quot;</span>,
+                    <span class="hljs-string">&quot;price_deal&quot;</span>:<span class="hljs-string">&quot;3622.0000&quot;</span>,
+                    <span class="hljs-string">&quot;deal_count&quot;</span>:<span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;contract_deal&quot;</span>:<span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2019-02-15T13:10:27.000Z&quot;</span>,
+                    <span class="hljs-string">&quot;updatedAt&quot;</span>:<span class="hljs-string">&quot;2019-02-15T13:10:45.000Z&quot;</span>
+                }
+            ],
+            <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/orderPendingByIDs&quot;</span>,
+            <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">13</span>
+        }
+    ]
+}
+</code></pre> <h3 id="&#x67E5;&#x8BE2;&#x4E2A;&#x4EBA;&#x6210;&#x4EA4;&#x8BB0;&#x5F55;"><a href="#&#x67E5;&#x8BE2;&#x4E2A;&#x4EBA;&#x6210;&#x4EA4;&#x8BB0;&#x5F55;"class="anchor-navigation-ex-anchor"name="&#x67E5;&#x8BE2;&#x4E2A;&#x4EBA;&#x6210;&#x4EA4;&#x8BB0;&#x5F55;"><i class="fa fa-link"aria-hidden="true"></i></a>check personal transaction record </h3> <ul> <li>POST <a href="https://api.bibox.com/v1/cquery"target="_blank">https://api.bibox.com/v1/cquery</a></li> <li>cmd: query/orderList</li> <li>Request parameter</li> </ul> <table> <thead> <tr> <th>Parameter Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>pair</td> <td>true</td> <td>String</td> <td>contract symbol</td> <td></td> <td>1,2,...</td> </tr> <tr> <td>page</td> <td>true</td> <td>integer</td> <td>page</td> <td></td> <td>1,2,...</td> </tr> <tr> <td>size</td> <td>true</td> <td>integer</td> <td>number</td> <td></td> <td>1,2,...</td> </tr> <tr> <td>begin_time</td> <td>false</td> <td>integer</td> <td>starting time</td> <td></td> <td></td> </tr> <tr> <td>end_time</td> <td>false</td> <td>integer</td> <td>ending time</td> <td></td> <td></td> </tr> <tr> <td>type</td> <td>false</td> <td>integer</td> <td>transaction type</td> <td></td> <td>1open position, 2liquidation, 3forced liquidation, 4cover position</td> </tr> </tbody> </table> <ul> <li>example</li> </ul> <p>Request parameter</p> <pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+{
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/orderList&quot;</span>,
+    <span class="hljs-string">&quot;body&quot;</span>:{
+        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>,
+        <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;size&quot;</span>:<span class="hljs-number">100</span>,
+        <span class="hljs-string">&quot;begin_time&quot;</span>:<span class="hljs-number">1550971541000</span>,
+        <span class="hljs-string">&quot;end_time&quot;</span>:<span class="hljs-number">1550977541000</span>,
+        type: <span class="hljs-number">2</span>,
+    }
+}
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://api.bibox.com/v1/cquery&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;query/orderList\&quot;,\&quot;body\&quot;:{\&quot;pair\&quot;:\&quot;4BTC_USDT\&quot;,\&quot;page\&quot;:1,\&quot;size\&quot;:100,\&quot;begin_time\&quot;:1550971541000,\&quot;end_time\&quot;:1550977541000,\&quot;type\&quot;:2}}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;2517280ee4d332c3b63d4ee34fa5bb06&quot;</span>
+    }
+}
+</code></pre> <p>example code</p> <pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;https://api.bibox.com/v1/cquery&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f098d93423&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/orderList&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>,
+            <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;size&quot;</span>:<span class="hljs-number">100</span>,
+            <span class="hljs-string">&quot;begin_time&quot;</span>:<span class="hljs-number">1550971541000</span>,
+            <span class="hljs-string">&quot;end_time&quot;</span>:<span class="hljs-number">1550977541000</span>,
+            type: <span class="hljs-number">2</span>,
+        }
+    }
+];
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre> <p>Response</p> <pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;result&quot;</span>:{
+                <span class="hljs-string">&quot;count&quot;</span>:<span class="hljs-number">101</span>,
+                <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,
+                <span class="hljs-string">&quot;items&quot;</span>:[
+                    {
+                        <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">236343</span>,
+                        <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>, 
+                        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>,    <span class="hljs-comment">// contract symbol</span>
+                        <span class="hljs-string">&quot;type&quot;</span>:<span class="hljs-number">2</span>,             <span class="hljs-comment">// 1open position, 2liquidation, 3forced liquidation, 4cover position</span>
+                        <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">2</span>, <span class="hljs-comment">// 1long, 2short</span>
+                        <span class="hljs-string">&quot;price_open&quot;</span>:<span class="hljs-string">&quot;3999.0000&quot;</span>, <span class="hljs-comment">// order pirce</span>
+                        <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;3964.5800&quot;</span>, <span class="hljs-comment">// average price of opening position</span>
+                        <span class="hljs-string">&quot;price_deal&quot;</span>:<span class="hljs-string">&quot;3999.0000&quot;</span>, <span class="hljs-comment">// transaction price</span>
+                        <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">2</span>, <span class="hljs-comment">// number of Cont</span>
+                        <span class="hljs-string">&quot;profit&quot;</span>:<span class="hljs-string">&quot;0.6884&quot;</span>, <span class="hljs-comment">// profits and losses</span>
+                        <span class="hljs-string">&quot;fee&quot;</span>:<span class="hljs-string">&quot;0.0000&quot;</span>, <span class="hljs-comment">// transaction fee</span>
+                        <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2019-02-23T17:07:31.000Z&quot;</span>
+                    },
+                    ...
+                ]
+            },
+            <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/orderList&quot;</span>
+        }
+    ]
+}
+</code></pre> <h3 id="&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x8BE6;&#x60C5;"><a href="#&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x8BE6;&#x60C5;"class="anchor-navigation-ex-anchor"name="&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x8BE6;&#x60C5;"><i class="fa fa-link"aria-hidden="true"></i></a>query order detail </h3> <ul> <li>POST <a href="https://api.bibox.com/v1/cquery"target="_blank">https://api.bibox.com/v1/cquery</a></li> <li>cmd: query/orderDetailByID</li> <li>Request parameter</li> </ul> <table> <thead> <tr> <th>Parameter Name</th> <th>Necessary or not</th> <th>Type</th> <th>Description</th> <th>Default</th> <th>Value Range</th> </tr> </thead> <tbody> <tr> <td>id</td> <td>true</td> <td>String</td> <td>order id</td> <td></td> </tr> </tbody> </table> <ul> <li>example</li> </ul> <p>Request parameter</p> <pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+{
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/orderDetailByID&quot;</span>,
+    <span class="hljs-string">&quot;body&quot;</span>:{
+        <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-string">&quot;58&quot;</span>, <span class="hljs-comment">// order id</span>
+    }
+}
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://api.bibox.com/v1/cquery&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;query/orderDetailByID\&quot;,\&quot;body\&quot;:{\&quot;id\&quot;:\&quot;58\&quot;}}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;2a5c0bdaea46ddf4efa809bd92e0181a&quot;</span>
+    }
+}
+</code></pre> <p>example code</p> <pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;https://api.bibox.com/v1/cquery&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f0e7c6d79d&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;1e01c22ff8c59e9d98d93423817303f098d93423&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/orderDetailByID&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-string">&quot;58&quot;</span>, <span class="hljs-comment">// order id</span>
+        }
+    }
+];
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre> <p>Response</p> <pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;result&quot;</span>:{
+                <span class="hljs-string">&quot;items&quot;</span>:[
+                   {
+                         <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">42</span>,                  <span class="hljs-comment">// order detail id</span>
+                        <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,      <span class="hljs-comment">// </span>
+                        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>,        <span class="hljs-comment">// Contract symbol</span>
+                        <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>,            <span class="hljs-comment">// 1 long, 2short</span>
+                        <span class="hljs-string">&quot;contract&quot;</span>:<span class="hljs-number">1</span>,              <span class="hljs-comment">// contract</span>
+                        <span class="hljs-string">&quot;order_from&quot;</span>:<span class="hljs-number">1</span>,            <span class="hljs-comment">// 1web&#xFF0C;2android&#xFF0C;3ios&#xFF0C; 6 apikey&#xFF0C;</span>
+                        <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2019-08-13T08:22:25.000Z&quot;</span>, <span class="hljs-comment">// create time</span>
+                        <span class="hljs-string">&quot;updatedAt&quot;</span>:<span class="hljs-string">&quot;2019-08-13T08:22:26.000Z&quot;</span>, 
+                        <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;7029.9700&quot;</span>,       <span class="hljs-comment">// price</span>
+                        <span class="hljs-string">&quot;price_deal&quot;</span>:<span class="hljs-string">&quot;0.0000&quot;</span>,     <span class="hljs-comment">// deal price</span>
+                        <span class="hljs-string">&quot;fee&quot;</span>:<span class="hljs-string">&quot;0.0000&quot;</span>,            <span class="hljs-comment">// fee </span>
+                        <span class="hljs-string">&quot;is_cancel&quot;</span>:<span class="hljs-number">1</span>,             <span class="hljs-comment">// 0 normal 1: canceld order</span>
+                        <span class="hljs-string">&quot;is_maker&quot;</span>:<span class="hljs-number">1</span>,              <span class="hljs-comment">// 0: taker; 1: maker; </span>
+                        <span class="hljs-string">&quot;order_type&quot;</span>:<span class="hljs-number">2</span>             <span class="hljs-comment">// 1:market price 2:limited price</span>
+                    }
+                ],
+                <span class="hljs-string">&quot;count&quot;</span>:<span class="hljs-number">9</span>,
+                <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>
+            },
+            <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;query/orderDetailByID&quot;</span>
+        }
+    ]
+}
+</code></pre> <h3 id="t1"><a href="#t1"class="anchor-navigation-ex-anchor"name="t1"><i class="fa fa-link"aria-hidden="true"></i></a>query contract value (apikey not required) </h3> <ul> <li>GET <a href="https://api.bibox.com/v1/cquery?cmd=contractValue"target="_blank">https://api.bibox.com/v1/cquery?cmd=contractValue</a></li> <li>The description of return result</li> </ul> <pre><code class="lang-js">{
+    <span class="hljs-string">&quot;result&quot;</span>:{
+        <span class="hljs-string">&quot;result&quot;</span>:[
+            {
+                <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;4BTC_USDT&quot;</span>,  
+                <span class="hljs-string">&quot;value&quot;</span>:<span class="hljs-string">&quot;0.0100000000&quot;</span>, 
+                <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;BTC&quot;</span>
+            },
+
+        ],
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;contractValue&quot;</span>
+    }
+}
+</code></pre> <h3 id="t2"><a href="#t2"class="anchor-navigation-ex-anchor"name="t2"><i class="fa fa-link"aria-hidden="true"></i></a>query contract leverage info (apikey not required) </h3> <ul> <li>GET <a href="https://api.bibox.com/v1/cquery?cmd=contractConfig"target="_blank">https://api.bibox.com/v1/cquery?cmd=contractConfig</a></li> <li>The description of return result</li> </ul> <pre><code class="lang-js">{
+    <span class="hljs-string">&quot;result&quot;</span>:{
+        <span class="hljs-string">&quot;result&quot;</span>:{
+            <span class="hljs-string">&quot;cross_leverage&quot;</span>:<span class="hljs-number">25</span>,         <span class="hljs-comment">// cross leverage</span>
+            <span class="hljs-string">&quot;leverage_max&quot;</span>:<span class="hljs-number">50</span>,           <span class="hljs-comment">// max leverage </span>
+            <span class="hljs-string">&quot;margin_rate_force&quot;</span>:<span class="hljs-string">&quot;0.01&quot;</span>,  <span class="hljs-comment">// margin rate force</span>
+            <span class="hljs-string">&quot;night_fee_rate&quot;</span>:<span class="hljs-string">&quot;0.0006&quot;</span>,   <span class="hljs-comment">// night fee rate</span>
+            <span class="hljs-string">&quot;hold_limit&quot;</span>:{               <span class="hljs-comment">// hold limit amount</span>
+                <span class="hljs-string">&quot;BTC&quot;</span>:<span class="hljs-number">5000</span>,
+                <span class="hljs-string">&quot;ETH&quot;</span>:<span class="hljs-number">150000</span>,
+                <span class="hljs-string">&quot;EOS&quot;</span>:<span class="hljs-number">50000</span>,
+                <span class="hljs-string">&quot;LTC&quot;</span>:<span class="hljs-number">35000</span>,
+                <span class="hljs-string">&quot;BCH&quot;</span>:<span class="hljs-number">100000</span>
+            }
+        },
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;contractConfig&quot;</span>
+    }
+}
+</code></pre> <h3 id="t3"><a href="#t3"class="anchor-navigation-ex-anchor"name="t3"><i class="fa fa-link"aria-hidden="true"></i></a>query contract open limit once (apikey not required) </h3> <ul> <li>GET <a href="https://api.bibox.com/v1/cquery?cmd=openLimit"target="_blank">https://api.bibox.com/v1/cquery?cmd=openLimit</a></li> <li>The description of return result</li> </ul> <pre><code class="lang-js">{
+    <span class="hljs-string">&quot;result&quot;</span>:{
+        <span class="hljs-string">&quot;result&quot;</span>:{
+            <span class="hljs-string">&quot;BTC&quot;</span>:<span class="hljs-number">5000</span>,
+            <span class="hljs-string">&quot;ETH&quot;</span>:<span class="hljs-number">75000</span>,
+            <span class="hljs-string">&quot;EOS&quot;</span>:<span class="hljs-number">75000</span>,
+            <span class="hljs-string">&quot;LTC&quot;</span>:<span class="hljs-number">15000</span>,
+            <span class="hljs-string">&quot;BCH&quot;</span>:<span class="hljs-number">15000</span>
+        },
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;openLimit&quot;</span>
+    }
+}
+</code></pre> <footer class="page-footer"><span class="copyright">Copyright &#xA9; bibox.com 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Update Date: 2019-11-13 </span></footer> </section> </div> <div class="search-results"> <div class="has-results"> <h1 class="search-results-title"><span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1> <ul class="search-results-list"></ul> </div> <div class="no-results"> <h1 class="search-results-title">No results matching "<span class="search-query"></span>"</h1> </div> </div> </div> </div> </div> </div> </div> <script>var gitbook=gitbook||[];gitbook.push(function(){gitbook.page.hasChanged({page:{title:"Restful API contract trading",level:"1.3",depth:1,next:{title:"contract account information",level:"1.3.1",depth:2,anchor:"#查询合约资产",path:"rest_api_c.md",ref:"rest_api_c.md#查询合约资产",articles:[]},previous:{title:"Example",level:"1.2.4.3",depth:3,anchor:"#请求示例",path:"restful_intro.md",ref:"restful_intro.md#请求示例",articles:[]},dir:"ltr"},config:{plugins:["-lunr","-search","search-pro","theme-api","theme-comscore","expandable-chapters-small","ancre-navigation","-sharing","hide-element","i18n","tbfed-pagefooter","custom-favicon-new","html-minifier"],styles:{website:"styles/website.css",pdf:"styles/pdf.css",epub:"styles/epub.css",mobi:"styles/mobi.css",ebook:"styles/ebook.css",print:"styles/print.css"},pluginsConfig:{"tbfed-pagefooter":{copyright:"Copyright &copy bibox.com 2019",modify_label:"Update Date: ",modify_format:"YYYY-MM-DD"},livereload:{},"search-pro":{},"html-minifier":{customAttrSurround:[],removeScriptTypeAttributes:!1,removeEmptyAttributes:!1,removeRedundantAttributes:!1,removeEmptyElements:!1,sortClassName:!0,caseSensitive:!0,html5:!0,collapseWhitespace:!0,processConditionalComments:!1,quoteCharacter:null,keepClosingSlash:!0,preventAttributesEscaping:!1,minifyURLs:!1,removeAttributeQuotes:!1,decodeEntities:!1,trimCustomFragments:!1,customAttrAssign:[],includeAutoGeneratedTags:!0,collapseInlineTagWhitespace:!0,collapseBooleanAttributes:!0,minifyJS:!0,removeTagWhitespace:!0,preserveLineBreaks:!1,sortAttributes:!0,removeStyleLinkTypeAttributes:!1,removeComments:!0,minifyCSS:!0,processScripts:[],conservativeCollapse:!0,removeOptionalTags:!1,useShortDoctype:!1},"custom-favicon-new":{myConfigKey:"default"},"hide-element":{elements:[".gitbook-link"]},fontsettings:{theme:"white",family:"sans",size:1},highlight:{},favicon:"assets/favicon.ico","theme-comscore":{},"theme-api":{languages:[{lang:"js",name:"JavaScript",default:!0},{lang:"python",name:"Python"}],split:!0,theme:"dark"},appleTouchIconPrecomposed152:"assets/favicon.ico","ancre-navigation":{associatedWithSummary:!0,float:{level1Icon:"",level2Icon:"",level3Icon:"",showLevelIcon:!1},mode:"float",multipleH1:!0,pageTop:{level1Icon:"",level2Icon:"",level3Icon:"",showLevelIcon:!1},printLog:!1,showLevel:!0},"expandable-chapters-small":{},"theme-default":{styles:{website:"styles/website.css",pdf:"styles/pdf.css",epub:"styles/epub.css",mobi:"styles/mobi.css",ebook:"styles/ebook.css",print:"styles/print.css"},showLevel:!1},i18n:{ChineseUrl:"../zh-hans",EnglishUrl:"../en",all:["english","chinese"]}},theme:"default",pdf:{pageNumbers:!0,fontSize:12,fontFamily:"Arial",paperSize:"a4",chapterMark:"pagebreak",pageBreaksBefore:"/",margin:{right:62,left:62,top:56,bottom:56}},structure:{langs:"LANGS.md",readme:"README.md",glossary:"GLOSSARY.md",summary:"SUMMARY.md"},variables:{},title:"Bibox API",language:"en",gitbook:"*",description:"Bibox交易所提供REST API 和 WebSocket API，便于投资者查看行情、快速交易。"},file:{path:"rest_api_c.md",mtime:"2019-11-13T11:31:47.948Z",type:"markdown"},gitbook:{version:"3.2.3",time:"2019-11-13T11:48:52.296Z"},basePath:".",book:{language:"en"}})})</script> </div> <script src="../gitbook/gitbook.js"></script> <script src="../gitbook/theme.js"></script> <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script> <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script> <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script> <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script> <script src="../gitbook/gitbook-plugin-i18n/buttons.js"></script> <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script> <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script> <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script> <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script> </body> </html> 
