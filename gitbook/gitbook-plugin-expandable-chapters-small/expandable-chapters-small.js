@@ -5,6 +5,22 @@ require(['gitbook', 'jQuery'], function(gitbook, $) {
       TRIGGER_TEMPLATE = '<i class="exc-trigger fa"></i>',
       LS_NAMESPACE = 'expChapters';
   var init = function () {
+
+    $(ARTICLES)
+    .parent(CHAPTER)
+    .children('a')
+    .on('click', function(e) {
+        toggle($(e.target).closest(CHAPTER));
+    });
+    
+
+    $(ARTICLES)
+    .parent(CHAPTER)
+    .children('a')
+    .on('click', function(e) {
+        toggle($(e.target).closest(CHAPTER));
+    });
+    
     // adding the trigger element to each ARTICLES parent and binding the event
     $(ARTICLES)
       .parent(CHAPTER)
