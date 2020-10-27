@@ -1,0 +1,4251 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Restful API Coin-based contract V3 · Bibox API</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="rest_api_bc_v3.html" />
+    
+    
+    <link rel="prev" href="rest_api_bc_v1_1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Bibox Exchange
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="restful_intro.html">
+            
+                <a href="restful_intro.html#t0">
+            
+                    
+                    Restful API description
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="restful_intro.html">
+            
+                <a href="restful_intro.html#t1">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="restful_intro.html">
+            
+                <a href="restful_intro.html#t2">
+            
+                    
+                    API Url
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="restful_intro.html">
+            
+                <a href="restful_intro.html#t3">
+            
+                    
+                    API Signature
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="restful_intro.html">
+            
+                <a href="restful_intro.html#申请apikey">
+            
+                    
+                    Apply for apikey
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="restful_intro.html">
+            
+                <a href="restful_intro.html#设置apikey操作权限">
+            
+                    
+                    Set apikey operating authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="restful_intro.html">
+            
+                <a href="restful_intro.html#合法请求结构">
+            
+                    
+                    Legal request structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="restful_intro.html">
+            
+                <a href="restful_intro.html#签名步骤">
+            
+                    
+                    Sign Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="restful_intro.html">
+            
+                <a href="restful_intro.html#完整签名例子">
+            
+                    
+                    the example of completed signature
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="restful_intro.html">
+            
+                <a href="restful_intro.html#t4">
+            
+                    
+                    API Request and Response Format
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="restful_intro.html">
+            
+                <a href="restful_intro.html#请求参数">
+            
+                    
+                    Request Parameter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="restful_intro.html">
+            
+                <a href="restful_intro.html#结果返回">
+            
+                    
+                    The result of return
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="restful_intro.html">
+            
+                <a href="restful_intro.html#请求示例">
+            
+                    
+                    Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#t0">
+            
+                    
+                    Restful API contract trading
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#查询k线">
+            
+                    
+                    View Kline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#查询合约市场深度">
+            
+                    
+                    View the contract depth of the market
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#查询合约资产">
+            
+                    
+                    contract account information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#查询单个合约持仓信息">
+            
+                    
+                    check single information of contract position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#查询所有合约持仓信息">
+            
+                    
+                    Check all information of contract position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#查询合约未成交订单">
+            
+                    
+                    Check uncompleted contract orders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#合约下单">
+            
+                    
+                    make contract order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#合约批量下单">
+            
+                    
+                    make bulk contract orders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#合约撤单">
+            
+                    
+                    cancel contract order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#合约撤多单">
+            
+                    
+                    cancel multiple orders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#合约撤1000单">
+            
+                    
+                    cancel 1000 orders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#t7">
+            
+                    
+                    cancel multiple orders through client order id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#合约调整杠杆倍数">
+            
+                    
+                    adjust contract leverage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#合约调整保证金">
+            
+                    
+                    adjust contract margin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#主账户资金转入合约账户">
+            
+                    
+                    transfer funds from master account to contract account
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#查询市场成交记录">
+            
+                    
+                    check transaction records in the market
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#通过订单号查询订单">
+            
+                    
+                    check orders through order id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#t5">
+            
+                    
+                    check uncompleted orders through client order id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#t6">
+            
+                    
+                    check orders through client order id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#查询个人仓位变化记录">
+            
+                    
+                    check personal position changed record
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#查询订单详情">
+            
+                    
+                    query order detail
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#t1">
+            
+                    
+                    query contract value (apikey not required)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.23" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#t2">
+            
+                    
+                    query contract leverage info (apikey not required)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.24" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#t3">
+            
+                    
+                    query contract open limit once (apikey not required)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.25" data-path="rest_api_c.html">
+            
+                <a href="rest_api_c.html#t4">
+            
+                    
+                    query current funding rate (apikey not required)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#t0">
+            
+                    
+                    Restful API contract trading_V1.1
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#描述">
+            
+                    
+                    Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#查询合约资产">
+            
+                    
+                    contract account information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#查询单个合约持仓信息">
+            
+                    
+                    check single information of contract position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#查询所有合约持仓信息">
+            
+                    
+                    Check all information of contract position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#查询合约未成交订单">
+            
+                    
+                    Check uncompleted contract orders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#合约下单">
+            
+                    
+                    make contract order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#合约批量下单">
+            
+                    
+                    make bulk contract orders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#合约撤单">
+            
+                    
+                    cancel contract order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#合约撤多单">
+            
+                    
+                    cancel multiple orders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#合约撤1000单">
+            
+                    
+                    cancel 1000 orders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#t7">
+            
+                    
+                    cancel multiple orders through client order id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#合约调整杠杆倍数">
+            
+                    
+                    adjust contract leverage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#合约调整保证金">
+            
+                    
+                    adjust contract margin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#主账户资金转入合约账户">
+            
+                    
+                    transfer funds from master account to contract account
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#查询市场成交记录">
+            
+                    
+                    check transaction records in the market
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#通过订单号查询订单">
+            
+                    
+                    check orders through order id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#t5">
+            
+                    
+                    check uncompleted orders through client order id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#t6">
+            
+                    
+                    check orders through client order id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#查询个人仓位变化记录">
+            
+                    
+                    check personal position changed record
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#查询订单详情">
+            
+                    
+                    query order detail
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#t1">
+            
+                    
+                    query contract value (apikey not required)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#t2">
+            
+                    
+                    query contract leverage info (apikey not required)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#t3">
+            
+                    
+                    query contract open limit once (apikey not required)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="rest_api_c_v1_1.html">
+            
+                <a href="rest_api_c_v1_1.html#t4">
+            
+                    
+                    query current funding rate (apikey not required)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="rest_api_bc.html">
+            
+                <a href="rest_api_bc.html#t0">
+            
+                    
+                    Restful API Coin-based contract
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="rest_api_bc.html">
+            
+                <a href="rest_api_bc.html#t1">
+            
+                    
+                    View Kline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="rest_api_bc.html">
+            
+                <a href="rest_api_bc.html#查询合约市场深度">
+            
+                    
+                    View the contract depth of the market
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="rest_api_bc_v1_1.html">
+            
+                <a href="rest_api_bc_v1_1.html#t0">
+            
+                    
+                    Restful API Coin-based contract V1.1
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="rest_api_bc_v1_1.html">
+            
+                <a href="rest_api_bc_v1_1.html#描述">
+            
+                    
+                    Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="rest_api_bc_v1_1.html">
+            
+                <a href="rest_api_bc_v1_1.html#查询持仓变化记录">
+            
+                    
+                    Query position change records
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="rest_api_bc_v1_1.html">
+            
+                <a href="rest_api_bc_v1_1.html#查询订单成交明细">
+            
+                    
+                    Query order transaction details
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="rest_api_bc_v1_1.html">
+            
+                <a href="rest_api_bc_v1_1.html#查询历史委托">
+            
+                    
+                    Query historical orders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="rest_api_bc_v1_1.html">
+            
+                <a href="rest_api_bc_v1_1.html#查询订单">
+            
+                    
+                    checking order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="rest_api_bc_v1_1.html">
+            
+                <a href="rest_api_bc_v1_1.html#查询资金费率">
+            
+                    
+                    Query funding rate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="rest_api_bc_v1_1.html">
+            
+                <a href="rest_api_bc_v1_1.html#查询标记价格">
+            
+                    
+                    Query mark price
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="rest_api_bc_v1_1.html">
+            
+                <a href="rest_api_bc_v1_1.html#查询合约基本信息">
+            
+                    
+                    Query basic contract information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="rest_api_bc_v1_1.html">
+            
+                <a href="rest_api_bc_v1_1.html#查询精度配置">
+            
+                    
+                    Query accuracy configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#t0">
+            
+                    
+                    Restful API Coin-based contract V3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#签名及返回值">
+            
+                    
+                    Signature and return format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#资金划转">
+            
+                    
+                    Fund transfer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#下单">
+            
+                    
+                    Place an order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#撤单">
+            
+                    
+                    Cancel order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#批量撤单">
+            
+                    
+                    Batch cancellation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#全部撤单">
+            
+                    
+                    Cancel all orders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#逐仓调整保证金">
+            
+                    
+                    Adjust margin on a fixed position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#调整持仓模式及杠杆">
+            
+                    
+                    Adjust position mode and leverage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#查询资产">
+            
+                    
+                    Query assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#查询仓位">
+            
+                    
+                    Query position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#查询订单列表">
+            
+                    
+                    Query order list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#查询订单">
+            
+                    
+                    Checking order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#批量查询订单列表">
+            
+                    
+                    Bulk query order list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#t1">
+            
+                    
+                    Batch query order list according to clientoid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="rest_api_bc_v3.html">
+            
+                <a href="rest_api_bc_v3.html#获取服务器时间">
+            
+                    
+                    Get server time
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#t0">
+            
+                    
+                    Restful API Spot trading
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#t1">
+            
+                    
+                    Market Quotation(apikey is not necessary)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#网络测试">
+            
+                    
+                    Network testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#查询交易对">
+            
+                    
+                    View trading pair
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#查询k线">
+            
+                    
+                    View Kline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.4" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#查询全币种市场行情">
+            
+                    
+                    View the market quotation of all tokens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.5" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#查询单币种市场行情">
+            
+                    
+                    View market quotation of a single token
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.6" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#查询市场深度">
+            
+                    
+                    View the depth of the market
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.7" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#查询成交记录">
+            
+                    
+                    View trading record history
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.8" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#查询市场ticker">
+            
+                    
+                    View the market ticker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.9" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#下单限制信息">
+            
+                    
+                    The trade parameter specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#t2">
+            
+                    
+                    Users Asset Information (needs apikey)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#币币账户资产">
+            
+                    
+                    Spot account asset
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.2" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#充值">
+            
+                    
+                    Deposit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.3" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#提现">
+            
+                    
+                    Withdraw
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.4" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#查询充值记录">
+            
+                    
+                    Deposit history list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.5" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#查询提现记录">
+            
+                    
+                    Withdraw history list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.6" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#获取币种配置">
+            
+                    
+                    Query token config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.7" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#查询某一条提现记录">
+            
+                    
+                    Withdrawal information
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#t3">
+            
+                    
+                    Transaction(Needs apikey)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.3.1" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#下单">
+            
+                    
+                    place an order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.2" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#撤单">
+            
+                    
+                    cancel an order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.3" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#当前委托">
+            
+                    
+                    The current order list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.4" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#历史委托">
+            
+                    
+                    The order history
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.5" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#成交记录">
+            
+                    
+                    The order history detail
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.6" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#委托单详情">
+            
+                    
+                    The order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.7" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#成交明细">
+            
+                    
+                    The dealed order history
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.8" data-path="rest_api_spot.html">
+            
+                <a href="rest_api_spot.html#最新成交明细">
+            
+                    
+                    The dealed order history last
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="rest_api_transfer.html">
+            
+                <a href="rest_api_transfer.html#t0">
+            
+                    
+                    Restful API Transfer Assets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="rest_api_transfer.html">
+            
+                <a href="rest_api_transfer.html#t1">
+            
+                    
+                    Query assets(apikey)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="rest_api_transfer.html">
+            
+                <a href="rest_api_transfer.html#钱包账户">
+            
+                    
+                    Main assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.2" data-path="rest_api_transfer.html">
+            
+                <a href="rest_api_transfer.html#币币账户资产">
+            
+                    
+                    Spot Assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.3" data-path="rest_api_transfer.html">
+            
+                <a href="rest_api_transfer.html#合约账户资产">
+            
+                    
+                    Contract Assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.4" data-path="rest_api_transfer.html">
+            
+                <a href="rest_api_transfer.html#信用账户资产">
+            
+                    
+                    Credit Assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="rest_api_transfer.html">
+            
+                <a href="rest_api_transfer.html#t2">
+            
+                    
+                    Main Assets And Spot Assets(needs apikey)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.2.1" data-path="rest_api_transfer.html">
+            
+                <a href="rest_api_transfer.html#钱包账户划转到币币账户">
+            
+                    
+                    Main assets transfer to spot assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="rest_api_transfer.html">
+            
+                <a href="rest_api_transfer.html#t3">
+            
+                    
+                    Main Assets Transfer to Credit Assets(needs apikey)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.3.1" data-path="rest_api_transfer.html">
+            
+                <a href="rest_api_transfer.html#钱包账户划转到信用账户">
+            
+                    
+                    Main assets to credit assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.2" data-path="rest_api_transfer.html">
+            
+                <a href="rest_api_transfer.html#信用户划转到钱包账户">
+            
+                    
+                    Credit assets transfer to main assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="rest_api_transfer.html">
+            
+                <a href="rest_api_transfer.html#t4">
+            
+                    
+                    Main Assets Transfer to Contract Assets(need apikey)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.4.1" data-path="rest_api_transfer.html">
+            
+                <a href="rest_api_transfer.html#钱包账户划转到合约账户">
+            
+                    
+                    Main Assets Transfer to Contract Assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="restful_credit.html">
+            
+                <a href="restful_credit.html#head">
+            
+                    
+                    Restful API Credit Trading
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ws_api_intro.html">
+            
+                <a href="ws_api_intro.html#t0">
+            
+                    
+                    WebSocket API description
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="ws_api_intro.html">
+            
+                <a href="ws_api_intro.html#t1">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="ws_api_intro.html">
+            
+                <a href="ws_api_intro.html#访问地址">
+            
+                    
+                    Access to the url
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="ws_api_intro.html">
+            
+                <a href="ws_api_intro.html#请求与订阅说明">
+            
+                    
+                    The description of request and subscription
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.3.1" data-path="ws_api_intro.html">
+            
+                <a href="ws_api_intro.html#t2">
+            
+                    
+                    Access to the url
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2" data-path="ws_api_intro.html">
+            
+                <a href="ws_api_intro.html#t3">
+            
+                    
+                    Data compression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.3" data-path="ws_api_intro.html">
+            
+                <a href="ws_api_intro.html#t4">
+            
+                    
+                    WebSocket Library
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.4" data-path="ws_api_intro.html">
+            
+                <a href="ws_api_intro.html#t5">
+            
+                    
+                    Ping message
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.5" data-path="ws_api_intro.html">
+            
+                <a href="ws_api_intro.html#t6">
+            
+                    
+                    Channel Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.6" data-path="ws_api_intro.html">
+            
+                <a href="ws_api_intro.html#t7">
+            
+                    
+                    Subscribe(addChannel)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.7" data-path="ws_api_intro.html">
+            
+                <a href="ws_api_intro.html#t8">
+            
+                    
+                    Unsubscribe(removeChannel)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#t0">
+            
+                    
+                    WebSocket API Subscribe
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#t1">
+            
+                    
+                    Subscribe Kline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#t2">
+            
+                    
+                    Subscribe Market
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#t3">
+            
+                    
+                    Subscribe Depth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#t4">
+            
+                    
+                    Subscribe Deals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#t5">
+            
+                    
+                    Subscribe Ticker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#t6">
+            
+                    
+                    Subscribe Login(spot+credit)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.6.1" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#签名步骤">
+            
+                    
+                    Sign Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6.2" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#完整签名例子">
+            
+                    
+                    the example of completed signature
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6.3" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#正确订阅">
+            
+                    
+                    subscribe correctly
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6.4" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#订阅成功返回">
+            
+                    
+                    the successful response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6.5" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#现货账户资产">
+            
+                    
+                    Normal account assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6.6" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#信用账户资产">
+            
+                    
+                    Credit account assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6.7" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#现货委托单">
+            
+                    
+                    Spot Pending orders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6.8" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#现货成交历史">
+            
+                    
+                    History of spot orders
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#t7">
+            
+                    
+                    Subscribe contract Kline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#t8">
+            
+                    
+                    Subscribe contract Market
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#t9">
+            
+                    
+                    Subscribe contract Depth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.10" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#t10">
+            
+                    
+                    Subscribe contract Deals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.11" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#t11">
+            
+                    
+                    Subscribe contract Ticker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.12" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#t12">
+            
+                    
+                    Subscribe contract Login
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.12.1" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#合约资产">
+            
+                    
+                    contract assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.12.2" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#合约持仓">
+            
+                    
+                    contract position contract_order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.12.3" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#合约委托单">
+            
+                    
+                    contract order pending
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.12.4" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#成交记录">
+            
+                    
+                    transaction records
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.12.5" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#仓位变化记录">
+            
+                    
+                    position change records
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.13" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#订阅指数">
+            
+                    
+                    Subscribe indexMarket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.14" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#订阅合约下单价格限制">
+            
+                    
+                    Subscribe the price limit of taking contract orders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.15" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#t21">
+            
+                    
+                    Coin-based contract subscribing to Kline data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.16" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#币本位合约订阅标记价格">
+            
+                    
+                    Coin-based contract subscription mark price
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.17" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#币本位合约订阅深度">
+            
+                    
+                    Coin-based contract subscription depth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.18" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#币本位合约订阅成交记录">
+            
+                    
+                    Coin-based contract subscription deals records
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.19" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#币本位合约订阅最新成交价">
+            
+                    
+                    Coin-based contract subscription ticker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.20" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#币本位合约订阅用户数据">
+            
+                    
+                    Coin-based contract subscription user data
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.20.1" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#币本位合约资产">
+            
+                    
+                    Coin-based contract assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.20.2" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#币本位合约仓位">
+            
+                    
+                    Coin-based contract position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.20.3" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#币本位合约挂单">
+            
+                    
+                    Coin-based contract pending order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.20.4" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#币本位合约成交">
+            
+                    
+                    Coin-based contract deal records
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.20.5" data-path="ws_api_sub.html">
+            
+                <a href="ws_api_sub.html#币本位合约持仓被动变化">
+            
+                    
+                    Coin-based contract position change records
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="error_code.html">
+            
+                <a href="error_code.html#错误码">
+            
+                    
+                    Error code
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <a target="_blank" href="https://github.com/Biboxcom/REST-API-demos">
+            
+                    
+                    Restful API example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <a target="_blank" href="https://github.com/Biboxcom/WS-API-demos">
+            
+                    
+                    WebSocket API example
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Restful API Coin-based contract V3</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="t0"><a name="t0" class="anchor-navigation-ex-anchor" href="#t0"><i class="fa fa-link" aria-hidden="true"></i></a>Restful API Coin-based contract V3 </h2>
+<h3 id="&#x7B7E;&#x540D;&#x53CA;&#x8FD4;&#x56DE;&#x503C;"><a name="&#x7B7E;&#x540D;&#x53CA;&#x8FD4;&#x56DE;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x7B7E;&#x540D;&#x53CA;&#x8FD4;&#x56DE;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>Signature and return format </h3>
+<ul>
+<li><p>All are post requests, and the request data is directly placed in httpbody
+  &apos;content-type&apos;: &apos;application/json&apos;,</p>
+</li>
+<li><p>The apikey and signature are placed in httpheader
+  &apos;bibox-api-key&apos;: apikey
+  &apos;bibox-api-sign&apos;: sign</p>
+</li>
+<li><p>Add a timestamp to the httpheader to indicate the timestamp of the request sent, expressed in milliseconds, to limit the time of the request
+  &apos;bibox-timestamp&apos;: timestamp</p>
+</li>
+<li><p>Return value, each response contains state, 0 means success, other error codes, means failure</p>
+</li>
+<li><p>example</p>
+</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:11268/v3/assets/transfer/cbc&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = {
+    <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;0.01&quot;</span>,
+    <span class="hljs-string">&quot;symbol&quot;</span>:<span class="hljs-string">&quot;BTC&quot;</span>,
+    <span class="hljs-string">&quot;type&quot;</span>:<span class="hljs-number">0</span>
+};
+
+<span class="hljs-keyword">let</span> cmd = <span class="hljs-built_in">JSON</span>.stringify(param); <span class="hljs-comment">//format param</span>
+<span class="hljs-keyword">let</span> timestamp = <span class="hljs-string">&apos;&apos;</span> + (<span class="hljs-built_in">Date</span>.now());
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(timestamp + cmd, secret).toString();<span class="hljs-comment">//sign cmds</span>
+
+request.post({
+        url: url,<span class="hljs-comment">//Request path</span>
+        method: <span class="hljs-string">&quot;POST&quot;</span>,<span class="hljs-comment">//Request method</span>
+        headers: {<span class="hljs-comment">//Request headers</span>
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        },
+        body: cmd<span class="hljs-comment">//Request parms string</span>
+    },
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">optionalCallback</span>(<span class="hljs-params">err, httpResponse, body</span>) </span>{
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;upload failed:&apos;</span>, err);
+        }
+        <span class="hljs-built_in">console</span>.log({
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        });
+        <span class="hljs-built_in">console</span>.log(body)
+
+    });
+</code></pre>
+<h3 id="&#x8D44;&#x91D1;&#x5212;&#x8F6C;"><a name="&#x8D44;&#x91D1;&#x5212;&#x8F6C;" class="anchor-navigation-ex-anchor" href="#&#x8D44;&#x91D1;&#x5212;&#x8F6C;"><i class="fa fa-link" aria-hidden="true"></i></a>Fund transfer </h3>
+<ul>
+<li><p>POST <a href="https://api.bibox.com/v3/assets/transfer/cbc" target="_blank">https://api.bibox.com/v3/assets/transfer/cbc</a></p>
+</li>
+<li><p>Request parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Necessary or not</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+<th>Value Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amount</td>
+<td>true</td>
+<td>string</td>
+<td>string of amount</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>true</td>
+<td>string</td>
+<td>coin symbol</td>
+<td></td>
+<td>BTC,ETH, ...</td>
+</tr>
+<tr>
+<td>type</td>
+<td>true</td>
+<td>integer</td>
+<td>0 transfer in, 1 transfer out</td>
+<td></td>
+<td>0,1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>example</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:11268/v3/assets/transfer/cbc&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = {
+    <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;0.01&quot;</span>,
+    <span class="hljs-string">&quot;symbol&quot;</span>:<span class="hljs-string">&quot;BTC&quot;</span>,
+    <span class="hljs-string">&quot;type&quot;</span>:<span class="hljs-number">0</span>
+};
+
+<span class="hljs-keyword">let</span> cmd = <span class="hljs-built_in">JSON</span>.stringify(param); <span class="hljs-comment">//format param</span>
+<span class="hljs-keyword">let</span> timestamp = <span class="hljs-string">&apos;&apos;</span> + (<span class="hljs-built_in">Date</span>.now());
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(timestamp + cmd, secret).toString();<span class="hljs-comment">//sign cmds</span>
+
+request.post({
+        url: url,<span class="hljs-comment">//Request path</span>
+        method: <span class="hljs-string">&quot;POST&quot;</span>,<span class="hljs-comment">//Request method</span>
+        headers: {<span class="hljs-comment">//Request headers</span>
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        },
+        body: cmd<span class="hljs-comment">//Request parms string</span>
+    },
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">optionalCallback</span>(<span class="hljs-params">err, httpResponse, body</span>) </span>{
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;upload failed:&apos;</span>, err);
+        }
+        <span class="hljs-built_in">console</span>.log({
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        });
+        <span class="hljs-built_in">console</span>.log(body)
+
+    });
+</code></pre>
+<p>Response</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;state&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">// success</span>
+    <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;352559634189422592&quot;</span>  <span class="hljs-comment">// ignore</span>
+}
+{
+    <span class="hljs-string">&quot;state&quot;</span>:<span class="hljs-number">3016</span>, <span class="hljs-comment">// failed</span>
+    <span class="hljs-string">&quot;msg&quot;</span>:<span class="hljs-string">&quot;&#x4EA4;&#x6613;&#x5BF9;&#x9519;&#x8BEF;&quot;</span>
+}
+</code></pre>
+<h3 id="&#x4E0B;&#x5355;"><a name="&#x4E0B;&#x5355;" class="anchor-navigation-ex-anchor" href="#&#x4E0B;&#x5355;"><i class="fa fa-link" aria-hidden="true"></i></a>Place an order </h3>
+<ul>
+<li><p>POST <a href="https://api.bibox.com/v3/cbc/order/open" target="_blank">https://api.bibox.com/v3/cbc/order/open</a></p>
+</li>
+<li><p>Request parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Necessary or not</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+<th>Value Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pair</td>
+<td>true</td>
+<td>string</td>
+<td>pair</td>
+<td></td>
+<td>5BTC_USD,5ETH_USD, ...</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>true</td>
+<td>string</td>
+<td>Number to string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>order_side</td>
+<td>true</td>
+<td>integer</td>
+<td>order side,1 open long, 2 open short, 3 close long, 4 close short</td>
+<td></td>
+<td>1,2,3,4</td>
+</tr>
+<tr>
+<td>order_type</td>
+<td>true</td>
+<td>integer</td>
+<td>order type,1 market order, 2 limit order</td>
+<td></td>
+<td>1,2</td>
+</tr>
+<tr>
+<td>price</td>
+<td>true</td>
+<td>string</td>
+<td>target price</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>order_from</td>
+<td>true</td>
+<td>integer</td>
+<td>order from</td>
+<td></td>
+<td>6</td>
+</tr>
+<tr>
+<td>client_oid</td>
+<td>false</td>
+<td>string</td>
+<td>client order id</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>example</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33185/v3/cbc/order/open&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = {
+    <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>,
+    <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;order_type&quot;</span>:<span class="hljs-number">2</span>,
+    <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;11500&quot;</span>,
+    <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;order_from&quot;</span>:<span class="hljs-number">6</span>,
+    <span class="hljs-string">&quot;client_oid&quot;</span>: <span class="hljs-string">&quot;1234567890&quot;</span>,
+};
+
+<span class="hljs-keyword">let</span> cmd = <span class="hljs-built_in">JSON</span>.stringify(param); <span class="hljs-comment">//format param</span>
+<span class="hljs-keyword">let</span> timestamp = <span class="hljs-string">&apos;&apos;</span> + (<span class="hljs-built_in">Date</span>.now());
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(timestamp + cmd, secret).toString();<span class="hljs-comment">//sign cmds</span>
+
+request.post({
+        url: url,<span class="hljs-comment">//Request path</span>
+        method: <span class="hljs-string">&quot;POST&quot;</span>,<span class="hljs-comment">//Request method</span>
+        headers: {<span class="hljs-comment">//Request headers</span>
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        },
+        body: cmd<span class="hljs-comment">//Request parms string</span>
+    },
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">optionalCallback</span>(<span class="hljs-params">err, httpResponse, body</span>) </span>{
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;upload failed:&apos;</span>, err);
+        }
+        <span class="hljs-built_in">console</span>.log({
+            url,
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        });
+        <span class="hljs-built_in">console</span>.log(body)
+
+    });
+</code></pre>
+<p>Response</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;state&quot;</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;order_id&quot;</span>:<span class="hljs-string">&quot;425510999949316&quot;</span>, <span class="hljs-comment">// order id</span>
+    <span class="hljs-string">&quot;client_oid&quot;</span>:<span class="hljs-string">&quot;1234567890&quot;</span>, <span class="hljs-comment">// client order id</span>
+    <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// order status&#xFF0C;1 uncompleted, 2 partially completed, 3 completely completed, 4 partially cancelled, 5 completely cancelled, 100 failed to place an order</span>
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;open&quot;</span> <span class="hljs-comment">// ignore</span>
+}
+</code></pre>
+<h3 id="&#x64A4;&#x5355;"><a name="&#x64A4;&#x5355;" class="anchor-navigation-ex-anchor" href="#&#x64A4;&#x5355;"><i class="fa fa-link" aria-hidden="true"></i></a>Cancel order </h3>
+<ul>
+<li><p>POST <a href="https://api.bibox.com/v3/cbc/order/close" target="_blank">https://api.bibox.com/v3/cbc/order/close</a></p>
+</li>
+<li><p>Request parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Necessary or not</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+<th>Value Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_id</td>
+<td>true</td>
+<td>string</td>
+<td>order id</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>example</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33185/v3/cbc/order/close&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = {
+    <span class="hljs-string">&quot;order_id&quot;</span>:<span class="hljs-string">&quot;425510999949316&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> cmd = <span class="hljs-built_in">JSON</span>.stringify(param); <span class="hljs-comment">//format param</span>
+<span class="hljs-keyword">let</span> timestamp = <span class="hljs-string">&apos;&apos;</span> + (<span class="hljs-built_in">Date</span>.now());
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(timestamp + cmd, secret).toString();<span class="hljs-comment">//sign cmds</span>
+
+request.post({
+        url: url,<span class="hljs-comment">//Request path</span>
+        method: <span class="hljs-string">&quot;POST&quot;</span>,<span class="hljs-comment">//Request method</span>
+        headers: {<span class="hljs-comment">//Request headers</span>
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        },
+        body: cmd<span class="hljs-comment">//Request parms string</span>
+    },
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">optionalCallback</span>(<span class="hljs-params">err, httpResponse, body</span>) </span>{
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;upload failed:&apos;</span>, err);
+        }
+        <span class="hljs-built_in">console</span>.log({
+            url,
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        });
+        <span class="hljs-built_in">console</span>.log(body)
+
+    });
+</code></pre>
+<p>Response</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;state&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">// success</span>
+    <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;success&quot;</span>, 
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;close&quot;</span>
+}
+</code></pre>
+<h3 id="&#x6279;&#x91CF;&#x64A4;&#x5355;"><a name="&#x6279;&#x91CF;&#x64A4;&#x5355;" class="anchor-navigation-ex-anchor" href="#&#x6279;&#x91CF;&#x64A4;&#x5355;"><i class="fa fa-link" aria-hidden="true"></i></a>Batch cancellation </h3>
+<ul>
+<li><p>POST <a href="https://api.bibox.com/v3/cbc/order/closeBatch" target="_blank">https://api.bibox.com/v3/cbc/order/closeBatch</a></p>
+</li>
+<li><p>Request parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Necessary or not</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+<th>Value Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_ids</td>
+<td>true</td>
+<td>array</td>
+<td>array of order id</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>example</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33185/v3/cbc/order/closeBatch&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = {
+    <span class="hljs-string">&quot;order_ids&quot;</span>:[<span class="hljs-string">&quot;2234567890&quot;</span>,<span class="hljs-string">&quot;2234567891&quot;</span>]
+};
+
+<span class="hljs-keyword">let</span> cmd = <span class="hljs-built_in">JSON</span>.stringify(param); <span class="hljs-comment">//format param</span>
+<span class="hljs-keyword">let</span> timestamp = <span class="hljs-string">&apos;&apos;</span> + (<span class="hljs-built_in">Date</span>.now());
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(timestamp + cmd, secret).toString();<span class="hljs-comment">//sign cmds</span>
+
+request.post({
+        url: url,<span class="hljs-comment">//Request path</span>
+        method: <span class="hljs-string">&quot;POST&quot;</span>,<span class="hljs-comment">//Request method</span>
+        headers: {<span class="hljs-comment">//Request headers</span>
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        },
+        body: cmd<span class="hljs-comment">//Request parms string</span>
+    },
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">optionalCallback</span>(<span class="hljs-params">err, httpResponse, body</span>) </span>{
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;upload failed:&apos;</span>, err);
+        }
+        <span class="hljs-built_in">console</span>.log({
+            url,
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        });
+        <span class="hljs-built_in">console</span>.log(body)
+
+    });
+</code></pre>
+<p>Response</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;state&quot;</span>:<span class="hljs-number">0</span>,<span class="hljs-comment">// success</span>
+    <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;success&quot;</span>,
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;close&quot;</span>
+}
+</code></pre>
+<h3 id="&#x5168;&#x90E8;&#x64A4;&#x5355;"><a name="&#x5168;&#x90E8;&#x64A4;&#x5355;" class="anchor-navigation-ex-anchor" href="#&#x5168;&#x90E8;&#x64A4;&#x5355;"><i class="fa fa-link" aria-hidden="true"></i></a>Cancel all orders </h3>
+<ul>
+<li><p>POST <a href="https://api.bibox.com/v3/cbc/order/closeAll" target="_blank">https://api.bibox.com/v3/cbc/order/closeAll</a></p>
+</li>
+<li><p>Request parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Necessary or not</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+<th>Value Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pair</td>
+<td>true</td>
+<td>string</td>
+<td>pair</td>
+<td></td>
+<td>5BTC_USD,5ETH_USD, ...</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>example</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33185/v3/cbc/order/closeAll&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = {
+    <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> cmd = <span class="hljs-built_in">JSON</span>.stringify(param); <span class="hljs-comment">//format param</span>
+<span class="hljs-keyword">let</span> timestamp = <span class="hljs-string">&apos;&apos;</span> + (<span class="hljs-built_in">Date</span>.now());
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(timestamp + cmd, secret).toString();<span class="hljs-comment">//sign cmds</span>
+
+request.post({
+        url: url,<span class="hljs-comment">//Request path</span>
+        method: <span class="hljs-string">&quot;POST&quot;</span>,<span class="hljs-comment">//Request method</span>
+        headers: {<span class="hljs-comment">//Request headers</span>
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        },
+        body: cmd<span class="hljs-comment">//Request parms string</span>
+    },
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">optionalCallback</span>(<span class="hljs-params">err, httpResponse, body</span>) </span>{
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;upload failed:&apos;</span>, err);
+        }
+        <span class="hljs-built_in">console</span>.log({
+            url,
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        });
+        <span class="hljs-built_in">console</span>.log(body)
+
+    });
+</code></pre>
+<p>Response</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;state&quot;</span>:<span class="hljs-number">0</span>,<span class="hljs-comment">// success</span>
+    <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;success&quot;</span>,
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;closeAll&quot;</span>
+}
+</code></pre>
+<h3 id="&#x9010;&#x4ED3;&#x8C03;&#x6574;&#x4FDD;&#x8BC1;&#x91D1;"><a name="&#x9010;&#x4ED3;&#x8C03;&#x6574;&#x4FDD;&#x8BC1;&#x91D1;" class="anchor-navigation-ex-anchor" href="#&#x9010;&#x4ED3;&#x8C03;&#x6574;&#x4FDD;&#x8BC1;&#x91D1;"><i class="fa fa-link" aria-hidden="true"></i></a>Adjust margin on a fixed position </h3>
+<ul>
+<li><p>POST <a href="https://api.bibox.com/v3/cbc/changeMargin" target="_blank">https://api.bibox.com/v3/cbc/changeMargin</a></p>
+</li>
+<li><p>Request parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Necessary or not</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+<th>Value Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pair</td>
+<td>true</td>
+<td>string</td>
+<td>pair</td>
+<td></td>
+<td>5BTC_USD,5ETH_USD, ...</td>
+</tr>
+<tr>
+<td>margin</td>
+<td>true</td>
+<td>string</td>
+<td>margin</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>side</td>
+<td>true</td>
+<td>integer</td>
+<td>position side, 1 long side, 2 short side</td>
+<td></td>
+<td>1&#xFF0C;2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>example</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33185/v3/cbc/changeMargin&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = {
+    <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>,
+    <span class="hljs-string">&quot;margin&quot;</span>:<span class="hljs-string">&quot;0.01&quot;</span>,
+    <span class="hljs-string">&quot;side&quot;</span>:<span class="hljs-number">1</span>
+};
+
+<span class="hljs-keyword">let</span> cmd = <span class="hljs-built_in">JSON</span>.stringify(param); <span class="hljs-comment">//format param</span>
+<span class="hljs-keyword">let</span> timestamp = <span class="hljs-string">&apos;&apos;</span> + (<span class="hljs-built_in">Date</span>.now());
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(timestamp + cmd, secret).toString();<span class="hljs-comment">//sign cmds</span>
+
+request.post({
+        url: url,<span class="hljs-comment">//Request path</span>
+        method: <span class="hljs-string">&quot;POST&quot;</span>,<span class="hljs-comment">//Request method</span>
+        headers: {<span class="hljs-comment">//Request headers</span>
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        },
+        body: cmd<span class="hljs-comment">//Request parms string</span>
+    },
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">optionalCallback</span>(<span class="hljs-params">err, httpResponse, body</span>) </span>{
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;upload failed:&apos;</span>, err);
+        }
+        <span class="hljs-built_in">console</span>.log({
+            url,
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        });
+        <span class="hljs-built_in">console</span>.log(body)
+
+    });
+</code></pre>
+<p>Response</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;state&quot;</span>:<span class="hljs-number">3103</span>, <span class="hljs-comment">// failed</span>
+    <span class="hljs-string">&quot;msg&quot;</span>:<span class="hljs-string">&quot;&#x6CA1;&#x6709;&#x6301;&#x4ED3;&#x4E0D;&#x652F;&#x6301;&#x8BE5;&#x64CD;&#x4F5C;&quot;</span>,
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;changeMargin&quot;</span>
+}
+</code></pre>
+<h3 id="&#x8C03;&#x6574;&#x6301;&#x4ED3;&#x6A21;&#x5F0F;&#x53CA;&#x6760;&#x6746;"><a name="&#x8C03;&#x6574;&#x6301;&#x4ED3;&#x6A21;&#x5F0F;&#x53CA;&#x6760;&#x6746;" class="anchor-navigation-ex-anchor" href="#&#x8C03;&#x6574;&#x6301;&#x4ED3;&#x6A21;&#x5F0F;&#x53CA;&#x6760;&#x6746;"><i class="fa fa-link" aria-hidden="true"></i></a>Adjust position mode and leverage </h3>
+<ul>
+<li><p>POST <a href="https://api.bibox.com/v3/cbc/changeMode" target="_blank">https://api.bibox.com/v3/cbc/changeMode</a></p>
+</li>
+<li><p>Request parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Necessary or not</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+<th>Value Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pair</td>
+<td>true</td>
+<td>string</td>
+<td>pair</td>
+<td></td>
+<td>5BTC_USD,5ETH_USD, ...</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>true</td>
+<td>integer</td>
+<td>position mode, 1 cross, 2 fi</td>
+<td></td>
+<td>1&#xFF0C;2</td>
+</tr>
+<tr>
+<td>leverage_long</td>
+<td>true</td>
+<td>integer</td>
+<td>Long leverage</td>
+<td></td>
+<td>1~100</td>
+</tr>
+<tr>
+<td>leverage_short</td>
+<td>true</td>
+<td>integer</td>
+<td>Short leverage</td>
+<td></td>
+<td>1~100</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>example</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33185/v3/cbc/changeMode&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = {
+    <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>,
+    <span class="hljs-string">&quot;mode&quot;</span>:<span class="hljs-number">2</span>,
+    <span class="hljs-string">&quot;leverage_long&quot;</span>:<span class="hljs-number">10</span>,
+    <span class="hljs-string">&quot;leverage_short&quot;</span>:<span class="hljs-number">20</span>
+};
+
+<span class="hljs-keyword">let</span> cmd = <span class="hljs-built_in">JSON</span>.stringify(param); <span class="hljs-comment">//format param</span>
+<span class="hljs-keyword">let</span> timestamp = <span class="hljs-string">&apos;&apos;</span> + (<span class="hljs-built_in">Date</span>.now());
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(timestamp + cmd, secret).toString();<span class="hljs-comment">//sign cmds</span>
+
+request.post({
+        url: url,<span class="hljs-comment">//Request path</span>
+        method: <span class="hljs-string">&quot;POST&quot;</span>,<span class="hljs-comment">//Request method</span>
+        headers: {<span class="hljs-comment">//Request headers</span>
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        },
+        body: cmd<span class="hljs-comment">//Request parms string</span>
+    },
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">optionalCallback</span>(<span class="hljs-params">err, httpResponse, body</span>) </span>{
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;upload failed:&apos;</span>, err);
+        }
+        <span class="hljs-built_in">console</span>.log({
+            url,
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        });
+        <span class="hljs-built_in">console</span>.log(body)
+
+    });
+</code></pre>
+<p>Response</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;state&quot;</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;success&quot;</span>,
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;changeMode&quot;</span>
+}
+</code></pre>
+<h3 id="&#x67E5;&#x8BE2;&#x8D44;&#x4EA7;"><a name="&#x67E5;&#x8BE2;&#x8D44;&#x4EA7;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x8D44;&#x4EA7;"><i class="fa fa-link" aria-hidden="true"></i></a>Query assets </h3>
+<ul>
+<li><p>POST <a href="https://api.bibox.com/v3/cbc/assets" target="_blank">https://api.bibox.com/v3/cbc/assets</a></p>
+</li>
+<li><p>Request parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Necessary or not</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+<th>Value Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>coin</td>
+<td>false</td>
+<td>string</td>
+<td>coin symbol</td>
+<td></td>
+<td>BTC&#xFF0C;ETH&#xFF0C;...</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>example</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33185/v3/cbc/assets&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = {
+    <span class="hljs-comment">// &quot;coin&quot;:&quot;BTC&quot;,</span>
+};
+
+<span class="hljs-keyword">let</span> cmd = <span class="hljs-built_in">JSON</span>.stringify(param); <span class="hljs-comment">//format param</span>
+<span class="hljs-keyword">let</span> timestamp = <span class="hljs-string">&apos;&apos;</span> + (<span class="hljs-built_in">Date</span>.now());
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(timestamp + cmd, secret).toString();<span class="hljs-comment">//sign cmds</span>
+
+request.post({
+        url: url,<span class="hljs-comment">//Request path</span>
+        method: <span class="hljs-string">&quot;POST&quot;</span>,<span class="hljs-comment">//Request method</span>
+        headers: {<span class="hljs-comment">//Request headers</span>
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        },
+        body: cmd<span class="hljs-comment">//Request parms string</span>
+    },
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">optionalCallback</span>(<span class="hljs-params">err, httpResponse, body</span>) </span>{
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;upload failed:&apos;</span>, err);
+        }
+        <span class="hljs-built_in">console</span>.log({
+            url,
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        });
+        <span class="hljs-built_in">console</span>.log(body)
+
+    });
+</code></pre>
+<p>Response</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;state&quot;</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;b&quot;</span>:<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-comment">// Available Balance</span>
+            <span class="hljs-string">&quot;c&quot;</span>:<span class="hljs-string">&quot;BTC&quot;</span>, <span class="hljs-comment">// coin symbol</span>
+            <span class="hljs-string">&quot;u&quot;</span>:<span class="hljs-number">100006</span>, <span class="hljs-comment">// user id</span>
+            <span class="hljs-string">&quot;f&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">// Frozen funds</span>
+            <span class="hljs-string">&quot;m&quot;</span>:<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-comment">// Margin</span>
+        },
+        {
+            <span class="hljs-string">&quot;b&quot;</span>:<span class="hljs-string">&quot;1&quot;</span>,
+            <span class="hljs-string">&quot;c&quot;</span>:<span class="hljs-string">&quot;ETH&quot;</span>,
+            <span class="hljs-string">&quot;u&quot;</span>:<span class="hljs-number">100006</span>,
+            <span class="hljs-string">&quot;f&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,
+            <span class="hljs-string">&quot;m&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>
+        }
+    ],
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;assets&quot;</span>
+}
+</code></pre>
+<h3 id="&#x67E5;&#x8BE2;&#x4ED3;&#x4F4D;"><a name="&#x67E5;&#x8BE2;&#x4ED3;&#x4F4D;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x4ED3;&#x4F4D;"><i class="fa fa-link" aria-hidden="true"></i></a>Query position </h3>
+<ul>
+<li><p>POST <a href="https://api.bibox.com/v3/cbc/position" target="_blank">https://api.bibox.com/v3/cbc/position</a></p>
+</li>
+<li><p>Request parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Necessary or not</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+<th>Value Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pair</td>
+<td>false</td>
+<td>string</td>
+<td>pair</td>
+<td></td>
+<td>5BTC_USD,5ETH_USD, ...</td>
+</tr>
+<tr>
+<td>side</td>
+<td>false</td>
+<td>integer</td>
+<td>position side, 1 long side, 2 short side</td>
+<td></td>
+<td>1&#xFF0C;2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>example</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33185/v3/cbc/position&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = {
+    <span class="hljs-comment">// &quot;pair&quot;:&quot;5BTC_USD&quot;,</span>
+    <span class="hljs-comment">// &quot;side&quot;:1</span>
+};
+
+<span class="hljs-keyword">let</span> cmd = <span class="hljs-built_in">JSON</span>.stringify(param); <span class="hljs-comment">//format param</span>
+<span class="hljs-keyword">let</span> timestamp = <span class="hljs-string">&apos;&apos;</span> + (<span class="hljs-built_in">Date</span>.now());
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(timestamp + cmd, secret).toString();<span class="hljs-comment">//sign cmds</span>
+
+request.post({
+        url: url,<span class="hljs-comment">//Request path</span>
+        method: <span class="hljs-string">&quot;POST&quot;</span>,<span class="hljs-comment">//Request method</span>
+        headers: {<span class="hljs-comment">//Request headers</span>
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        },
+        body: cmd<span class="hljs-comment">//Request parms string</span>
+    },
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">optionalCallback</span>(<span class="hljs-params">err, httpResponse, body</span>) </span>{
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;upload failed:&apos;</span>, err);
+        }
+        <span class="hljs-built_in">console</span>.log({
+            url,
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        });
+        <span class="hljs-built_in">console</span>.log(body)
+
+    });
+</code></pre>
+<p>Response</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;state&quot;</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;pt&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,<span class="hljs-comment">//ignore</span>
+            <span class="hljs-string">&quot;f&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,<span class="hljs-comment">//ignore</span>
+            <span class="hljs-string">&quot;l&quot;</span>:<span class="hljs-string">&quot;10&quot;</span>, <span class="hljs-comment">// leverage</span>
+            <span class="hljs-string">&quot;sd&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// position side, 1 long, 2 short</span>
+            <span class="hljs-string">&quot;pa&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//Alert price</span>
+            <span class="hljs-string">&quot;ui&quot;</span>:<span class="hljs-number">100006</span>,<span class="hljs-comment">//user id</span>
+            <span class="hljs-string">&quot;fb0&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,<span class="hljs-comment">//ignore</span>
+            <span class="hljs-string">&quot;pf&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,<span class="hljs-comment">//Liquidation price</span>
+            <span class="hljs-string">&quot;md&quot;</span>:<span class="hljs-number">2</span>,<span class="hljs-comment">// position mode, 1 cross, 2 fixed</span>
+            <span class="hljs-string">&quot;lc&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,<span class="hljs-comment">// Closable position price</span>
+            <span class="hljs-string">&quot;pi&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>, <span class="hljs-comment">// pair</span>
+            <span class="hljs-string">&quot;mg&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//margin</span>
+            <span class="hljs-string">&quot;hc&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,<span class="hljs-comment">// Position value</span>
+            <span class="hljs-string">&quot;fb&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>,<span class="hljs-comment">//ignore</span>
+            <span class="hljs-string">&quot;po&quot;</span>:<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-comment">//Opening price</span>
+        },
+        ...
+    ],
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;position&quot;</span>
+}
+</code></pre>
+<h3 id="&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x5217;&#x8868;"><a name="&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>Query order list </h3>
+<ul>
+<li><p>POST <a href="https://api.bibox.com/v3/cbc/order/list" target="_blank">https://api.bibox.com/v3/cbc/order/list</a></p>
+</li>
+<li><p>Request parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Necessary or not</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+<th>Value Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pair</td>
+<td>false</td>
+<td>string</td>
+<td>pair</td>
+<td></td>
+<td>5BTC_USD,5ETH_USD, ...</td>
+</tr>
+<tr>
+<td>order_side</td>
+<td>true</td>
+<td>integer</td>
+<td>order side,1 open long, 2 open short, 3 close long, 4 close short</td>
+<td></td>
+<td>1,2,3,4</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>example</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33185/v3/cbc/order/list&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = {
+    <span class="hljs-comment">// &quot;pair&quot;:&quot;5BTC_USD&quot;,</span>
+    <span class="hljs-comment">// &quot;order_side&quot;:1</span>
+};
+
+<span class="hljs-keyword">let</span> cmd = <span class="hljs-built_in">JSON</span>.stringify(param); <span class="hljs-comment">//format param</span>
+<span class="hljs-keyword">let</span> timestamp = <span class="hljs-string">&apos;&apos;</span> + (<span class="hljs-built_in">Date</span>.now());
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(timestamp + cmd, secret).toString();<span class="hljs-comment">//sign cmds</span>
+
+request.post({
+        url: url,<span class="hljs-comment">//Request path</span>
+        method: <span class="hljs-string">&quot;POST&quot;</span>,<span class="hljs-comment">//Request method</span>
+        headers: {<span class="hljs-comment">//Request headers</span>
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        },
+        body: cmd<span class="hljs-comment">//Request parms string</span>
+    },
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">optionalCallback</span>(<span class="hljs-params">err, httpResponse, body</span>) </span>{
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;upload failed:&apos;</span>, err);
+        }
+        <span class="hljs-built_in">console</span>.log({
+            url,
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        });
+        <span class="hljs-built_in">console</span>.log(body)
+
+    });
+</code></pre>
+<p>Response</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;state&quot;</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;result&quot;</span>:{
+        <span class="hljs-string">&quot;p&quot;</span>:<span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;t&quot;</span>:<span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;o&quot;</span>:[
+            {
+                <span class="hljs-string">&quot;f&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//fee</span>
+                <span class="hljs-string">&quot;dp&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//deal price</span>
+                <span class="hljs-string">&quot;eq&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//deal  amount</span>
+                <span class="hljs-string">&quot;p&quot;</span>:<span class="hljs-string">&quot;11092&quot;</span>, <span class="hljs-comment">//target price</span>
+                <span class="hljs-string">&quot;tif&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">// ignore</span>
+                <span class="hljs-string">&quot;q&quot;</span>:<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-comment">//Order quantity</span>
+                <span class="hljs-string">&quot;sd&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">//order side</span>
+                <span class="hljs-string">&quot;r&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">//reason</span>
+                <span class="hljs-string">&quot;s&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// status</span>
+                <span class="hljs-string">&quot;t&quot;</span>:<span class="hljs-number">1602679944815</span>, <span class="hljs-comment">//time</span>
+                <span class="hljs-string">&quot;ui&quot;</span>:<span class="hljs-number">100006</span>, <span class="hljs-comment">//user id</span>
+                <span class="hljs-string">&quot;fz&quot;</span>:<span class="hljs-string">&quot;0.0000091417&quot;</span>, <span class="hljs-comment">//Frozen funds</span>
+                <span class="hljs-string">&quot;fb0&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//Coupon deduction</span>
+                <span class="hljs-string">&quot;of&quot;</span>:<span class="hljs-number">4</span>, <span class="hljs-comment">//order from</span>
+                <span class="hljs-string">&quot;pi&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>, <span class="hljs-comment">//pair</span>
+                <span class="hljs-string">&quot;oi&quot;</span>:<span class="hljs-string">&quot;426610511577093&quot;</span>, <span class="hljs-comment">// order id</span>
+                <span class="hljs-string">&quot;coi&quot;</span>:<span class="hljs-string">&quot;1602679943911&quot;</span>, <span class="hljs-comment">//clientoid</span>
+                <span class="hljs-string">&quot;fb&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//bix deduction</span>
+                <span class="hljs-string">&quot;po&quot;</span>:<span class="hljs-literal">false</span> <span class="hljs-comment">//ignore</span>
+            },
+            ...
+        ]
+    },
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;orderList&quot;</span>
+}
+</code></pre>
+<h3 id="&#x67E5;&#x8BE2;&#x8BA2;&#x5355;"><a name="&#x67E5;&#x8BE2;&#x8BA2;&#x5355;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x8BA2;&#x5355;"><i class="fa fa-link" aria-hidden="true"></i></a>Checking order </h3>
+<ul>
+<li><p>POST <a href="https://api.bibox.com/v3/cbc/order/detail" target="_blank">https://api.bibox.com/v3/cbc/order/detail</a></p>
+</li>
+<li><p>Request parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Necessary or not</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+<th>Value Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_id</td>
+<td>true</td>
+<td>string</td>
+<td>order id</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>example</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33185/v3/cbc/order/detail&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = {
+    <span class="hljs-string">&quot;order_id&quot;</span>:<span class="hljs-string">&quot;426610511577093&quot;</span>,
+};
+
+<span class="hljs-keyword">let</span> cmd = <span class="hljs-built_in">JSON</span>.stringify(param); <span class="hljs-comment">//format param</span>
+<span class="hljs-keyword">let</span> timestamp = <span class="hljs-string">&apos;&apos;</span> + (<span class="hljs-built_in">Date</span>.now());
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(timestamp + cmd, secret).toString();<span class="hljs-comment">//sign cmds</span>
+
+request.post({
+        url: url,<span class="hljs-comment">//Request path</span>
+        method: <span class="hljs-string">&quot;POST&quot;</span>,<span class="hljs-comment">//Request method</span>
+        headers: {<span class="hljs-comment">//Request headers</span>
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        },
+        body: cmd<span class="hljs-comment">//Request parms string</span>
+    },
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">optionalCallback</span>(<span class="hljs-params">err, httpResponse, body</span>) </span>{
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;upload failed:&apos;</span>, err);
+        }
+        <span class="hljs-built_in">console</span>.log({
+            url,
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        });
+        <span class="hljs-built_in">console</span>.log(body)
+
+    });
+</code></pre>
+<p>Response</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;state&quot;</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;result&quot;</span>:{
+        <span class="hljs-string">&quot;f&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//fee</span>
+        <span class="hljs-string">&quot;dp&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//deal price</span>
+        <span class="hljs-string">&quot;eq&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//deal  amount</span>
+        <span class="hljs-string">&quot;p&quot;</span>:<span class="hljs-string">&quot;11092&quot;</span>, <span class="hljs-comment">//target price</span>
+        <span class="hljs-string">&quot;tif&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">// ignore</span>
+        <span class="hljs-string">&quot;q&quot;</span>:<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-comment">//Order quantity</span>
+        <span class="hljs-string">&quot;sd&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">//order side</span>
+        <span class="hljs-string">&quot;r&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">//reason</span>
+        <span class="hljs-string">&quot;s&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// status</span>
+        <span class="hljs-string">&quot;t&quot;</span>:<span class="hljs-number">1602679944815</span>, <span class="hljs-comment">//time</span>
+        <span class="hljs-string">&quot;ui&quot;</span>:<span class="hljs-number">100006</span>, <span class="hljs-comment">//user id</span>
+        <span class="hljs-string">&quot;fz&quot;</span>:<span class="hljs-string">&quot;0.0000091417&quot;</span>, <span class="hljs-comment">//Frozen funds</span>
+        <span class="hljs-string">&quot;fb0&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//Coupon deduction</span>
+        <span class="hljs-string">&quot;of&quot;</span>:<span class="hljs-number">4</span>, <span class="hljs-comment">//order from</span>
+        <span class="hljs-string">&quot;pi&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>, <span class="hljs-comment">//pair</span>
+        <span class="hljs-string">&quot;oi&quot;</span>:<span class="hljs-string">&quot;426610511577093&quot;</span>, <span class="hljs-comment">// order id</span>
+        <span class="hljs-string">&quot;coi&quot;</span>:<span class="hljs-string">&quot;1602679943911&quot;</span>, <span class="hljs-comment">//clientoid</span>
+        <span class="hljs-string">&quot;fb&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//bix deduction</span>
+        <span class="hljs-string">&quot;po&quot;</span>:<span class="hljs-literal">false</span> <span class="hljs-comment">//ignore</span>
+    },
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;orderDetail&quot;</span>
+}
+</code></pre>
+<h3 id="&#x6279;&#x91CF;&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x5217;&#x8868;"><a name="&#x6279;&#x91CF;&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x6279;&#x91CF;&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>Bulk query order list </h3>
+<ul>
+<li><p>POST <a href="https://api.bibox.com/v3/cbc/order/listBatch" target="_blank">https://api.bibox.com/v3/cbc/order/listBatch</a></p>
+</li>
+<li><p>Request parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Necessary or not</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+<th>Value Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_ids</td>
+<td>true</td>
+<td>array</td>
+<td>array of order id</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>example</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33185/v3/cbc/order/listBatch&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = {
+    <span class="hljs-string">&quot;order_ids&quot;</span>:[<span class="hljs-string">&quot;426610511577093&quot;</span>],
+};
+
+<span class="hljs-keyword">let</span> cmd = <span class="hljs-built_in">JSON</span>.stringify(param); <span class="hljs-comment">//format param</span>
+<span class="hljs-keyword">let</span> timestamp = <span class="hljs-string">&apos;&apos;</span> + (<span class="hljs-built_in">Date</span>.now());
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(timestamp + cmd, secret).toString();<span class="hljs-comment">//sign cmds</span>
+
+request.post({
+        url: url,<span class="hljs-comment">//Request path</span>
+        method: <span class="hljs-string">&quot;POST&quot;</span>,<span class="hljs-comment">//Request method</span>
+        headers: {<span class="hljs-comment">//Request headers</span>
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        },
+        body: cmd<span class="hljs-comment">//Request parms string</span>
+    },
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">optionalCallback</span>(<span class="hljs-params">err, httpResponse, body</span>) </span>{
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;upload failed:&apos;</span>, err);
+        }
+        <span class="hljs-built_in">console</span>.log({
+            url,
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        });
+        <span class="hljs-built_in">console</span>.log(body)
+
+    });
+</code></pre>
+<p>Response</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;state&quot;</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+             <span class="hljs-string">&quot;f&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//fee</span>
+            <span class="hljs-string">&quot;dp&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//deal price</span>
+            <span class="hljs-string">&quot;eq&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//deal amount</span>
+            <span class="hljs-string">&quot;p&quot;</span>:<span class="hljs-string">&quot;11092&quot;</span>, <span class="hljs-comment">//target price</span>
+            <span class="hljs-string">&quot;tif&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">// ignore</span>
+            <span class="hljs-string">&quot;q&quot;</span>:<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-comment">//Order quantity</span>
+            <span class="hljs-string">&quot;sd&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">//order side</span>
+            <span class="hljs-string">&quot;r&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">//reason</span>
+            <span class="hljs-string">&quot;s&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// status</span>
+            <span class="hljs-string">&quot;t&quot;</span>:<span class="hljs-number">1602679944815</span>, <span class="hljs-comment">//time</span>
+            <span class="hljs-string">&quot;ui&quot;</span>:<span class="hljs-number">100006</span>, <span class="hljs-comment">//user id</span>
+            <span class="hljs-string">&quot;fz&quot;</span>:<span class="hljs-string">&quot;0.0000091417&quot;</span>, <span class="hljs-comment">//Frozen funds</span>
+            <span class="hljs-string">&quot;fb0&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//Coupon deduction</span>
+            <span class="hljs-string">&quot;of&quot;</span>:<span class="hljs-number">4</span>, <span class="hljs-comment">//order from</span>
+            <span class="hljs-string">&quot;pi&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>, <span class="hljs-comment">//pair</span>
+            <span class="hljs-string">&quot;oi&quot;</span>:<span class="hljs-string">&quot;426610511577093&quot;</span>, <span class="hljs-comment">// order id</span>
+            <span class="hljs-string">&quot;coi&quot;</span>:<span class="hljs-string">&quot;1602679943911&quot;</span>, <span class="hljs-comment">//clientoid</span>
+            <span class="hljs-string">&quot;fb&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//bix deduction</span>
+            <span class="hljs-string">&quot;po&quot;</span>:<span class="hljs-literal">false</span> <span class="hljs-comment">//ignore</span>
+        }
+    ],
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;orderListBatch&quot;</span>
+}
+</code></pre>
+<h3 id="t1"><a name="t1" class="anchor-navigation-ex-anchor" href="#t1"><i class="fa fa-link" aria-hidden="true"></i></a>Batch query order list according to clientoid </h3>
+<ul>
+<li><p>POST <a href="https://api.bibox.com/v3/cbc/order/listBatchByClientOid" target="_blank">https://api.bibox.com/v3/cbc/order/listBatchByClientOid</a></p>
+</li>
+<li><p>Request parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Necessary or not</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+<th>Value Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_ids</td>
+<td>true</td>
+<td>array</td>
+<td>array of client order id</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>example</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33185/v3/cbc/order/listBatchByClientOid&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = {
+    <span class="hljs-string">&quot;order_ids&quot;</span>:[<span class="hljs-string">&quot;1602679943911&quot;</span>],
+};
+
+<span class="hljs-keyword">let</span> cmd = <span class="hljs-built_in">JSON</span>.stringify(param); <span class="hljs-comment">//format param</span>
+<span class="hljs-keyword">let</span> timestamp = <span class="hljs-string">&apos;&apos;</span> + (<span class="hljs-built_in">Date</span>.now());
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(timestamp + cmd, secret).toString();<span class="hljs-comment">//sign cmds</span>
+
+request.post({
+        url: url,<span class="hljs-comment">//Request path</span>
+        method: <span class="hljs-string">&quot;POST&quot;</span>,<span class="hljs-comment">//Request method</span>
+        headers: {<span class="hljs-comment">//Request headers</span>
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        },
+        body: cmd<span class="hljs-comment">//Request parms string</span>
+    },
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">optionalCallback</span>(<span class="hljs-params">err, httpResponse, body</span>) </span>{
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;upload failed:&apos;</span>, err);
+        }
+        <span class="hljs-built_in">console</span>.log({
+            url,
+            <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+            <span class="hljs-string">&apos;bibox-api-key&apos;</span>: apikey,
+            <span class="hljs-string">&apos;bibox-api-sign&apos;</span>: sign,
+            <span class="hljs-string">&apos;bibox-timestamp&apos;</span>: timestamp
+        });
+        <span class="hljs-built_in">console</span>.log(body)
+
+    });
+</code></pre>
+<p>Response</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;state&quot;</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+             <span class="hljs-string">&quot;f&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//fee</span>
+            <span class="hljs-string">&quot;dp&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//deal price</span>
+            <span class="hljs-string">&quot;eq&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//deal amount</span>
+            <span class="hljs-string">&quot;p&quot;</span>:<span class="hljs-string">&quot;11092&quot;</span>, <span class="hljs-comment">//target price</span>
+            <span class="hljs-string">&quot;tif&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">// ignore</span>
+            <span class="hljs-string">&quot;q&quot;</span>:<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-comment">//Order quantity</span>
+            <span class="hljs-string">&quot;sd&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">//order side</span>
+            <span class="hljs-string">&quot;r&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">//reason</span>
+            <span class="hljs-string">&quot;s&quot;</span>:<span class="hljs-number">1</span>, <span class="hljs-comment">// status</span>
+            <span class="hljs-string">&quot;t&quot;</span>:<span class="hljs-number">1602679944815</span>, <span class="hljs-comment">//time</span>
+            <span class="hljs-string">&quot;ui&quot;</span>:<span class="hljs-number">100006</span>, <span class="hljs-comment">//user id</span>
+            <span class="hljs-string">&quot;fz&quot;</span>:<span class="hljs-string">&quot;0.0000091417&quot;</span>, <span class="hljs-comment">//Frozen funds</span>
+            <span class="hljs-string">&quot;fb0&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//Coupon deduction</span>
+            <span class="hljs-string">&quot;of&quot;</span>:<span class="hljs-number">4</span>, <span class="hljs-comment">//order from</span>
+            <span class="hljs-string">&quot;pi&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>, <span class="hljs-comment">//pair</span>
+            <span class="hljs-string">&quot;oi&quot;</span>:<span class="hljs-string">&quot;426610511577093&quot;</span>, <span class="hljs-comment">// order id</span>
+            <span class="hljs-string">&quot;coi&quot;</span>:<span class="hljs-string">&quot;1602679943911&quot;</span>, <span class="hljs-comment">//clientoid</span>
+            <span class="hljs-string">&quot;fb&quot;</span>:<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-comment">//bix deduction</span>
+            <span class="hljs-string">&quot;po&quot;</span>:<span class="hljs-literal">false</span> <span class="hljs-comment">//ignore</span>
+        }
+    ],
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;orderListBatchByCLientOid&quot;</span>
+}
+</code></pre>
+<h3 id="&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x5668;&#x65F6;&#x95F4;"><a name="&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x5668;&#x65F6;&#x95F4;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x5668;&#x65F6;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>Get server time </h3>
+<ul>
+<li>GET <a href="https://api.bibox.com/v3/cbc/timestamp" target="_blank">https://api.bibox.com/v3/cbc/timestamp</a></li>
+</ul>
+<p>Response</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;time&quot;</span>:<span class="hljs-string">&quot;1602680518605&quot;</span>
+}
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; bibox.com 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Update Date: 
+2020-10-19
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Restful API Coin-based contract V3","level":"1.7","depth":1,"next":{"title":"Signature and return format","level":"1.7.1","depth":2,"anchor":"#签名及返回值","path":"rest_api_bc_v3.md","ref":"rest_api_bc_v3.md#签名及返回值","articles":[]},"previous":{"title":"Query accuracy configuration","level":"1.6.9","depth":2,"anchor":"#查询精度配置","path":"rest_api_bc_v1_1.md","ref":"rest_api_bc_v1_1.md#查询精度配置","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","theme-api","theme-comscore","expandable-chapters-small","ancre-navigation","-sharing","hide-element","i18n","tbfed-pagefooter","custom-favicon-new"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy bibox.com 2019","modify_label":"Update Date: ","modify_format":"YYYY-MM-DD"},"livereload":{},"search-pro":{},"custom-favicon-new":{"myConfigKey":"default"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":1},"highlight":{},"favicon":"assets/favicon.ico","theme-comscore":{},"theme-api":{"languages":[{"lang":"js","name":"JavaScript","default":true},{"lang":"python","name":"Python"}],"split":true,"theme":"dark"},"appleTouchIconPrecomposed152":"assets/favicon.ico","ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"i18n":{"ChineseUrl":"../zh-hans","EnglishUrl":"../en","all":["english","chinese"]}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bibox API","language":"en","gitbook":"*","description":"Bibox交易所提供REST API 和 WebSocket API，便于投资者查看行情、快速交易。"},"file":{"path":"rest_api_bc_v3.md","mtime":"2020-10-19T03:02:39.476Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-27T06:39:48.139Z"},"basePath":".","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-i18n/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Restful API 杠杆交易 · Bibox API</title>
+        <title>Restful API 币本位合约V1.1 · Bibox API</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -77,10 +77,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="ws_api_intro.html" />
+    <link rel="next" href="rest_api_bc_v1_1.html" />
     
     
-    <link rel="prev" href="rest_api_transfer.html" />
+    <link rel="prev" href="rest_api_bc.html" />
     
 
     </head>
@@ -2741,7 +2741,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Restful API 杠杆交易</a>
+        <a href="." >Restful API 币本位合约V1.1</a>
     </h1>
 </div>
 
@@ -2756,119 +2756,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#head"><b></b>&#x6760;&#x6746;API&#x5217;&#x8868; </a></li><ul><li><span class="title-icon "></span><a href="#&#x7D22;&#x5F15;"><b></b>&#x7D22;&#x5F15;</a></li><ul><li><span class="title-icon "></span><a href="#lendOrder-get"><b></b>&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x653E;&#x8D37;&#x4FE1;&#x606F; lendOrder/get </a></li><li><span class="title-icon "></span><a href="#borrowOrder-get"><b></b>&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x501F;&#x8D37;&#x4FE1;&#x606F; borrowOrder/get </a></li><li><span class="title-icon "></span><a href="#lendOrderbook-get"><b></b>&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x653E;&#x8D37;&#x6302;&#x5355;&#x4FE1;&#x606F; lendOrderbook/get </a></li><li><span class="title-icon "></span><a href="#transferAssets-lendAssets"><b></b>&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x653E;&#x8D37;&#x8D44;&#x4EA7;&#x4FE1;&#x606F; transferAssets/lendAssets </a></li><li><span class="title-icon "></span><a href="#transferAssets-borrowAssets"><b></b>&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x501F;&#x6B3E;&#x8D44;&#x4EA7;&#x4FE1;&#x606F; transferAssets/borrowAssets </a></li><li><span class="title-icon "></span><a href="#borrowDepth-get"><b></b>&#x83B7;&#x53D6;&#x501F;&#x8D37;&#x6DF1;&#x5EA6; borrowDepth/get </a></li><li><span class="title-icon "></span><a href="#borrowOrder-autobook"><b></b>&#x53D1;&#x8D77;&#x501F;&#x8D37; borrowOrder/autobook </a></li><li><span class="title-icon "></span><a href="#borrowOrder-refund"><b></b>&#x8FD8;&#x6B3E; borrowOrder/refund </a></li><li><span class="title-icon "></span><a href="#lendOrderbook-publish"><b></b>&#x53D1;&#x5E03;&#x9884;&#x5B9A;&#x653E;&#x8D37;&#x4FE1;&#x606F; lendOrderbook/publish </a></li><li><span class="title-icon "></span><a href="#lendOrderbook-cancel"><b></b>&#x64A4;&#x9500;&#x9884;&#x5B9A;&#x653E;&#x8D37;&#x4FE1;&#x606F; lendOrderbook/cancel </a></li><li><span class="title-icon "></span><a href="#trade-trade"><b></b>&#x4FE1;&#x7528;&#x8D26;&#x6237;&#x4E0B;&#x5355; trade/trade </a></li><li><span class="title-icon "></span><a href="#trade-cancel"><b></b>&#x4FE1;&#x7528;&#x8D26;&#x6237;&#x64A4;&#x5355; trade/cancel </a></li></ul></ul></ul></div><a href="#head" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="head"><a name="head" class="anchor-navigation-ex-anchor" href="#head"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6760;&#x6746;API&#x5217;&#x8868; </h1>
-<h2 id="&#x7D22;&#x5F15;"><a name="&#x7D22;&#x5F15;" class="anchor-navigation-ex-anchor" href="#&#x7D22;&#x5F15;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7D22;&#x5F15;</h2>
+                                <h2 id="t0"><a name="t0" class="anchor-navigation-ex-anchor" href="#t0"><i class="fa fa-link" aria-hidden="true"></i></a>Restful API &#x5E01;&#x672C;&#x4F4D;&#x5408;&#x7EA6;V1.1 </h2>
+<h3 id="&#x63CF;&#x8FF0;"><a name="&#x63CF;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#&#x63CF;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63CF;&#x8FF0;</h3>
 <ul>
-<li><a href="#lendOrder-get">&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x653E;&#x8D37;&#x4FE1;&#x606F; lendOrder/get</a></li>
-<li><a href="#borrowOrder-get">&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x501F;&#x8D37;&#x4FE1;&#x606F; borrowOrder/get</a></li>
-<li><a href="#lendOrderbook-get">&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x9884;&#x5B9A;&#x653E;&#x8D37;&#x4FE1;&#x606F; lendOrderbook/get</a></li>
-<li><a href="#transferAssets-lendAssets">&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x653E;&#x8D37;&#x8D44;&#x4EA7;&#x4FE1;&#x606F; transferAssets/lendAssets</a></li>
-<li><a href="#transferAssets-borrowAssets">&#x83B7;&#x53D6;&#x4FE1;&#x7528;&#x8D26;&#x6237;&#x8D44;&#x4EA7; transferAssets/borrowAssets</a></li>
-<li><a href="#borrowDepth-get">&#x83B7;&#x53D6;&#x4FE1;&#x7528;&#x4EA4;&#x6613;&#x6DF1;&#x5EA6; borrowDepth/get</a></li>
-<li><a href="#borrowOrder-autobook">&#x53D1;&#x8D77;&#x501F;&#x8D37; borrowOrder/autobook</a></li>
-<li><a href="#borrowOrder-refund">&#x8FD8;&#x6B3E; borrowOrder/refund</a></li>
-<li><a href="#lendOrderbook-publish">&#x53D1;&#x5E03;&#x9884;&#x5B9A;&#x653E;&#x8D37;&#x4FE1;&#x606F; lendOrderbook/publish</a></li>
-<li><a href="#lendOrderbook-cancel">&#x64A4;&#x9500;&#x9884;&#x5B9A;&#x653E;&#x8D37;&#x4FE1;&#x606F; lendOrderbook/cancel</a></li>
-<li><a href="#trade-trade">&#x4FE1;&#x7528;&#x8D26;&#x6237;&#x4E0B;&#x5355; trade/trade</a></li>
-<li><a href="#trade-cancel">&#x4FE1;&#x7528;&#x8D26;&#x6237;&#x64A4;&#x5355; trade/cancel</a></li>
+<li>v1.1 &#x5BF9; v1&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x4E86;&#x7CBE;&#x7B80;&#x3002;&#x8981;&#x6C42;&#xFF1A;&#x53C2;&#x6570;&#x4E2D;cmds&#x53EA;&#x5305;&#x542B;&#x4E00;&#x4E2A;cmd&#x3002;</li>
 </ul>
-<hr>
-<div class="api-method"><div class="api-method-definition"><h3 id="lendOrder-get"><a name="lendOrder-get" class="anchor-navigation-ex-anchor" href="#lendOrder-get"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x653E;&#x8D37;&#x4FE1;&#x606F; lendOrder/get </h3>
+<h3 id="&#x67E5;&#x8BE2;&#x6301;&#x4ED3;&#x53D8;&#x5316;&#x8BB0;&#x5F55;"><a name="&#x67E5;&#x8BE2;&#x6301;&#x4ED3;&#x53D8;&#x5316;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x6301;&#x4ED3;&#x53D8;&#x5316;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x6301;&#x4ED3;&#x53D8;&#x5316;&#x8BB0;&#x5F55;</h3>
 <ul>
-<li>path: <strong> /v1/credit </strong></li>
-<li>method: <strong> POST </strong></li>
-<li>cmd: <strong> lendOrder/get </strong></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>page</td>
-<td>int</td>
-<td>&#x9875;&#x6570;</td>
-</tr>
-<tr>
-<td>size</td>
-<td>int</td>
-<td>&#x6570;&#x91CF;</td>
-</tr>
-<tr>
-<td>coin_symbol</td>
-<td>string</td>
-<td>&#x5E01;&#x79CD;</td>
-</tr>
-<tr>
-<td>status</td>
-<td>list</td>
-<td>0-&#x501F;&#x51FA; 1-&#x90E8;&#x5206;&#x6536;&#x56DE; 2-&#x5B8C;&#x6210;</td>
-</tr>
-</tbody>
-</table>
-</div><div class="api-method-code"><div class="api-method-sample" data-lang="js" data-name="JavaScript"><p>&#x8BF7;&#x6C42;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;lendOrder/get&quot;</span>,
-    <span class="hljs-string">&quot;body&quot;</span>:{
-        <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,
-        <span class="hljs-string">&quot;status&quot;</span>:[
-            <span class="hljs-number">0</span>,
-            <span class="hljs-number">1</span>
-        ],
-        <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;USDT&quot;</span>,
-        <span class="hljs-string">&quot;size&quot;</span>:<span class="hljs-number">1</span>
-    }
-}
-</code></pre>
-</div><div class="api-method-example"><p>&#x54CD;&#x5E94;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;result&quot;</span>: [
-        {
-            <span class="hljs-string">&quot;result&quot;</span>: {
-                <span class="hljs-string">&quot;count&quot;</span>: <span class="hljs-number">2</span>,
-                <span class="hljs-string">&quot;page&quot;</span>: <span class="hljs-number">1</span>,
-                <span class="hljs-string">&quot;items&quot;</span>: [
-                    {
-                        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">14</span>,
-                        <span class="hljs-string">&quot;user_id&quot;</span>: <span class="hljs-number">8114202916</span>,
-                        <span class="hljs-string">&quot;coin_id&quot;</span>: <span class="hljs-number">60</span>,
-                        <span class="hljs-string">&quot;coin_symbol&quot;</span>: <span class="hljs-string">&quot;USDT&quot;</span>,
-                        <span class="hljs-string">&quot;amount&quot;</span>: <span class="hljs-string">&quot;1000.00000000&quot;</span>,
-                        <span class="hljs-string">&quot;amount_receipt&quot;</span>: <span class="hljs-string">&quot;0.00000000&quot;</span>,
-                        <span class="hljs-string">&quot;interest_rate&quot;</span>: <span class="hljs-string">&quot;0.00200000&quot;</span>,
-                        <span class="hljs-string">&quot;insurance_rate&quot;</span>: <span class="hljs-string">&quot;0.10000000&quot;</span>,
-                        <span class="hljs-string">&quot;fee&quot;</span>: <span class="hljs-string">&quot;0.00000000&quot;</span>,
-                        <span class="hljs-string">&quot;insurance&quot;</span>: <span class="hljs-string">&quot;0.00000000&quot;</span>,
-                        <span class="hljs-string">&quot;interest&quot;</span>: <span class="hljs-string">&quot;2.33333324&quot;</span>,
-                        <span class="hljs-string">&quot;interest_receipt&quot;</span>: <span class="hljs-string">&quot;0.00000000&quot;</span>,
-                        <span class="hljs-string">&quot;period&quot;</span>: <span class="hljs-number">7</span>,
-                        <span class="hljs-string">&quot;expireAt&quot;</span>: <span class="hljs-string">&quot;2019-11-18T03:00:00.000Z&quot;</span>,
-                        <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-number">0</span>,
-                        <span class="hljs-string">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;2019-11-11T03:50:47.000Z&quot;</span>,
-                        <span class="hljs-string">&quot;days&quot;</span>: <span class="hljs-number">1</span>
-                    }
-                ],
-                <span class="hljs-string">&quot;validSymbols&quot;</span>: [
-                    <span class="hljs-string">&quot;USDT&quot;</span>
-                ]
-            },
-            <span class="hljs-string">&quot;cmd&quot;</span>: <span class="hljs-string">&quot;lendOrder/get&quot;</span>
-        }
-    ]
-}
-</code></pre>
-</div></div></div>
-
-<hr>
-<div class="api-method"><div class="api-method-definition"><h3 id="borrowOrder-get"><a name="borrowOrder-get" class="anchor-navigation-ex-anchor" href="#borrowOrder-get"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x501F;&#x8D37;&#x4FE1;&#x606F; borrowOrder/get </h3>
-<ul>
-<li>path: <strong> /v1/credit </strong></li>
-<li>method: <strong> POST </strong></li>
-<li>cmd: <strong> borrowOrder/get </strong></li>
+<li><p>POST <a href="https://api.bibox.com/v1.1/cquery" target="_blank">https://api.bibox.com/v1.1/cquery</a></p>
+</li>
+<li><p>cmd&#xFF1A;bc/dealLog</p>
+</li>
+<li><p>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</p>
+</li>
 </ul>
 <table>
 <thead>
@@ -2882,29 +2782,13 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>coin_symbol</td>
-<td>true</td>
-<td>string</td>
-<td>&#x4EA4;&#x6613;&#x5E01;&#x79CD;</td>
-<td></td>
-<td>USDT, EOS...</td>
-</tr>
 <tr>
 <td>pair</td>
 <td>true</td>
 <td>string</td>
-<td>&#x4ED3;&#x4F4D;</td>
+<td>&#x5408;&#x7EA6;&#x7B26;&#x53F7;</td>
 <td></td>
-<td>BTC_USDT, ETH_USDT, *_USDT-&#x5168;&#x4ED3;</td>
-</tr>
-<tr>
-<td>status</td>
-<td>true</td>
-<td>int&#x6216;Array</td>
-<td>&#x8BA2;&#x5355;&#x72B6;&#x6001;</td>
-<td></td>
-<td>0&#x672A;&#x6210;&#x4EA4;, 1&#x501F;&#x6B3E;&#x6210;&#x529F;, 2&#x90E8;&#x5206;&#x8FD8;&#x6B3E;, 3-6&#x5DF2;&#x5B8C;&#x6210;</td>
+<td>5BTC_USD,5ETH_USD, ...</td>
 </tr>
 <tr>
 <td>page</td>
@@ -2912,78 +2796,129 @@
 <td>integer</td>
 <td>&#x7B2C;&#x51E0;&#x9875;</td>
 <td></td>
-<td>&#x4ECE;1&#x5F00;&#x59CB;</td>
+<td>1,2, ...</td>
 </tr>
 <tr>
 <td>size</td>
 <td>true</td>
 <td>integer</td>
-<td>&#x6BCF;&#x9875;&#x6570;&#x91CF;</td>
+<td>&#x6761;&#x6570;</td>
 <td></td>
-<td>1-50</td>
+<td>10,20, ...</td>
 </tr>
 </tbody>
 </table>
-</div><div class="api-method-code"><div class="api-method-sample" data-lang="js" data-name="JavaScript"><p>&#x8BF7;&#x6C42;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;borrowOrder/get&quot;</span>,
-    <span class="hljs-string">&quot;body&quot;</span>:{
-        <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,
-        <span class="hljs-string">&quot;status&quot;</span>:[
-            <span class="hljs-number">1</span>,
-            <span class="hljs-number">2</span>
-        ],
-        <span class="hljs-string">&quot;size&quot;</span>:<span class="hljs-number">10</span>,
-        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;BTC_USDT&quot;</span>
+<ul>
+<li>&#x793A;&#x4F8B;</li>
+</ul>
+<p>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+[
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bc/dealLog&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>,
+            <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;size&quot;</span>:<span class="hljs-number">10</span>
+        },
+        <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">1</span>
+    }
+]
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;http://tapi.bibox365aa.com:33050/v1.1/cquery&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;bc/dealLog\&quot;,\&quot;body\&quot;:{\&quot;pair\&quot;:\&quot;5BTC_USD\&quot;,\&quot;page\&quot;:1,\&quot;size\&quot;:10},\&quot;index\&quot;:1}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;4429dee1480d6b046a087b10b751143b&quot;</span>
     }
 }
 </code></pre>
-</div><div class="api-method-example"><p>&#x54CD;&#x5E94;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;result&quot;</span>: [
-        {
-            <span class="hljs-string">&quot;result&quot;</span>: {
-                <span class="hljs-string">&quot;count&quot;</span>: <span class="hljs-number">2</span>,
-                <span class="hljs-string">&quot;page&quot;</span>: <span class="hljs-number">1</span>,
-                <span class="hljs-string">&quot;items&quot;</span>: [
-                    {
-                        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">539354</span>,
-                        <span class="hljs-string">&quot;user_id&quot;</span>: <span class="hljs-number">8114202916</span>,
-                        <span class="hljs-string">&quot;coin_id&quot;</span>: <span class="hljs-number">60</span>,
-                        <span class="hljs-string">&quot;coin_symbol&quot;</span>: <span class="hljs-string">&quot;USDT&quot;</span>,
-                        <span class="hljs-string">&quot;pair&quot;</span>: <span class="hljs-string">&quot;BTC_USDT&quot;</span>,
-                        <span class="hljs-string">&quot;amount&quot;</span>: <span class="hljs-string">&quot;406.00000000&quot;</span>,
-                        <span class="hljs-string">&quot;amount_refund&quot;</span>: <span class="hljs-string">&quot;0.00000000&quot;</span>,
-                        <span class="hljs-string">&quot;interest_rate&quot;</span>: <span class="hljs-string">&quot;0.00010000&quot;</span>,
-                        <span class="hljs-string">&quot;interest_rate_hour&quot;</span>: <span class="hljs-string">&quot;0.00000417&quot;</span>,
-                        <span class="hljs-string">&quot;interest&quot;</span>: <span class="hljs-string">&quot;0.26559180&quot;</span>,
-                        <span class="hljs-string">&quot;interest_refund&quot;</span>: <span class="hljs-string">&quot;0.00000000&quot;</span>,
-                        <span class="hljs-string">&quot;period&quot;</span>: <span class="hljs-number">7</span>,
-                        <span class="hljs-string">&quot;expireAt&quot;</span>: <span class="hljs-string">&quot;2019-11-15T11:00:00.000Z&quot;</span>,
-                        <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-number">1</span>,
-                        <span class="hljs-string">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;2019-11-08T11:53:15.000Z&quot;</span>
-                    }
-                ],
-                <span class="hljs-string">&quot;validSymbols&quot;</span>: [
-                    {
-                        <span class="hljs-string">&quot;coin_symbol&quot;</span>: <span class="hljs-string">&quot;USDT&quot;</span>,
-                        <span class="hljs-string">&quot;pair&quot;</span>: <span class="hljs-string">&quot;BTC_USDT&quot;</span>
-                    }
-                ]
-            },
-            <span class="hljs-string">&quot;cmd&quot;</span>: <span class="hljs-string">&quot;borrowOrder/get&quot;</span>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33050/v1.1/cquery&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bc/dealLog&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;pair&quot;</span>: <span class="hljs-string">&quot;5BTC_USD&quot;</span>,
+            <span class="hljs-string">&quot;page&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;size&quot;</span>: <span class="hljs-number">10</span>,
+        },
+        <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">1</span>
+    }
+];
+
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(param))
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
         }
-    ]
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:{
+        <span class="hljs-string">&quot;count&quot;</span>:<span class="hljs-number">3</span>,
+        <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;items&quot;</span>:[
+            {
+                <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-string">&quot;1125899906842635654&quot;</span>, <span class="hljs-comment">// &#x4ED3;&#x4F4D;&#x53D8;&#x5316;id</span>
+                <span class="hljs-string">&quot;user_id&quot;</span>:<span class="hljs-number">100006</span>, <span class="hljs-comment">// &#x7528;&#x6237;id</span>
+                <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;BTC&quot;</span>,<span class="hljs-comment">// &#x5E01;&#x79CD;</span>
+                <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>,<span class="hljs-comment">// &#x4EA4;&#x6613;&#x5BF9;</span>
+                <span class="hljs-string">&quot;side&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-comment">// &#x4ED3;&#x4F4D;&#x65B9;&#x5411; 1&#x591A;&#x4ED3;&#xFF0C;2&#x7A7A;&#x4ED3;</span>
+                <span class="hljs-string">&quot;model&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-comment">// &#x4ED3;&#x4F4D;&#x6A21;&#x5F0F;&#xFF0C;1&#x5168;&#x4ED3;&#xFF0C;2&#x9010;&#x4ED3;</span>
+                <span class="hljs-string">&quot;log_type&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-comment">// &#x53D8;&#x5316;&#x7C7B;&#x578B; 1&#x5F00;&#x4ED3;&#xFF0C;2&#x5E73;&#x4ED3;&#xFF0C;3&#x51CF;&#x4ED3;&#x964D;&#x4F4E;&#x98CE;&#x9669;&#x7B49;&#x7EA7;, 4&#x7206;&#x4ED3;&#x6E05;&#x7A7A;&#x4ED3;&#x4F4D;, 5ADL</span>
+                <span class="hljs-string">&quot;hold_coin_dx&quot;</span>:<span class="hljs-string">&quot;1.0000000000&quot;</span>,<span class="hljs-comment">// &#x4ED3;&#x4F4D;&#x6301;&#x4ED3;&#x53D8;&#x5316;&#x91CF;</span>
+                <span class="hljs-string">&quot;hold_coin&quot;</span>:<span class="hljs-string">&quot;1.0000000000&quot;</span>,<span class="hljs-comment">// &#x4ED3;&#x4F4D;&#x6301;&#x4ED3;</span>
+                <span class="hljs-string">&quot;price_log&quot;</span>:<span class="hljs-string">&quot;11692.0000000000&quot;</span>,<span class="hljs-comment">// &#x53C2;&#x8003;&#x4EF7;&#x683C;</span>
+                <span class="hljs-string">&quot;price_open&quot;</span>:<span class="hljs-string">&quot;11692.0000000000&quot;</span>,<span class="hljs-comment">// &#x5F00;&#x4ED3;&#x5747;&#x4EF7;</span>
+                <span class="hljs-string">&quot;profit&quot;</span>:<span class="hljs-string">&quot;0.0000000000&quot;</span>,<span class="hljs-comment">// &#x6536;&#x76CA;</span>
+                <span class="hljs-string">&quot;fee&quot;</span>:<span class="hljs-string">&quot;0.0000000599&quot;</span>,<span class="hljs-comment">// &#x624B;&#x7EED;&#x8D39;</span>
+                <span class="hljs-string">&quot;fee_bix&quot;</span>:<span class="hljs-string">&quot;0.0000000000&quot;</span>,<span class="hljs-comment">// bix&#x62B5;&#x6263;</span>
+                <span class="hljs-string">&quot;fee_bix0&quot;</span>:<span class="hljs-string">&quot;0.0000000000&quot;</span>, <span class="hljs-comment">// &#x4F18;&#x60E0;&#x5238;&#x62B5;&#x6263;</span>
+                <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2020-10-14T03:00:08.000Z&quot;</span>,<span class="hljs-comment">// &#x53D8;&#x5316;&#x65F6;&#x95F4;</span>
+                <span class="hljs-string">&quot;updatedAt&quot;</span>:<span class="hljs-string">&quot;2020-10-14T03:00:08.000Z&quot;</span>
+            },
+            ...
+        ]
+    },
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bc/dealLog&quot;</span>,
+    <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">1</span>
 }
 </code></pre>
-</div></div></div>
-
-<hr>
-<div class="api-method"><div class="api-method-definition"><h3 id="lendOrderbook-get"><a name="lendOrderbook-get" class="anchor-navigation-ex-anchor" href="#lendOrderbook-get"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x653E;&#x8D37;&#x6302;&#x5355;&#x4FE1;&#x606F; lendOrderbook/get </h3>
+<h3 id="&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x6210;&#x4EA4;&#x660E;&#x7EC6;"><a name="&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x6210;&#x4EA4;&#x660E;&#x7EC6;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x6210;&#x4EA4;&#x660E;&#x7EC6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x6210;&#x4EA4;&#x660E;&#x7EC6;</h3>
 <ul>
-<li>path: <strong> /v1/credit </strong></li>
-<li>method: <strong> POST </strong></li>
-<li>cmd: <strong> lendOrderbook/get </strong></li>
+<li><p>POST <a href="https://api.bibox.com/v1.1/cquery" target="_blank">https://api.bibox.com/v1.1/cquery</a></p>
+</li>
+<li><p>cmd&#xFF1A;bc/orderDetail</p>
+</li>
+<li><p>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</p>
+</li>
 </ul>
 <table>
 <thead>
@@ -2998,20 +2933,12 @@
 </thead>
 <tbody>
 <tr>
-<td>coin_symbol</td>
+<td>orderId</td>
 <td>true</td>
-<td>string</td>
-<td>&#x4EA4;&#x6613;&#x5E01;&#x79CD;</td>
+<td>long</td>
+<td>&#x8BA2;&#x5355;id</td>
 <td></td>
-<td>USDT, EOS, ...</td>
-</tr>
-<tr>
-<td>status</td>
-<td>true</td>
-<td>integer&#x6216;integerArray</td>
-<td>&#x8BA2;&#x5355;&#x72B6;&#x6001;</td>
 <td></td>
-<td>0&#x672A;&#x6210;&#x4EA4;, 1&#x90E8;&#x5206;&#x6210;&#x4EA4;, 2&#x5DF2;&#x5B8C;&#x6210;</td>
 </tr>
 <tr>
 <td>page</td>
@@ -3019,67 +2946,124 @@
 <td>integer</td>
 <td>&#x7B2C;&#x51E0;&#x9875;</td>
 <td></td>
-<td>&#x4ECE;1&#x5F00;&#x59CB;</td>
+<td>1,2, ...</td>
 </tr>
 <tr>
 <td>size</td>
 <td>true</td>
 <td>integer</td>
-<td>&#x6BCF;&#x9875;&#x6570;&#x91CF;</td>
+<td>&#x6761;&#x6570;</td>
 <td></td>
-<td>1-50</td>
+<td>10,20, ...</td>
 </tr>
 </tbody>
 </table>
-</div><div class="api-method-code"><div class="api-method-sample" data-lang="js" data-name="JavaScript"><p>&#x8BF7;&#x6C42;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;lendOrderbook/get&quot;</span>,
-    <span class="hljs-string">&quot;body&quot;</span>:{
-        <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,
-        <span class="hljs-string">&quot;status&quot;</span>:[
-            <span class="hljs-number">0</span>,
-            <span class="hljs-number">1</span>
-        ],
-        <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;EOS&quot;</span>,
-        <span class="hljs-string">&quot;size&quot;</span>:<span class="hljs-number">50</span>
+<ul>
+<li>&#x793A;&#x4F8B;</li>
+</ul>
+<p>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+[
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bc/orderDetail&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;orderId&quot;</span>:<span class="hljs-string">&quot;421112953438213&quot;</span>,
+            <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;size&quot;</span>:<span class="hljs-number">10</span>
+        },
+        <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">1</span>
+    }
+]
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;http://tapi.bibox365aa.com:33050/v1.1/cquery&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;bc/orderDetail\&quot;,\&quot;body\&quot;:{\&quot;orderId\&quot;:\&quot;421112953438213\&quot;,\&quot;page\&quot;:1,\&quot;size\&quot;:10},\&quot;index\&quot;:1}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;a8741a05515df4be5ce75a2776790a0c&quot;</span>
     }
 }
 </code></pre>
-</div><div class="api-method-example"><p>&#x54CD;&#x5E94;:</p>
-<pre><code class="lang-js">{
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33050/v1.1/cquery&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bc/orderDetail&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;orderId&quot;</span>: <span class="hljs-string">&quot;421112953438213&quot;</span>,
+            <span class="hljs-string">&quot;page&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;size&quot;</span>: <span class="hljs-number">10</span>,
+        },
+        <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">1</span>
+    }
+];
+
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(param))
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
     <span class="hljs-string">&quot;result&quot;</span>:{
         <span class="hljs-string">&quot;count&quot;</span>:<span class="hljs-number">1</span>,
         <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,
         <span class="hljs-string">&quot;items&quot;</span>:[
             {
-                <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">1</span>,
-                <span class="hljs-string">&quot;user_id&quot;</span>:<span class="hljs-number">10000000</span>,
-                <span class="hljs-string">&quot;coin_id&quot;</span>:<span class="hljs-number">61</span>,
-                <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;EOS&quot;</span>,
-                <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-number">5</span>, <span class="hljs-comment">// &#x5F85;&#x6210;&#x4EA4;&#x6570;&#x91CF;</span>
-                <span class="hljs-string">&quot;amount_finish&quot;</span>:<span class="hljs-number">0</span>, <span class="hljs-comment">// &#x5DF2;&#x6210;&#x4EA4;&#x6570;&#x91CF;</span>
-                <span class="hljs-string">&quot;interest_rate&quot;</span>:<span class="hljs-number">0.001</span>, <span class="hljs-comment">// &#x5229;&#x7387;</span>
-                <span class="hljs-string">&quot;period&quot;</span>:<span class="hljs-number">7</span>,
-                <span class="hljs-string">&quot;expireAt&quot;</span>:<span class="hljs-string">&quot;2018-12-29T10:59:18.000Z&quot;</span>, 
-                <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-number">0</span>,
-                <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2018-12-22T10:59:18.000Z&quot;</span> 
+                <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-string">&quot;1125899906842635651&quot;</span>,<span class="hljs-comment">// &#x660E;&#x7EC6;id</span>
+                <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;BTC&quot;</span>,<span class="hljs-comment">// &#x5E01;&#x79CD;</span>
+                <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>,<span class="hljs-comment">// &#x4EA4;&#x6613;&#x5BF9;</span>
+                <span class="hljs-string">&quot;side&quot;</span>:<span class="hljs-number">2</span>,<span class="hljs-comment">// &#x6302;&#x5355;&#x65B9;&#x5411; 1&#x5F00;&#x591A;&#xFF0C;2&#x5F00;&#x7A7A;&#xFF0C;3&#x5E73;&#x591A;&#xFF0C;4&#x5E73;&#x7A7A;</span>
+                <span class="hljs-string">&quot;order_from&quot;</span>:<span class="hljs-number">4</span>,<span class="hljs-comment">// &#x8BA2;&#x5355;&#x6765;&#x6E90;</span>
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;10692.0000000000&quot;</span>,<span class="hljs-comment">// &#x6302;&#x5355;&#x4EF7;&#x683C;</span>
+                <span class="hljs-string">&quot;deal_price&quot;</span>:<span class="hljs-string">&quot;11510.0000000000&quot;</span>,<span class="hljs-comment">// &#x6210;&#x4EA4;&#x4EF7;&#x683C;</span>
+                <span class="hljs-string">&quot;deal_coin&quot;</span>:<span class="hljs-string">&quot;1.0000000000&quot;</span>,<span class="hljs-comment">// &#x6210;&#x4EA4;&#x4EF7;&#x503C;</span>
+                <span class="hljs-string">&quot;fee&quot;</span>:<span class="hljs-string">&quot;0.0000000608&quot;</span>,<span class="hljs-comment">// &#x624B;&#x7EED;&#x8D39;</span>
+                <span class="hljs-string">&quot;fee_bix&quot;</span>:<span class="hljs-string">&quot;0.0000000000&quot;</span>,<span class="hljs-comment">// bix&#x62B5;&#x6263;</span>
+                <span class="hljs-string">&quot;fee_bix0&quot;</span>:<span class="hljs-string">&quot;0.0000000000&quot;</span>,<span class="hljs-comment">// &#x4F18;&#x60E0;&#x5238;&#x62B5;&#x6263;</span>
+                <span class="hljs-string">&quot;is_maker&quot;</span>:<span class="hljs-number">0</span>,<span class="hljs-comment">// &#x662F;&#x5426;&#x662F;maker</span>
+                <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2020-10-14T02:58:59.000Z&quot;</span><span class="hljs-comment">// &#x6210;&#x4EA4;&#x65F6;&#x95F4;</span>
             }
-        ],
-        <span class="hljs-string">&quot;validSymbols&quot;</span>:[
-            <span class="hljs-string">&quot;EOS&quot;</span>
         ]
     },
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;lendOrderbook/get&quot;</span>
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bc/orderDetail&quot;</span>,
+    <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">1</span>
 }
 </code></pre>
-</div></div></div>
-
-<hr>
-<div class="api-method"><div class="api-method-definition"><h3 id="transferAssets-lendAssets"><a name="transferAssets-lendAssets" class="anchor-navigation-ex-anchor" href="#transferAssets-lendAssets"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x653E;&#x8D37;&#x8D44;&#x4EA7;&#x4FE1;&#x606F; transferAssets/lendAssets </h3>
+<h3 id="&#x67E5;&#x8BE2;&#x5386;&#x53F2;&#x59D4;&#x6258;"><a name="&#x67E5;&#x8BE2;&#x5386;&#x53F2;&#x59D4;&#x6258;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x5386;&#x53F2;&#x59D4;&#x6258;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x5386;&#x53F2;&#x59D4;&#x6258;</h3>
 <ul>
-<li>path: <strong> /v1/credit </strong></li>
-<li>method: <strong> POST </strong></li>
-<li>cmd: <strong> transferAssets/lendAssets </strong></li>
+<li><p>POST <a href="https://api.bibox.com/v1.1/cquery" target="_blank">https://api.bibox.com/v1.1/cquery</a></p>
+</li>
+<li><p>cmd&#xFF1A;bc/orderHistory</p>
+</li>
+<li><p>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</p>
+</li>
 </ul>
 <table>
 <thead>
@@ -3093,229 +3077,172 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>coin_symbol</td>
-<td>true</td>
-<td>string</td>
-<td>&#x4EA4;&#x6613;&#x5E01;&#x79CD;</td>
-<td></td>
-<td>USDT, EOS, ...</td>
-</tr>
-</tbody>
-</table>
-</div><div class="api-method-code"><div class="api-method-sample" data-lang="js" data-name="JavaScript"><p>&#x8BF7;&#x6C42;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;transferAssets/lendAssets&quot;</span>,
-    <span class="hljs-string">&quot;body&quot;</span>:{
-        <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;EOS&quot;</span>
-    }
-}
-</code></pre>
-</div><div class="api-method-example"><p>&#x54CD;&#x5E94;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;result&quot;</span>:{
-        <span class="hljs-string">&quot;balance&quot;</span>:<span class="hljs-string">&quot;1.52319980&quot;</span>, <span class="hljs-comment">// &#x53EF;&#x7528;&#x4F59;&#x989D;</span>
-        <span class="hljs-string">&quot;lend&quot;</span>:<span class="hljs-string">&quot;0.00000000&quot;</span>, <span class="hljs-comment">// &#x5F85;&#x6536;&#x8D37;&#x6B3E;&#x6570;&#x91CF;</span>
-        <span class="hljs-string">&quot;lend_book&quot;</span>:<span class="hljs-string">&quot;0.00000000&quot;</span>, <span class="hljs-comment">// &#x9884;&#x8BA2;&#x8D37;&#x6B3E;&#x6570;&#x91CF;</span>
-        <span class="hljs-string">&quot;interest&quot;</span>:<span class="hljs-string">&quot;0.00000000&quot;</span>, <span class="hljs-comment">// &#x5F85;&#x6536;&#x5229;&#x606F;</span>
-        <span class="hljs-string">&quot;lend_receipt&quot;</span>:<span class="hljs-string">&quot;1.44000000&quot;</span>, <span class="hljs-comment">// &#x5DF2;&#x6536;&#x8D37;&#x6B3E;&#x6570;&#x91CF;</span>
-        <span class="hljs-string">&quot;interest_receipt&quot;</span>:<span class="hljs-string">&quot;0.16115200&quot;</span> <span class="hljs-comment">// &#x5DF2;&#x6536;&#x5229;&#x606F;</span>
-    },
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;transferAssets/lendAssets&quot;</span>
-}
-</code></pre>
-</div></div></div>
-
-<hr>
-<div class="api-method"><div class="api-method-definition"><h3 id="transferAssets-borrowAssets"><a name="transferAssets-borrowAssets" class="anchor-navigation-ex-anchor" href="#transferAssets-borrowAssets"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x501F;&#x6B3E;&#x8D44;&#x4EA7;&#x4FE1;&#x606F; transferAssets/borrowAssets </h3>
-<ul>
-<li>path: <strong> /v1/credit </strong></li>
-<li>method: <strong> POST </strong></li>
-<li>cmd: <strong> transferAssets/borrowAssets </strong></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
-<th>&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x63CF;&#x8FF0;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x53D6;&#x503C;&#x8303;&#x56F4;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>pair</td>
-<td>true</td>
-<td>string</td>
-<td>&#x4ED3;&#x4F4D;</td>
-<td></td>
-<td>BTC_USDT, ETH_USDT, *_USDT-&#x5168;&#x4ED3;</td>
-</tr>
-</tbody>
-</table>
-</div><div class="api-method-code"><div class="api-method-sample" data-lang="js" data-name="JavaScript"><p>&#x8BF7;&#x6C42;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;transferAssets/borrowAssets&quot;</span>,
-    <span class="hljs-string">&quot;body&quot;</span>:{
-        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;BTC_USDT&quot;</span>,
-    }
-}
-</code></pre>
-</div><div class="api-method-example"><p>&#x54CD;&#x5E94;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;result&quot;</span>: [
-        {
-            <span class="hljs-string">&quot;result&quot;</span>: {
-                <span class="hljs-string">&quot;pair&quot;</span>: <span class="hljs-string">&quot;BTC_USDT&quot;</span>,
-                <span class="hljs-string">&quot;currency_deposit&quot;</span>: <span class="hljs-string">&quot;8406.00000000&quot;</span>,
-                <span class="hljs-string">&quot;currency_borrow&quot;</span>: <span class="hljs-string">&quot;506.34642529&quot;</span>,
-                <span class="hljs-string">&quot;currency_can_borrow&quot;</span>: <span class="hljs-string">&quot;70590.53574710&quot;</span>,
-                <span class="hljs-string">&quot;currency_borrow_book&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,
-                <span class="hljs-string">&quot;margin_radio&quot;</span>: <span class="hljs-string">&quot;1660.13&quot;</span>,
-                <span class="hljs-string">&quot;leverage_ratio&quot;</span>: <span class="hljs-number">3</span>, <span class="hljs-comment">//&#x6760;&#x6746;&#x500D;&#x6570;(&#x5E9F;&#x5F03;)</span>
-                <span class="hljs-string">&quot;max_leverage_ratio&quot;</span>: <span class="hljs-number">10</span>, <span class="hljs-comment">//&#x6700;&#x5927;&#x652F;&#x6301;&#x6760;&#x6746;&#x500D;&#x6570;(&#x65B0;)</span>
-                <span class="hljs-string">&quot;force_price&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,
-                <span class="hljs-string">&quot;bust_price&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,
-                <span class="hljs-string">&quot;items&quot;</span>: [
-                    {
-                        <span class="hljs-string">&quot;coin_symbol&quot;</span>: <span class="hljs-string">&quot;BTC&quot;</span>,
-                        <span class="hljs-string">&quot;coin_id&quot;</span>: <span class="hljs-number">42</span>,
-                        <span class="hljs-string">&quot;balance&quot;</span>: <span class="hljs-string">&quot;0.00000000&quot;</span>,
-                        <span class="hljs-string">&quot;freeze&quot;</span>: <span class="hljs-string">&quot;0.00000000&quot;</span>,
-                        <span class="hljs-string">&quot;borrow&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,
-                        <span class="hljs-string">&quot;can_transfer_credit&quot;</span>: <span class="hljs-string">&quot;0.00000000&quot;</span>,
-                        <span class="hljs-string">&quot;can_transfer_main&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,
-                        <span class="hljs-string">&quot;can_borrow&quot;</span>: <span class="hljs-string">&quot;8.82381696&quot;</span>,
-                        <span class="hljs-string">&quot;borrow_book&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,
-                        <span class="hljs-string">&quot;force_price&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,
-                        <span class="hljs-string">&quot;bust_price&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,
-                        <span class="hljs-string">&quot;price&quot;</span>: <span class="hljs-string">&quot;8000&quot;</span>,
-                        <span class="hljs-string">&quot;interest&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,
-                        <span class="hljs-string">&quot;total&quot;</span>: <span class="hljs-string">&quot;0.00000000&quot;</span>
-                    },
-                    {
-                        <span class="hljs-string">&quot;coin_symbol&quot;</span>: <span class="hljs-string">&quot;USDT&quot;</span>,
-                        <span class="hljs-string">&quot;coin_id&quot;</span>: <span class="hljs-number">60</span>,
-                        <span class="hljs-string">&quot;balance&quot;</span>: <span class="hljs-string">&quot;8406.00000000&quot;</span>,
-                        <span class="hljs-string">&quot;freeze&quot;</span>: <span class="hljs-string">&quot;0.00000000&quot;</span>,
-                        <span class="hljs-string">&quot;borrow&quot;</span>: <span class="hljs-string">&quot;506.34642529&quot;</span>,
-                        <span class="hljs-string">&quot;can_transfer_credit&quot;</span>: <span class="hljs-string">&quot;7494.57643447&quot;</span>,
-                        <span class="hljs-string">&quot;can_transfer_main&quot;</span>: <span class="hljs-string">&quot;5000.00000000&quot;</span>,
-                        <span class="hljs-string">&quot;can_borrow&quot;</span>: <span class="hljs-string">&quot;70590.53574710&quot;</span>,
-                        <span class="hljs-string">&quot;borrow_book&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,
-                        <span class="hljs-string">&quot;force_price&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,
-                        <span class="hljs-string">&quot;bust_price&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,
-                        <span class="hljs-string">&quot;price&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>,
-                        <span class="hljs-string">&quot;interest&quot;</span>: <span class="hljs-string">&quot;0.34642529&quot;</span>,
-                        <span class="hljs-string">&quot;total&quot;</span>: <span class="hljs-string">&quot;8406.00000000&quot;</span>
-                    }
-                ],
-                <span class="hljs-string">&quot;current_leverage_radio&quot;</span>: <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-comment">//&#x5F53;&#x524D;&#x6760;&#x6746;&#x500D;&#x6570;(&#x65B0;)</span>
-                <span class="hljs-string">&quot;force_deal_radio&quot;</span>: <span class="hljs-number">110</span>, <span class="hljs-comment">//&#x7206;&#x4ED3;&#x4FDD;&#x8BC1;&#x91D1;&#x7387;(&#x65B0;)</span>
-                <span class="hljs-string">&quot;alert_radio&quot;</span>: <span class="hljs-number">115</span>, <span class="hljs-comment">//&#x62A5;&#x8B66;&#x4FDD;&#x8BC1;&#x91D1;&#x7387;(&#x65B0;)</span>
-                <span class="hljs-string">&quot;safe_radio&quot;</span>: <span class="hljs-number">200</span> <span class="hljs-comment">//&#x5F3A;&#x5E73;&#x4E4B;&#x540E;&#x7684;&#x4FDD;&#x8BC1;&#x91D1;&#x7387;(&#x65B0;)</span>
-            },
-            <span class="hljs-string">&quot;cmd&quot;</span>: <span class="hljs-string">&quot;transferAssets/borrowAssets&quot;</span>
-        }
-    ]
-}
-</code></pre>
-</div></div></div>
-
-<hr>
-<div class="api-method"><div class="api-method-definition"><h3 id="borrowDepth-get"><a name="borrowDepth-get" class="anchor-navigation-ex-anchor" href="#borrowDepth-get"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x501F;&#x8D37;&#x6DF1;&#x5EA6; borrowDepth/get </h3>
-<ul>
-<li>path: <strong> /v1/credit </strong></li>
-<li>method: <strong> POST </strong></li>
-<li>cmd: <strong> borrowDepth/get </strong></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
-<th>&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x63CF;&#x8FF0;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x53D6;&#x503C;&#x8303;&#x56F4;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>coin_symbol</td>
-<td>true</td>
-<td>string</td>
-<td>&#x5E01;&#x79CD;</td>
-<td></td>
-<td>USDT, EOS, ...</td>
-</tr>
 <tr>
 <td>pair</td>
 <td>false</td>
 <td>string</td>
-<td>&#x4ED3;&#x4F4D;</td>
+<td>&#x5408;&#x7EA6;&#x7B26;&#x53F7;</td>
 <td></td>
-<td>BTC_USDT, ETH_USDT, ...</td>
+<td>5BTC_USD,5ETH_USD, ...</td>
+</tr>
+<tr>
+<td>page</td>
+<td>true</td>
+<td>integer</td>
+<td>&#x7B2C;&#x51E0;&#x9875;</td>
+<td></td>
+<td>1,2, ...</td>
+</tr>
+<tr>
+<td>size</td>
+<td>true</td>
+<td>integer</td>
+<td>&#x6761;&#x6570;</td>
+<td></td>
+<td>10,20, ...</td>
+</tr>
+<tr>
+<td>side</td>
+<td>false</td>
+<td>integer</td>
+<td>1&#x5F00;&#x591A; 2&#x5F00;&#x7A7A; 3&#x5E73;&#x591A; 4&#x5E73;&#x7A7A;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td>false</td>
+<td>&#x6570;&#x7EC4;</td>
+<td>&#x72B6;&#x6001;&#xFF0C;3:&#x5168;&#x90E8;&#x6210;&#x4EA4;&#xFF0C;4:&#x90E8;&#x5206;&#x64A4;&#x5355;&#xFF0C; 5:&#x5168;&#x90E8;&#x64A4;&#x5355;&#xFF0C; 100:&#x4E0B;&#x5355;&#x5931;&#x8D25;</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-</div><div class="api-method-code"><div class="api-method-sample" data-lang="js" data-name="JavaScript"><p>&#x8BF7;&#x6C42;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;borrowDepth/get&quot;</span>,
-    <span class="hljs-string">&quot;body&quot;</span>:{
-        <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;EOS&quot;</span>,
-        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;EOS_USDT&quot;</span>
+<ul>
+<li>&#x793A;&#x4F8B;</li>
+</ul>
+<p>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+[
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bc/orderHistory&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;size&quot;</span>:<span class="hljs-number">10</span>,
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>,
+            <span class="hljs-string">&quot;side&quot;</span>:<span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;status&quot;</span>:[
+                <span class="hljs-number">3</span>,
+                <span class="hljs-number">4</span>,
+                <span class="hljs-number">5</span>,
+                <span class="hljs-number">100</span>
+            ]
+        },
+        <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">1</span>
+    }
+]
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;http://tapi.bibox365aa.com:33050/v1.1/cquery&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;bc/orderHistory\&quot;,\&quot;body\&quot;:{\&quot;page\&quot;:1,\&quot;size\&quot;:10,\&quot;pair\&quot;:\&quot;5BTC_USD\&quot;,\&quot;side\&quot;:1,\&quot;status\&quot;:[3,4,5,100]},\&quot;index\&quot;:1}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;e5da11a7b038b1ad546243706aa75ecc&quot;</span>
     }
 }
 </code></pre>
-</div><div class="api-method-example"><p>&#x54CD;&#x5E94;:</p>
-<pre><code class="lang-js">{
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
+
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33050/v1.1/cquery&quot;</span>;
+
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
+
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bc/orderHistory&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;page&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;size&quot;</span>: <span class="hljs-number">10</span>,
+            <span class="hljs-string">&quot;pair&quot;</span>: <span class="hljs-string">&quot;5BTC_USD&quot;</span>,
+            <span class="hljs-string">&quot;side&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;status&quot;</span>: [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">100</span>],
+        },
+        <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">1</span>
+    }
+];
+
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(param))
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
+        }
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
+    }
+});
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
     <span class="hljs-string">&quot;result&quot;</span>:{
-        <span class="hljs-string">&quot;lend&quot;</span>:[ <span class="hljs-comment">// &#x653E;&#x6B3E;&#x6DF1;&#x5EA6;</span>
+        <span class="hljs-string">&quot;count&quot;</span>:<span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;items&quot;</span>:[
             {
-                <span class="hljs-string">&quot;interest_rate&quot;</span>:<span class="hljs-string">&quot;0.07&quot;</span>, <span class="hljs-comment">//&#x653E;&#x6B3E;&#x5229;&#x7387;</span>
-                <span class="hljs-string">&quot;total&quot;</span>:<span class="hljs-string">&quot;5.20000000&quot;</span>, <span class="hljs-comment">// &#x653E;&#x6B3E;&#x6570;&#x91CF;</span>
-                <span class="hljs-string">&quot;number&quot;</span>:<span class="hljs-number">1</span>
-            },
-            {
-                <span class="hljs-string">&quot;interest_rate&quot;</span>:<span class="hljs-string">&quot;0.08&quot;</span>,
-                <span class="hljs-string">&quot;total&quot;</span>:<span class="hljs-string">&quot;21657.73800000&quot;</span>,
-                <span class="hljs-string">&quot;number&quot;</span>:<span class="hljs-number">19</span>
-            }
-        ],
-        <span class="hljs-string">&quot;borrow&quot;</span>:[<span class="hljs-comment">// &#x501F;&#x6B3E;&#x6DF1;&#x5EA6;</span>
-            {
-                <span class="hljs-string">&quot;interest_rate&quot;</span>:<span class="hljs-string">&quot;0.01&quot;</span>, <span class="hljs-comment">// &#x501F;&#x6B3E;&#x5229;&#x7387;</span>
-                <span class="hljs-string">&quot;total&quot;</span>:<span class="hljs-string">&quot;5.00000000&quot;</span>, <span class="hljs-comment">// &#x501F;&#x6B3E;&#x6570;&#x91CF;</span>
-                <span class="hljs-string">&quot;number&quot;</span>:<span class="hljs-number">1</span>
-            }
-        ],
-        <span class="hljs-string">&quot;history&quot;</span>:[<span class="hljs-comment">// &#x6210;&#x4EA4;&#x5386;&#x53F2;</span>
-            {
-                <span class="hljs-string">&quot;interest_rate&quot;</span>:<span class="hljs-number">0.0008</span>, 
-                <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;26.480&quot;</span>, 
-                <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2018-12-19T22:05:21.000Z&quot;</span>
-            },
-            {
-                <span class="hljs-string">&quot;interest_rate&quot;</span>:<span class="hljs-number">0.0008</span>,
-                <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;6000.000&quot;</span>,
-                <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2018-12-19T10:24:27.000Z&quot;</span>
+                <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">421112953438215</span>,<span class="hljs-comment">// &#x8BA2;&#x5355;id</span>
+                <span class="hljs-string">&quot;user_id&quot;</span>:<span class="hljs-number">100006</span>,<span class="hljs-comment">// &#x7528;&#x6237;id</span>
+                <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;BTC&quot;</span>,<span class="hljs-comment">// &#x5E01;&#x79CD;</span>
+                <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>,<span class="hljs-comment">// &#x4EA4;&#x6613;&#x5BF9;</span>
+                <span class="hljs-string">&quot;side&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-comment">// &#x6302;&#x5355;&#x65B9;&#x5411;</span>
+                <span class="hljs-string">&quot;order_type&quot;</span>:<span class="hljs-number">2</span>,<span class="hljs-comment">// &#x6302;&#x5355;&#x7C7B;&#x578B; 1&#x5E02;&#x4EF7;&#xFF0C;2&#x9650;&#x4EF7;</span>
+                <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;11692.0000000000&quot;</span>,<span class="hljs-comment">// &#x6302;&#x5355;&#x4EF7;&#x683C;</span>
+                <span class="hljs-string">&quot;amount_coin&quot;</span>:<span class="hljs-string">&quot;1.0000000000&quot;</span>,<span class="hljs-comment">// &#x6302;&#x5355;&#x6570;&#x91CF;</span>
+                <span class="hljs-string">&quot;freeze&quot;</span>:<span class="hljs-string">&quot;0.0000000000&quot;</span>,<span class="hljs-comment">// &#x51BB;&#x7ED3;&#x8D44;&#x91D1;</span>
+                <span class="hljs-string">&quot;price_deal&quot;</span>:<span class="hljs-string">&quot;11692.0000000000&quot;</span>,<span class="hljs-comment">// &#x6210;&#x4EA4;&#x5747;&#x4EF7;</span>
+                <span class="hljs-string">&quot;deal_coin&quot;</span>:<span class="hljs-string">&quot;1.0000000000&quot;</span>,<span class="hljs-comment">// &#x6210;&#x4EA4;&#x4EF7;&#x503C;</span>
+                <span class="hljs-string">&quot;deal_num&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-comment">// &#x6210;&#x4EA4;&#x7B14;&#x6570;</span>
+                <span class="hljs-string">&quot;fee&quot;</span>:<span class="hljs-string">&quot;0.0000000599&quot;</span>,<span class="hljs-comment">// &#x624B;&#x7EED;&#x8D39;</span>
+                <span class="hljs-string">&quot;fee_bix&quot;</span>:<span class="hljs-string">&quot;0.0000000000&quot;</span>,<span class="hljs-comment">// bix&#x62B5;&#x6263;</span>
+                <span class="hljs-string">&quot;fee_bix0&quot;</span>:<span class="hljs-string">&quot;0.0000000000&quot;</span>,<span class="hljs-comment">// &#x4F18;&#x60E0;&#x5238;&#x62B5;&#x6263;</span>
+                <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-number">3</span>,<span class="hljs-comment">// &#x8BA2;&#x5355;&#x72B6;&#x6001;&#xFF0C;1&#x672A;&#x6210;&#x4EA4;&#xFF0C;2&#x90E8;&#x5206;&#x6210;&#x4EA4;&#xFF0C;3&#x5B8C;&#x5168;&#x6210;&#x4EA4;&#xFF0C;4&#x90E8;&#x5206;&#x64A4;&#x9500;&#xFF0C;5&#x5168;&#x90E8;&#x64A4;&#x9500;&#xFF0C;100&#x4E0B;&#x5355;&#x5931;&#x8D25;</span>
+                <span class="hljs-string">&quot;reason&quot;</span>:<span class="hljs-number">0</span>,<span class="hljs-comment">// &#x5931;&#x8D25;&#x539F;&#x56E0;</span>
+                <span class="hljs-string">&quot;fee_rate_maker&quot;</span>:<span class="hljs-string">&quot;0.0007000000&quot;</span>,<span class="hljs-comment">// maker&#x624B;&#x7EED;&#x8D39;&#x8D39;&#x7387;</span>
+                <span class="hljs-string">&quot;fee_rate_taker&quot;</span>:<span class="hljs-string">&quot;0.0007000000&quot;</span>,<span class="hljs-comment">// taker&#x624B;&#x7EED;&#x8D39;&#x8D39;&#x7387;</span>
+                <span class="hljs-string">&quot;client_oid&quot;</span>:<span class="hljs-number">1602644402806</span>,<span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;id</span>
+                <span class="hljs-string">&quot;order_from&quot;</span>:<span class="hljs-number">4</span>, <span class="hljs-comment">// &#x5FFD;&#x7565;</span>
+                <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2020-10-14T03:00:08.000Z&quot;</span>,<span class="hljs-comment">// &#x6302;&#x5355;&#x65F6;&#x95F4;</span>
+                <span class="hljs-string">&quot;updatedAt&quot;</span>:<span class="hljs-string">&quot;2020-10-14T03:00:08.000Z&quot;</span><span class="hljs-comment">// &#x6700;&#x65B0;&#x53D8;&#x5316;&#x65F6;&#x95F4;</span>
             }
         ]
     },
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;borrowDepth/get&quot;</span>
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bc/orderHistory&quot;</span>,
+    <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">1</span>
 }
 </code></pre>
-</div></div></div>
-
-<hr>
-<div class="api-method"><div class="api-method-definition"><h3 id="borrowOrder-autobook"><a name="borrowOrder-autobook" class="anchor-navigation-ex-anchor" href="#borrowOrder-autobook"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x8D77;&#x501F;&#x8D37; borrowOrder/autobook </h3>
+<h3 id="&#x67E5;&#x8BE2;&#x8BA2;&#x5355;"><a name="&#x67E5;&#x8BE2;&#x8BA2;&#x5355;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x8BA2;&#x5355;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x8BA2;&#x5355;</h3>
 <ul>
-<li>path: <strong> /v1/credit </strong></li>
-<li>method: <strong> POST </strong></li>
-<li>cmd: <strong> borrowOrder/autobook </strong></li>
+<li><p>POST <a href="https://api.bibox.com/v1.1/cquery" target="_blank">https://api.bibox.com/v1.1/cquery</a></p>
+</li>
+<li><p>cmd&#xFF1A;bc/orderById</p>
+</li>
+<li><p>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</p>
+</li>
 </ul>
 <table>
 <thead>
@@ -3330,365 +3257,245 @@
 </thead>
 <tbody>
 <tr>
-<td>coin_symbol</td>
+<td>orderIds</td>
 <td>true</td>
-<td>string</td>
-<td>&#x9700;&#x8981;&#x501F;&#x6B3E;&#x7684;&#x5E01;&#x79CD;</td>
+<td>&#x6570;&#x7EC4;</td>
+<td>&#x8BA2;&#x5355;id&#x6570;&#x7EC4;</td>
 <td></td>
-<td>EOS, BTC, USDT</td>
+<td></td>
 </tr>
 <tr>
-<td>pair</td>
+<td>clientOids</td>
 <td>true</td>
-<td>string</td>
-<td>&#x9700;&#x8981;&#x501F;&#x6B3E;&#x7684;&#x4ED3;&#x4F4D;</td>
-<td></td>
-<td>BTC_USDT, *_USDT</td>
-</tr>
-<tr>
-<td>amount</td>
-<td>true</td>
-<td>double</td>
-<td>&#x501F;&#x6B3E;&#x6570;&#x91CF;</td>
-<td></td>
+<td>&#x6570;&#x7EC4;</td>
+<td>&#x8BA2;&#x5355;&#x81EA;&#x5B9A;&#x4E49;di&#x6570;&#x7EC4;</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-</div><div class="api-method-code"><div class="api-method-sample" data-lang="js" data-name="JavaScript"><p>&#x8BF7;&#x6C42;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;borrowOrder/autobook&quot;</span>,
-    <span class="hljs-string">&quot;body&quot;</span>:{
-        <span class="hljs-string">&quot;coin_symbol&quot;</span>: <span class="hljs-string">&quot;BTC&quot;</span>,
-        <span class="hljs-string">&quot;pair&quot;</span>: <span class="hljs-string">&quot;BTC_USDT&quot;</span>,
-        <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;5.0036&quot;</span>
-    }
-}
-</code></pre>
-</div><div class="api-method-example"><p>&#x54CD;&#x5E94;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;&#x64CD;&#x4F5C;&#x6210;&#x529F;&quot;</span>,
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;borrowOrder/autobook&quot;</span>
-}
-</code></pre>
-</div></div></div>
-
-<hr>
-<div class="api-method"><div class="api-method-definition"><h3 id="borrowOrder-refund"><a name="borrowOrder-refund" class="anchor-navigation-ex-anchor" href="#borrowOrder-refund"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD8;&#x6B3E; borrowOrder/refund </h3>
 <ul>
-<li>path: <strong> /v1/credit </strong></li>
-<li>method: <strong> POST </strong></li>
-<li>cmd: <strong> borrowOrder/refund </strong></li>
+<li>&#x793A;&#x4F8B;</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
-<th>&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x63CF;&#x8FF0;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x53D6;&#x503C;&#x8303;&#x56F4;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>coin_symbol</td>
-<td>true</td>
-<td>string</td>
-<td>&#x9700;&#x8981;&#x8FD8;&#x6B3E;&#x7684;&#x5E01;&#x79CD;</td>
-<td></td>
-<td>EOS, BTC, USDT</td>
-</tr>
-<tr>
-<td>pair</td>
-<td>true</td>
-<td>string</td>
-<td>&#x9700;&#x8981;&#x8FD8;&#x6B3E;&#x7684;&#x4ED3;&#x4F4D;</td>
-<td></td>
-<td>BTC_USDT, *_USDT</td>
-</tr>
-<tr>
-<td>amount</td>
-<td>true</td>
-<td>double</td>
-<td>&#x8FD8;&#x6B3E;&#x6570;&#x91CF;</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div><div class="api-method-code"><div class="api-method-sample" data-lang="js" data-name="JavaScript"><p>&#x8BF7;&#x6C42;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;borrowOrder/refund&quot;</span>,
-    <span class="hljs-string">&quot;body&quot;</span>:{
-        <span class="hljs-string">&quot;coin_symbol&quot;</span>: <span class="hljs-string">&quot;BTC&quot;</span>,
-        <span class="hljs-string">&quot;pair&quot;</span>: <span class="hljs-string">&quot;BTC_USDT&quot;</span>,
-        <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;5.0036&quot;</span>
+<p>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Request</span>
+[
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bc/orderById&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;orderIds&quot;</span>:[
+                <span class="hljs-string">&quot;421112953438213&quot;</span>,
+                <span class="hljs-string">&quot;421112953438214&quot;</span>
+            ],
+            <span class="hljs-string">&quot;clientOids&quot;</span>:[
+                <span class="hljs-string">&quot;1602644402806&quot;</span>,
+                <span class="hljs-string">&quot;1602644402811&quot;</span>
+            ]
+        },
+        <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">1</span>
+    }
+]
+{
+    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;http://tapi.bibox365aa.com:33050/v1.1/cquery&quot;</span>,
+    <span class="hljs-string">&quot;form&quot;</span>:{
+        <span class="hljs-string">&quot;cmds&quot;</span>:<span class="hljs-string">&quot;[{\&quot;cmd\&quot;:\&quot;bc/orderById\&quot;,\&quot;body\&quot;:{\&quot;orderIds\&quot;:[\&quot;421112953438213\&quot;,\&quot;421112953438214\&quot;],\&quot;clientOids\&quot;:[\&quot;1602644402806\&quot;,\&quot;1602644402811\&quot;]},\&quot;index\&quot;:1}]&quot;</span>,
+        <span class="hljs-string">&quot;apikey&quot;</span>:<span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>,
+        <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;8a83452af336b6cf14a0c0090da96912&quot;</span>
     }
 }
 </code></pre>
-</div><div class="api-method-example"><p>&#x54CD;&#x5E94;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;&#x64CD;&#x4F5C;&#x6210;&#x529F;&quot;</span>,
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;borrowOrder/refund&quot;</span>
-}
-</code></pre>
-</div></div></div>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> CryptoJS = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;crypto-js&quot;</span>);
+<span class="hljs-keyword">let</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;request&quot;</span>);
 
-<hr>
-<div class="api-method"><div class="api-method-definition"><h3 id="lendOrderbook-publish"><a name="lendOrderbook-publish" class="anchor-navigation-ex-anchor" href="#lendOrderbook-publish"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x5E03;&#x9884;&#x5B9A;&#x653E;&#x8D37;&#x4FE1;&#x606F; lendOrderbook/publish </h3>
-<ul>
-<li>path: <strong> /v1/credit </strong></li>
-<li>method: <strong> POST </strong></li>
-<li>cmd: <strong> lendOrderbook/publish </strong></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
-<th>&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x63CF;&#x8FF0;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x53D6;&#x503C;&#x8303;&#x56F4;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>coin_symbol</td>
-<td>true</td>
-<td>string</td>
-<td>&#x4EA4;&#x6613;&#x5E01;&#x79CD;</td>
-<td></td>
-<td>USDT, EOS, ...</td>
-</tr>
-<tr>
-<td>amount</td>
-<td>true</td>
-<td>double</td>
-<td>&#x653E;&#x6B3E;&#x6570;&#x91CF;</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>interest_rate</td>
-<td>true</td>
-<td>double</td>
-<td>&#x653E;&#x6B3E;&#x5229;&#x7387;</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>is_insurance</td>
-<td>true</td>
-<td>integer</td>
-<td>&#x662F;&#x5426;&#x5F00;&#x542F;&#x4FDD;&#x9669;</td>
-<td></td>
-<td>0&#x6216;1</td>
-</tr>
-<tr>
-<td>force</td>
-<td>true</td>
-<td>integer</td>
-<td></td>
-<td></td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-</div><div class="api-method-code"><div class="api-method-sample" data-lang="js" data-name="JavaScript"><p>&#x8BF7;&#x6C42;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;lendOrderbook/publish&quot;</span>,
-    <span class="hljs-string">&quot;body&quot;</span>:{
-        <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;EOS&quot;</span>,
-        <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;5&quot;</span>,
-        <span class="hljs-string">&quot;interest_rate&quot;</span>:<span class="hljs-number">0.001</span>,
-        <span class="hljs-string">&quot;is_insurance&quot;</span>:<span class="hljs-number">1</span>,
-        <span class="hljs-string">&quot;force&quot;</span>:<span class="hljs-number">1</span>
-    }
-}
-</code></pre>
-</div><div class="api-method-example"><p>&#x54CD;&#x5E94;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;&#x64CD;&#x4F5C;&#x6210;&#x529F;&quot;</span>,
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;lendOrderbook/publish&quot;</span>
-}
-</code></pre>
-</div></div></div>
+<span class="hljs-keyword">let</span> url = <span class="hljs-string">&quot;http://tapi.bibox365aa.com:33050/v1.1/cquery&quot;</span>;
 
-<hr>
-<div class="api-method"><div class="api-method-definition"><h3 id="lendOrderbook-cancel"><a name="lendOrderbook-cancel" class="anchor-navigation-ex-anchor" href="#lendOrderbook-cancel"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64A4;&#x9500;&#x9884;&#x5B9A;&#x653E;&#x8D37;&#x4FE1;&#x606F; lendOrderbook/cancel </h3>
-<ul>
-<li>path: <strong> /v1/credit </strong></li>
-<li>method: <strong> POST </strong></li>
-<li>cmd: <strong> lendOrderbook/cancel </strong></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
-<th>&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x63CF;&#x8FF0;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x53D6;&#x503C;&#x8303;&#x56F4;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>orderbook_id</td>
-<td>true</td>
-<td>integer</td>
-<td>&#x8BA2;&#x5355;id</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div><div class="api-method-code"><div class="api-method-sample" data-lang="js" data-name="JavaScript"><p>&#x8BF7;&#x6C42;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;lendOrderbook/cancel&quot;</span>,
-    <span class="hljs-string">&quot;body&quot;</span>:{
-        <span class="hljs-string">&quot;orderbook_id&quot;</span>:<span class="hljs-number">9064</span>
-    }
-}
-</code></pre>
-</div><div class="api-method-example"><p>&#x54CD;&#x5E94;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;&#x64CD;&#x4F5C;&#x6210;&#x529F;&quot;</span>,
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;lendOrderbook/cancel&quot;</span>
-}
-</code></pre>
-</div></div></div>
+<span class="hljs-keyword">let</span> apikey = <span class="hljs-string">&quot;900625568558820892a8c833c33ebc8fd2701efe&quot;</span>; <span class="hljs-comment">//your apikey</span>
+<span class="hljs-keyword">let</span> secret = <span class="hljs-string">&quot;c708ac3e70d115ec29efbee197330627d7edf842&quot;</span>; <span class="hljs-comment">//your apikey secret</span>
 
-<hr>
-<div class="api-method"><div class="api-method-definition"><h3 id="trade-trade"><a name="trade-trade" class="anchor-navigation-ex-anchor" href="#trade-trade"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FE1;&#x7528;&#x8D26;&#x6237;&#x4E0B;&#x5355; trade/trade </h3>
-<ul>
-<li>path: <strong> /v1/credit </strong></li>
-<li>method: <strong> POST </strong></li>
-<li>cmd: <strong> trade/trade </strong></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x63CF;&#x8FF0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>pair</td>
-<td>string</td>
-<td>&#x4EA4;&#x6613;&#x5BF9;</td>
-</tr>
-<tr>
-<td>account_type</td>
-<td>integer</td>
-<td>&#x8D26;&#x6237;&#x7C7B;&#x578B; 1-&#x9010;&#x4ED3;&#x8D26;&#x6237; 257-&#x5168;&#x4ED3;&#x8D26;&#x6237;</td>
-</tr>
-<tr>
-<td>order_type</td>
-<td>integer</td>
-<td>&#x4EA4;&#x6613;&#x7C7B;&#x578B;  2-&#x9650;&#x4EF7;&#x5355;</td>
-</tr>
-<tr>
-<td>order_side</td>
-<td>integer</td>
-<td>&#x4EA4;&#x6613;&#x65B9;&#x5411; 1-&#x4E70;&#xFF0C;2-&#x5356;</td>
-</tr>
-<tr>
-<td>price</td>
-<td>string</td>
-<td>&#x59D4;&#x6258;&#x4EF7;&#x683C; &#x6700;&#x5C0F;&#x503C; 0.00000001</td>
-</tr>
-<tr>
-<td>amount</td>
-<td>string</td>
-<td>&#x59D4;&#x6258;&#x6570;&#x91CF;  &#x6700;&#x5C0F;&#x503C; 0.0001</td>
-</tr>
-<tr>
-<td>money</td>
-<td>string</td>
-<td>&#x59D4;&#x6258;&#x91D1;&#x989D;</td>
-</tr>
-</tbody>
-</table>
-</div><div class="api-method-code"><div class="api-method-sample" data-lang="js" data-name="JavaScript"><p>&#x8BF7;&#x6C42;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;trade/trade&quot;</span>,
-    <span class="hljs-string">&quot;body&quot;</span>:{
-        <span class="hljs-string">&quot;account_type&quot;</span>:<span class="hljs-number">1</span>,
-        <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;BTC_USDT&quot;</span>,
-        <span class="hljs-string">&quot;order_type&quot;</span>:<span class="hljs-number">2</span>,
-        <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;100&quot;</span>,
-        <span class="hljs-string">&quot;amount&quot;</span>:<span class="hljs-string">&quot;1&quot;</span>,
-        <span class="hljs-string">&quot;money&quot;</span>:<span class="hljs-string">&quot;100.0000&quot;</span>,
-        <span class="hljs-string">&quot;order_side&quot;</span>:<span class="hljs-number">1</span>
+<span class="hljs-keyword">let</span> param = [
+    {
+        <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bc/orderById&quot;</span>,
+        <span class="hljs-string">&quot;body&quot;</span>:{
+            <span class="hljs-string">&quot;orderIds&quot;</span>: [<span class="hljs-string">&quot;421112953438213&quot;</span>, <span class="hljs-string">&quot;421112953438214&quot;</span>],
+            <span class="hljs-string">&quot;clientOids&quot;</span>: [<span class="hljs-string">&quot;1602644402806&quot;</span>, <span class="hljs-string">&quot;1602644402811&quot;</span>],
+        },
+        <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">1</span>
     }
-}
-</code></pre>
-</div><div class="api-method-example"><p>&#x54CD;&#x5E94;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;result&quot;</span>: [
-        {
-            <span class="hljs-string">&quot;result&quot;</span>: <span class="hljs-number">1</span>,
-            <span class="hljs-string">&quot;cmd&quot;</span>: <span class="hljs-string">&quot;trade/trade&quot;</span>
+];
+
+<span class="hljs-keyword">let</span> form = {
+    <span class="hljs-string">&quot;cmds&quot;</span>: <span class="hljs-built_in">JSON</span>.stringify(param), <span class="hljs-comment">//format param</span>
+    <span class="hljs-string">&quot;apikey&quot;</span>: apikey,
+    <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+};
+
+<span class="hljs-keyword">let</span> sign = CryptoJS.HmacMD5(form.cmds, secret).toString();<span class="hljs-comment">//sign cmds</span>
+form.sign = sign;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(param))
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify({url, form}))
+
+request.post({url, form }, (error, response, body) =&gt; {
+    <span class="hljs-keyword">if</span> (!error &amp;&amp; response &amp;&amp; response.statusCode === <span class="hljs-number">200</span>) {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-built_in">console</span>.log(body)
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.log(error)
         }
-    ]
-}
-</code></pre>
-</div></div></div>
-
-<hr>
-<div class="api-method"><div class="api-method-definition"><h3 id="trade-cancel"><a name="trade-cancel" class="anchor-navigation-ex-anchor" href="#trade-cancel"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FE1;&#x7528;&#x8D26;&#x6237;&#x64A4;&#x5355; trade/cancel </h3>
-<ul>
-<li>path: <strong> /v1/credit </strong></li>
-<li>method: <strong> POST </strong></li>
-<li>cmd: <strong> trade/cancel </strong></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>&#x53C2;&#x6570;&#x540D;&#x79F0;</th>
-<th>&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x63CF;&#x8FF0;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x53D6;&#x503C;&#x8303;&#x56F4;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>orders_id</td>
-<td>true</td>
-<td>string</td>
-<td>&#x59D4;&#x6258;&#x5355;id</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div><div class="api-method-code"><div class="api-method-sample" data-lang="js" data-name="JavaScript"><p>&#x8BF7;&#x6C42;:</p>
-<pre><code class="lang-js">{
-    <span class="hljs-string">&quot;cmd&quot;</span>: <span class="hljs-string">&quot;trade/cancel&quot;</span>,
-    <span class="hljs-string">&quot;body&quot;</span>: {
-        <span class="hljs-string">&quot;orders_id&quot;</span>: <span class="hljs-string">&quot;4631142976192513&quot;</span>               <span class="hljs-comment">//&#x59D4;&#x6258;&#x5355;id</span>
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(error, response, body);
     }
+});
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Response</span>
+{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">421112953438214</span>,<span class="hljs-comment">// &#x8BA2;&#x5355;id</span>
+            <span class="hljs-string">&quot;user_id&quot;</span>:<span class="hljs-number">100006</span>,<span class="hljs-comment">// &#x7528;&#x6237;id</span>
+            <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;BTC&quot;</span>,<span class="hljs-comment">// &#x5E01;&#x79CD;</span>
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>,<span class="hljs-comment">// &#x4EA4;&#x6613;&#x5BF9;</span>
+            <span class="hljs-string">&quot;side&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-comment">// &#x6302;&#x5355;&#x65B9;&#x5411;</span>
+            <span class="hljs-string">&quot;order_type&quot;</span>:<span class="hljs-number">2</span>,<span class="hljs-comment">// &#x6302;&#x5355;&#x7C7B;&#x578B; 1&#x5E02;&#x4EF7;&#xFF0C;2&#x9650;&#x4EF7;</span>
+            <span class="hljs-string">&quot;price&quot;</span>:<span class="hljs-string">&quot;11692.0000000000&quot;</span>,<span class="hljs-comment">// &#x6302;&#x5355;&#x4EF7;&#x683C;</span>
+            <span class="hljs-string">&quot;amount_coin&quot;</span>:<span class="hljs-string">&quot;1.0000000000&quot;</span>,<span class="hljs-comment">// &#x6302;&#x5355;&#x6570;&#x91CF;</span>
+            <span class="hljs-string">&quot;freeze&quot;</span>:<span class="hljs-string">&quot;0.0000000000&quot;</span>,<span class="hljs-comment">// &#x51BB;&#x7ED3;&#x8D44;&#x91D1;</span>
+            <span class="hljs-string">&quot;price_deal&quot;</span>:<span class="hljs-string">&quot;11692.0000000000&quot;</span>,<span class="hljs-comment">// &#x6210;&#x4EA4;&#x5747;&#x4EF7;</span>
+            <span class="hljs-string">&quot;deal_coin&quot;</span>:<span class="hljs-string">&quot;1.0000000000&quot;</span>,<span class="hljs-comment">// &#x6210;&#x4EA4;&#x4EF7;&#x503C;</span>
+            <span class="hljs-string">&quot;deal_num&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-comment">// &#x6210;&#x4EA4;&#x7B14;&#x6570;</span>
+            <span class="hljs-string">&quot;fee&quot;</span>:<span class="hljs-string">&quot;0.0000000599&quot;</span>,<span class="hljs-comment">// &#x624B;&#x7EED;&#x8D39;</span>
+            <span class="hljs-string">&quot;fee_bix&quot;</span>:<span class="hljs-string">&quot;0.0000000000&quot;</span>,<span class="hljs-comment">// bix&#x62B5;&#x6263;</span>
+            <span class="hljs-string">&quot;fee_bix0&quot;</span>:<span class="hljs-string">&quot;0.0000000000&quot;</span>,<span class="hljs-comment">// &#x4F18;&#x60E0;&#x5238;&#x62B5;&#x6263;</span>
+            <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-number">3</span>,<span class="hljs-comment">// &#x8BA2;&#x5355;&#x72B6;&#x6001;&#xFF0C;1&#x672A;&#x6210;&#x4EA4;&#xFF0C;2&#x90E8;&#x5206;&#x6210;&#x4EA4;&#xFF0C;3&#x5B8C;&#x5168;&#x6210;&#x4EA4;&#xFF0C;4&#x90E8;&#x5206;&#x64A4;&#x9500;&#xFF0C;5&#x5168;&#x90E8;&#x64A4;&#x9500;&#xFF0C;100&#x4E0B;&#x5355;&#x5931;&#x8D25;</span>
+            <span class="hljs-string">&quot;reason&quot;</span>:<span class="hljs-number">0</span>,<span class="hljs-comment">// &#x5931;&#x8D25;&#x539F;&#x56E0;</span>
+            <span class="hljs-string">&quot;fee_rate_maker&quot;</span>:<span class="hljs-string">&quot;0.0007000000&quot;</span>,<span class="hljs-comment">// maker&#x624B;&#x7EED;&#x8D39;&#x8D39;&#x7387;</span>
+            <span class="hljs-string">&quot;fee_rate_taker&quot;</span>:<span class="hljs-string">&quot;0.0007000000&quot;</span>,<span class="hljs-comment">// taker&#x624B;&#x7EED;&#x8D39;&#x8D39;&#x7387;</span>
+            <span class="hljs-string">&quot;client_oid&quot;</span>:<span class="hljs-number">1602644402806</span>,<span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;id</span>
+            <span class="hljs-string">&quot;order_from&quot;</span>:<span class="hljs-number">4</span>, <span class="hljs-comment">// &#x5FFD;&#x7565;</span>
+            <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2020-10-14T03:00:08.000Z&quot;</span>,<span class="hljs-comment">// &#x6302;&#x5355;&#x65F6;&#x95F4;</span>
+            <span class="hljs-string">&quot;updatedAt&quot;</span>:<span class="hljs-string">&quot;2020-10-14T03:00:08.000Z&quot;</span><span class="hljs-comment">// &#x6700;&#x65B0;&#x53D8;&#x5316;&#x65F6;&#x95F4;</span>
+        },
+        ...
+    ],
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bc/orderById&quot;</span>,
+    <span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">1</span>
 }
 </code></pre>
-</div><div class="api-method-example"><p>&#x54CD;&#x5E94;:</p>
+<h3 id="&#x67E5;&#x8BE2;&#x8D44;&#x91D1;&#x8D39;&#x7387;"><a name="&#x67E5;&#x8BE2;&#x8D44;&#x91D1;&#x8D39;&#x7387;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x8D44;&#x91D1;&#x8D39;&#x7387;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x8D44;&#x91D1;&#x8D39;&#x7387;</h3>
+<ul>
+<li>GET <a href="https://api.bibox.com/v1.1/cquery?cmd=bcFundRate" target="_blank">https://api.bibox.com/v1.1/cquery?cmd=bcFundRate</a></li>
+<li>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x8BF4;&#x660E;</li>
+</ul>
 <pre><code class="lang-js">{
-    <span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-string">&quot;ok&quot;</span>,
-    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;trade/cancel&quot;</span>
+    <span class="hljs-string">&quot;result&quot;</span>:{
+        <span class="hljs-string">&quot;5BTC_USD&quot;</span>:{
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>,
+            <span class="hljs-string">&quot;close&quot;</span>:<span class="hljs-string">&quot;0.0000000000&quot;</span>,
+            <span class="hljs-string">&quot;fund_rate&quot;</span>:<span class="hljs-string">&quot;0.0001000000&quot;</span>,
+            <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2020-10-14T00:00:00.000Z&quot;</span>
+        },
+        <span class="hljs-string">&quot;5ETH_USD&quot;</span>:{
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5ETH_USD&quot;</span>,
+            <span class="hljs-string">&quot;close&quot;</span>:<span class="hljs-string">&quot;0.0000000000&quot;</span>,
+            <span class="hljs-string">&quot;fund_rate&quot;</span>:<span class="hljs-string">&quot;0.0001000000&quot;</span>,
+            <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2020-10-14T00:00:00.000Z&quot;</span>
+        }
+    },
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bcFundRate&quot;</span>
 }
 </code></pre>
-</div></div></div>
-
-<hr>
+<h3 id="&#x67E5;&#x8BE2;&#x6807;&#x8BB0;&#x4EF7;&#x683C;"><a name="&#x67E5;&#x8BE2;&#x6807;&#x8BB0;&#x4EF7;&#x683C;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x6807;&#x8BB0;&#x4EF7;&#x683C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x6807;&#x8BB0;&#x4EF7;&#x683C;</h3>
+<ul>
+<li>GET <a href="https://api.bibox.com/v1.1/cquery?cmd=bcTagPrice" target="_blank">https://api.bibox.com/v1.1/cquery?cmd=bcTagPrice</a></li>
+<li>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x8BF4;&#x660E;</li>
+</ul>
+<pre><code class="lang-js">{
+    <span class="hljs-string">&quot;result&quot;</span>:{
+        <span class="hljs-string">&quot;5BTC_USD&quot;</span>:{<span class="hljs-comment">//&#x4EA4;&#x6613;&#x5BF9;</span>
+            <span class="hljs-string">&quot;close&quot;</span>:<span class="hljs-string">&quot;11453.7224909000&quot;</span>,<span class="hljs-comment">// &#x6307;&#x6570;&#x4EF7;&#x683C;</span>
+            <span class="hljs-string">&quot;priceTag&quot;</span>:<span class="hljs-string">&quot;11454.2951770245&quot;</span>,<span class="hljs-comment">// &#x6807;&#x8BB0;&#x4EF7;&#x683C;</span>
+            <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2020-10-14T03:41:08.000Z&quot;</span> <span class="hljs-comment">// &#x65F6;&#x95F4;</span>
+        },
+        <span class="hljs-string">&quot;5ETH_USD&quot;</span>:{
+            <span class="hljs-string">&quot;close&quot;</span>:<span class="hljs-string">&quot;383.1999999600&quot;</span>,
+            <span class="hljs-string">&quot;priceTag&quot;</span>:<span class="hljs-string">&quot;383.2191599600&quot;</span>,
+            <span class="hljs-string">&quot;createdAt&quot;</span>:<span class="hljs-string">&quot;2020-10-14T03:41:08.000Z&quot;</span>
+        }
+    },
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bcTagPrice&quot;</span>
+}
+</code></pre>
+<h3 id="&#x67E5;&#x8BE2;&#x5408;&#x7EA6;&#x57FA;&#x672C;&#x4FE1;&#x606F;"><a name="&#x67E5;&#x8BE2;&#x5408;&#x7EA6;&#x57FA;&#x672C;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x5408;&#x7EA6;&#x57FA;&#x672C;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x5408;&#x7EA6;&#x57FA;&#x672C;&#x4FE1;&#x606F;</h3>
+<ul>
+<li>GET <a href="https://api.bibox.com/v1.1/cquery?cmd=bcValue" target="_blank">https://api.bibox.com/v1.1/cquery?cmd=bcValue</a></li>
+<li>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x8BF4;&#x660E;</li>
+</ul>
+<pre><code class="lang-js">{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">465</span>, <span class="hljs-comment">// &#x5FFD;&#x7565;</span>
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>,<span class="hljs-comment">//&#x4EA4;&#x6613;&#x5BF9;</span>
+            <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;BTC&quot;</span>, <span class="hljs-comment">// &#x5FFD;&#x7565;</span>
+            <span class="hljs-string">&quot;leverage_init&quot;</span>:<span class="hljs-string">&quot;10.0000000000&quot;</span>, <span class="hljs-comment">// &#x5FFD;&#x7565;</span>
+            <span class="hljs-string">&quot;leverage_min&quot;</span>:<span class="hljs-string">&quot;0.0100000000&quot;</span>,<span class="hljs-comment">//&#x6700;&#x5C0F;&#x6760;&#x6746;&#x500D;&#x6570;</span>
+            <span class="hljs-string">&quot;leverage_max&quot;</span>:<span class="hljs-string">&quot;100.0000000000&quot;</span>,<span class="hljs-comment">//&#x6700;&#x5927;&#x6760;&#x6746;&#x500D;&#x6570;</span>
+            <span class="hljs-string">&quot;value&quot;</span>:<span class="hljs-string">&quot;1.0000000000&quot;</span>,<span class="hljs-comment">//&#x5408;&#x7EA6;&#x9762;&#x503C;</span>
+            <span class="hljs-string">&quot;risk_level_base&quot;</span>:<span class="hljs-string">&quot;1000000.0000000000&quot;</span>,<span class="hljs-comment">//&#x5FFD;&#x7565;</span>
+            <span class="hljs-string">&quot;risk_level_dx&quot;</span>:<span class="hljs-string">&quot;50000.0000000000&quot;</span>,<span class="hljs-comment">//&#x5FFD;&#x7565;</span>
+            <span class="hljs-string">&quot;maker_fee&quot;</span>:<span class="hljs-string">&quot;0.0006000000&quot;</span>,<span class="hljs-comment">//&#x9ED8;&#x8BA4;maker&#x624B;&#x7EED;&#x8D39;&#x8D39;&#x7387;</span>
+            <span class="hljs-string">&quot;taker_fee&quot;</span>:<span class="hljs-string">&quot;0.0006000000&quot;</span>,<span class="hljs-comment">//&#x9ED8;&#x8BA4;taker&#x624B;&#x7EED;&#x8D39;&#x8D39;&#x7387;</span>
+            <span class="hljs-string">&quot;open_max_per&quot;</span>:<span class="hljs-string">&quot;10000000.0000000000&quot;</span>,<span class="hljs-comment">//&#x5355;&#x7B14;&#x6302;&#x5355;&#x6700;&#x5927;&#x6570;&#x91CF;</span>
+            <span class="hljs-string">&quot;pending_max&quot;</span>:<span class="hljs-number">100</span>,<span class="hljs-comment">//&#x6700;&#x5927;&#x6302;&#x5355;&#x4E2A;&#x6570;</span>
+            <span class="hljs-string">&quot;hold_max&quot;</span>:<span class="hljs-string">&quot;100000000.0000000000&quot;</span>,<span class="hljs-comment">//&#x6700;&#x5927;&#x6301;&#x4ED3;&#x4EF7;&#x503C;</span>
+            <span class="hljs-string">&quot;price_precision&quot;</span>:<span class="hljs-number">1</span> <span class="hljs-comment">// &#x5FFD;&#x7565; </span>
+        },
+        {
+            <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">466</span>,
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5ETH_USD&quot;</span>,
+            <span class="hljs-string">&quot;coin_symbol&quot;</span>:<span class="hljs-string">&quot;ETH&quot;</span>,
+            <span class="hljs-string">&quot;leverage_init&quot;</span>:<span class="hljs-string">&quot;10.0000000000&quot;</span>,
+            <span class="hljs-string">&quot;leverage_min&quot;</span>:<span class="hljs-string">&quot;0.0100000000&quot;</span>,
+            <span class="hljs-string">&quot;leverage_max&quot;</span>:<span class="hljs-string">&quot;100.0000000000&quot;</span>,
+            <span class="hljs-string">&quot;value&quot;</span>:<span class="hljs-string">&quot;1.0000000000&quot;</span>,
+            <span class="hljs-string">&quot;risk_level_base&quot;</span>:<span class="hljs-string">&quot;10000.0000000000&quot;</span>,
+            <span class="hljs-string">&quot;risk_level_dx&quot;</span>:<span class="hljs-string">&quot;5000.0000000000&quot;</span>,
+            <span class="hljs-string">&quot;maker_fee&quot;</span>:<span class="hljs-string">&quot;0.0006000000&quot;</span>,
+            <span class="hljs-string">&quot;taker_fee&quot;</span>:<span class="hljs-string">&quot;0.0006000000&quot;</span>,
+            <span class="hljs-string">&quot;open_max_per&quot;</span>:<span class="hljs-string">&quot;10000000.0000000000&quot;</span>,
+            <span class="hljs-string">&quot;pending_max&quot;</span>:<span class="hljs-number">100</span>,
+            <span class="hljs-string">&quot;hold_max&quot;</span>:<span class="hljs-string">&quot;100000000.0000000000&quot;</span>,
+            <span class="hljs-string">&quot;price_precision&quot;</span>:<span class="hljs-number">2</span>
+        }
+    ],
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bcValue&quot;</span>
+}
+</code></pre>
+<h3 id="&#x67E5;&#x8BE2;&#x7CBE;&#x5EA6;&#x914D;&#x7F6E;"><a name="&#x67E5;&#x8BE2;&#x7CBE;&#x5EA6;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x7CBE;&#x5EA6;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x7CBE;&#x5EA6;&#x914D;&#x7F6E;</h3>
+<ul>
+<li>GET <a href="https://api.bibox.com/v1.1/cquery?cmd=bcUnit" target="_blank">https://api.bibox.com/v1.1/cquery?cmd=bcUnit</a></li>
+<li>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x8BF4;&#x660E;</li>
+</ul>
+<pre><code class="lang-js">{
+    <span class="hljs-string">&quot;result&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5BTC_USD&quot;</span>,<span class="hljs-comment">//&#x4EA4;&#x6613;&#x5BF9;</span>
+            <span class="hljs-string">&quot;price_unit&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-comment">//&#x4E0B;&#x5355;&#x5C0F;&#x6570;&#x70B9;&#x6570;</span>
+            <span class="hljs-string">&quot;vol_unit&quot;</span>:<span class="hljs-number">6</span>, <span class="hljs-comment">// &#x5FFD;&#x7565;</span>
+            <span class="hljs-string">&quot;value_unit&quot;</span>:<span class="hljs-number">0</span> <span class="hljs-comment">// &#x5FFD;&#x7565;</span>
+        },
+        {
+            <span class="hljs-string">&quot;pair&quot;</span>:<span class="hljs-string">&quot;5ETH_USD&quot;</span>,
+            <span class="hljs-string">&quot;price_unit&quot;</span>:<span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;vol_unit&quot;</span>:<span class="hljs-number">6</span>,
+            <span class="hljs-string">&quot;value_unit&quot;</span>:<span class="hljs-number">0</span>
+        }
+    ],
+    <span class="hljs-string">&quot;cmd&quot;</span>:<span class="hljs-string">&quot;bcUnit&quot;</span>
+}
+</code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; bibox.com 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Update Date: 
-2020-09-11
+2020-10-19
 </span></footer>
                                 
                                 </section>
@@ -3722,7 +3529,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Restful API 杠杆交易","level":"1.10","depth":1,"next":{"title":"WebSocket API 说明","level":"1.11","depth":1,"anchor":"#t0","path":"ws_api_intro.md","ref":"ws_api_intro.md#t0","articles":[{"title":"简介","level":"1.11.1","depth":2,"anchor":"#t1","path":"ws_api_intro.md","ref":"ws_api_intro.md#t1","articles":[]},{"title":"访问地址","level":"1.11.2","depth":2,"anchor":"#访问地址","path":"ws_api_intro.md","ref":"ws_api_intro.md#访问地址","articles":[]},{"title":"请求与订阅说明","level":"1.11.3","depth":2,"anchor":"#请求与订阅说明","path":"ws_api_intro.md","ref":"ws_api_intro.md#请求与订阅说明","articles":[{"title":"访问地址","level":"1.11.3.1","depth":3,"anchor":"#t2","path":"ws_api_intro.md","ref":"ws_api_intro.md#t2","articles":[]},{"title":"数据压缩","level":"1.11.3.2","depth":3,"anchor":"#t3","path":"ws_api_intro.md","ref":"ws_api_intro.md#t3","articles":[]},{"title":"WebSocket库","level":"1.11.3.3","depth":3,"anchor":"#t4","path":"ws_api_intro.md","ref":"ws_api_intro.md#t4","articles":[]},{"title":"心跳","level":"1.11.3.4","depth":3,"anchor":"#t5","path":"ws_api_intro.md","ref":"ws_api_intro.md#t5","articles":[]},{"title":"channel格式","level":"1.11.3.5","depth":3,"anchor":"#t6","path":"ws_api_intro.md","ref":"ws_api_intro.md#t6","articles":[]},{"title":"订阅数据(addChannel)","level":"1.11.3.6","depth":3,"anchor":"#t7","path":"ws_api_intro.md","ref":"ws_api_intro.md#t7","articles":[]},{"title":"取消订阅","level":"1.11.3.7","depth":3,"anchor":"#t8","path":"ws_api_intro.md","ref":"ws_api_intro.md#t8","articles":[]}]}]},"previous":{"title":"钱包账户划转到金本位合约账户","level":"1.9.4.1","depth":3,"anchor":"#钱包账户划转到合约账户","path":"rest_api_transfer.md","ref":"rest_api_transfer.md#钱包账户划转到合约账户","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","theme-api","theme-comscore","expandable-chapters-small","ancre-navigation","-sharing","hide-element","i18n","tbfed-pagefooter","custom-favicon-new"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy bibox.com 2019","modify_label":"Update Date: ","modify_format":"YYYY-MM-DD"},"livereload":{},"search-pro":{},"custom-favicon-new":{"myConfigKey":"default"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":1},"highlight":{},"favicon":"assets/favicon.ico","theme-comscore":{},"theme-api":{"languages":[{"lang":"js","name":"JavaScript","default":true},{"lang":"python","name":"Python"}],"split":true,"theme":"dark"},"appleTouchIconPrecomposed152":"assets/favicon.ico","ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"i18n":{"ChineseUrl":"../zh-hans","EnglishUrl":"../en","all":["english","chinese"]}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bibox API","language":"zh-hans","gitbook":"*","description":"Bibox交易所提供REST API 和 WebSocket API，便于投资者查看行情、快速交易。"},"file":{"path":"restful_credit.md","mtime":"2020-09-11T07:26:30.585Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-27T06:39:48.139Z"},"basePath":".","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"Restful API 币本位合约V1.1","level":"1.6","depth":1,"next":{"title":"描述","level":"1.6.1","depth":2,"anchor":"#描述","path":"rest_api_bc_v1_1.md","ref":"rest_api_bc_v1_1.md#描述","articles":[]},"previous":{"title":"查询合约市场深度","level":"1.5.2","depth":2,"anchor":"#查询合约市场深度","path":"rest_api_bc.md","ref":"rest_api_bc.md#查询合约市场深度","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","theme-api","theme-comscore","expandable-chapters-small","ancre-navigation","-sharing","hide-element","i18n","tbfed-pagefooter","custom-favicon-new"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy bibox.com 2019","modify_label":"Update Date: ","modify_format":"YYYY-MM-DD"},"livereload":{},"search-pro":{},"custom-favicon-new":{"myConfigKey":"default"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":1},"highlight":{},"favicon":"assets/favicon.ico","theme-comscore":{},"theme-api":{"languages":[{"lang":"js","name":"JavaScript","default":true},{"lang":"python","name":"Python"}],"split":true,"theme":"dark"},"appleTouchIconPrecomposed152":"assets/favicon.ico","ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"i18n":{"ChineseUrl":"../zh-hans","EnglishUrl":"../en","all":["english","chinese"]}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bibox API","language":"zh-hans","gitbook":"*","description":"Bibox交易所提供REST API 和 WebSocket API，便于投资者查看行情、快速交易。"},"file":{"path":"rest_api_bc_v1_1.md","mtime":"2020-10-19T03:02:39.478Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-27T06:39:48.139Z"},"basePath":".","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
